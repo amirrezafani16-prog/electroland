@@ -1,0 +1,2939 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الکترولند | فروشگاه لوازم برقی</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff;
+  --ink:#101012;
+  --ink-soft:#3a3a3d;
+  --muted:#75757b;
+  --line:#e6e6ea;
+  --panel:#0b0b0c;
+  --panel-text:#f4f4f5;
+  --support:#ff6a1a;
+  --support-ink:#ffffff;
+  --surface:#ffffff;
+  --surface-2:var(--surface-2);
+  --on-ink:#ffffff;
+  --panel-muted:var(--panel-muted);
+  --panel-line:#444444;
+  --danger:#c0392b;
+  --ok:#1a7a4c;
+  --radius-lg:18px;
+  --radius-md:12px;
+  --radius-sm:8px;
+  --shadow:0 14px 34px rgba(10,10,12,.10);
+  --shadow-lg:0 24px 60px rgba(10,10,12,.30);
+  --font:'Vazirmatn','Tahoma',sans-serif;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;font-family:var(--font);background:var(--bg);color:var(--ink);
+  -webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden;
+}
+img{max-width:100%;display:block;}
+button{font-family:var(--font);cursor:pointer;}
+a{color:inherit;text-decoration:none;}
+input,select,textarea{font-family:var(--font);}
+.wrap{max-width:1240px;margin:0 auto;padding:0 22px;}
+::selection{background:var(--ink);color:var(--on-ink);}
+
+/* ---------- topbar ---------- */
+.topbar{background:var(--panel);color:var(--panel-text);font-size:13px;text-align:center;padding:8px 12px;letter-spacing:.2px;}
+
+/* ---------- header ---------- */
+header.site-header{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+.header-inner{display:flex;align-items:center;gap:20px;padding:14px 0;}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.brand-mark{width:42px;height:42px;border-radius:50%;background:var(--ink);color:var(--on-ink);display:grid;place-items:center;font-size:20px;flex-shrink:0;overflow:hidden;}
+.brand-mark img{width:100%;height:100%;object-fit:cover;}
+.brand-text{display:flex;flex-direction:column;line-height:1.15;}
+.brand-name{font-weight:800;font-size:18px;letter-spacing:.2px;}
+.brand-tag{font-size:11px;color:var(--muted);}
+nav.main-nav{display:flex;align-items:center;gap:2px;margin-inline-start:8px;flex:1;}
+nav.main-nav a{padding:9px 14px;border-radius:999px;font-size:14px;font-weight:500;color:var(--ink-soft);transition:background .15s,color .15s;white-space:nowrap;}
+nav.main-nav a:hover{background:var(--surface-2);color:var(--ink);}
+nav.main-nav a.active{background:var(--ink);color:var(--on-ink);}
+.header-icons{display:flex;align-items:center;gap:6px;flex-shrink:0;}
+.icon-btn{position:relative;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;font-size:17px;transition:transform .15s,background .15s;}
+.icon-btn:hover{background:var(--surface-2);transform:translateY(-1px);}
+.icon-badge{position:absolute;top:-4px;left:-4px;background:var(--support);color:var(--support-ink);font-size:10px;font-weight:700;min-width:17px;height:17px;border-radius:999px;display:grid;place-items:center;padding:0 3px;}
+.burger{display:none;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--surface);position:relative;flex-shrink:0;}
+.burger span{position:absolute;right:11px;left:11px;height:2px;background:var(--ink);border-radius:2px;transition:.2s;}
+.burger span:nth-child(1){top:15px;}
+.burger span:nth-child(2){top:20px;}
+.burger span:nth-child(3){top:25px;}
+.burger.open span:nth-child(1){transform:translateY(5px) rotate(45deg);}
+.burger.open span:nth-child(2){opacity:0;}
+.burger.open span:nth-child(3){transform:translateY(-5px) rotate(-45deg);}
+.mobile-menu{display:none;flex-direction:column;gap:2px;padding:10px 0 16px;border-top:1px solid var(--line);}
+.mobile-menu a{padding:12px 8px;border-radius:10px;font-weight:500;color:var(--ink-soft);}
+.mobile-menu a.active{background:var(--surface-2);color:var(--ink);}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--panel);color:var(--panel-text);overflow:hidden;min-height:420px;display:flex;align-items:center;}
+.hero-circuit{position:absolute;inset:0;opacity:.16;transition:opacity .3s;}
+.hero-bgimg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .4s ease;}
+.hero-bgimg.show{opacity:1;}
+.hero-bgimg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.55),rgba(10,10,12,.78));}
+.hero-inner{position:relative;z-index:1;padding:70px 0;width:100%;}
+.hero-slide{display:none;text-align:center;max-width:680px;margin:0 auto;}
+.hero-slide.active{display:block;animation:fadeUp .6s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+.hero-eyebrow{display:inline-block;font-size:13px;color:var(--panel-muted);border:1px solid var(--panel-line);border-radius:999px;padding:6px 14px;margin-bottom:18px;}
+.hero-title{font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.3;margin:0 0 14px;}
+.hero-sub{font-size:16px;color:var(--panel-muted);max-width:520px;margin:0 auto 28px;}
+.hero-cta{display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center;}
+.btn{border:none;border-radius:999px;padding:13px 26px;font-size:14px;font-weight:700;transition:transform .15s,opacity .15s;}
+.btn:hover{transform:translateY(-2px);}
+.btn-light{background:var(--surface);color:var(--ink);}
+.btn-outline-light{background:transparent;color:var(--on-ink);border:1px solid var(--panel-line);}
+.hero-dots{display:flex;justify-content:center;gap:8px;margin-top:34px;}
+.hero-dots button{width:8px;height:8px;border-radius:50%;border:none;background:var(--panel-line);padding:0;}
+.hero-dots button.active{background:var(--surface);width:22px;border-radius:6px;transition:.25s;}
+
+/* ---------- categories ---------- */
+.section{padding:52px 0;}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap;}
+.section-title{font-size:22px;font-weight:800;margin:0;}
+.section-desc{color:var(--muted);font-size:13.5px;margin-top:4px;}
+.search-field{max-width:220px;width:100%;}
+@media (max-width:640px){ .search-field{max-width:100%;flex:1 1 100%;} }
+.cat-row{display:flex;gap:12px;overflow-x:auto;padding:4px 2px 14px;scrollbar-width:thin;}
+.cat-chip{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 18px;border:1px solid var(--line);border-radius:16px;min-width:110px;text-align:center;background:var(--surface);transition:.15s;}
+.cat-chip:hover{border-color:var(--ink);transform:translateY(-2px);}
+.cat-chip.active{background:var(--ink);color:var(--on-ink);border-color:var(--ink);}
+.cat-chip .em{font-size:26px;}
+.cat-chip .em.cat-img-em{width:44px;height:44px;border-radius:50%;overflow:hidden;font-size:0;}
+.cat-chip .em.cat-img-em img{width:100%;height:100%;object-fit:cover;display:block;}
+.cat-chip .nm{font-size:12.5px;font-weight:600;line-height:1.35;}
+.cat-chip .nm-row{display:inline-flex;align-items:center;gap:4px;}
+.chip-caret{font-size:13px;line-height:1;opacity:.65;transform:translateY(1px);}
+.cat-chip.active .chip-caret{opacity:.9;}
+
+/* ---------- subcategory page (modal) ---------- */
+.subcat-head-em{font-size:26px;width:44px;height:44px;border-radius:50%;background:var(--surface-2);display:grid;place-items:center;flex-shrink:0;overflow:hidden;}
+.subcat-head-em img{width:100%;height:100%;object-fit:cover;display:block;}
+.subcat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px;}
+.subcat-item{border:1px solid var(--line);border-radius:14px;padding:14px 10px;background:var(--surface);display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center;cursor:pointer;transition:.15s;font-family:inherit;color:inherit;}
+.subcat-item:hover{border-color:var(--ink);transform:translateY(-2px);box-shadow:var(--shadow);}
+.subcat-item.no-click{cursor:default;}
+.subcat-item.no-click:hover{border-color:var(--line);transform:none;box-shadow:none;}
+.subcat-item.active{background:var(--ink);color:var(--on-ink);border-color:var(--ink);}
+.subcat-item .sc-img{width:60px;height:60px;border-radius:12px;object-fit:cover;background:var(--surface-2);display:block;}
+.subcat-item .sc-em{width:60px;height:60px;border-radius:12px;background:var(--surface-2);display:grid;place-items:center;font-size:24px;}
+.subcat-item.active .sc-em{background:rgba(255,255,255,.14);}
+.subcat-item .sc-nm{font-size:13px;font-weight:700;line-height:1.35;}
+.subcat-item .sc-count{font-size:10.5px;opacity:.6;font-weight:600;}
+.subcat-item-wrap{display:flex;flex-direction:column;gap:6px;}
+.subcat-children{display:flex;flex-direction:column;gap:4px;}
+.subcat-child-pill{display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:9px;padding:5px 8px;background:var(--surface-2);cursor:pointer;font-family:inherit;color:inherit;font-size:10.5px;font-weight:600;text-align:right;}
+.subcat-child-pill:hover{border-color:var(--ink);}
+.subcat-child-pill.active{background:var(--ink);color:var(--on-ink);border-color:var(--ink);}
+.subcat-child-pill img{width:16px;height:16px;border-radius:5px;object-fit:cover;flex-shrink:0;}
+.subcat-child-pill span{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.subcat-child-pill em{font-style:normal;opacity:.6;font-size:9.5px;flex-shrink:0;}
+.subcat-empty{color:var(--muted);font-size:13.5px;padding:10px 2px 16px;text-align:center;}
+.subcat-all-btn{display:block;width:100%;margin-top:16px;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:12px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;color:inherit;}
+.subcat-all-btn:hover{border-color:var(--ink);}
+.subcat-box{border:1px solid var(--line);border-radius:18px;background:var(--surface);padding:18px;margin-top:16px;box-shadow:var(--shadow);animation:subFade .2s ease both;}
+@keyframes subFade{from{opacity:0;transform:translateY(-6px);}to{opacity:1;transform:none;}}
+.subcat-box-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap;}
+.subcat-box-close{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 14px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit;flex-shrink:0;}
+.subcat-box-close:hover{border-color:var(--ink);}
+@media (max-width:560px){
+  .subcat-grid{grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:10px;}
+  .subcat-item .sc-img,.subcat-item .sc-em{width:50px;height:50px;}
+}
+
+/* ---------- products ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;}
+.card{border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;background:var(--surface);display:flex;flex-direction:column;transition:box-shadow .18s,transform .18s;position:relative;}
+.card:hover{box-shadow:var(--shadow);transform:translateY(-3px);}
+.card .imgwrap{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--surface-2);}
+.card .imgwrap img{width:100%;height:100%;object-fit:cover;transition:transform .12s ease-out,opacity .25s ease;will-change:transform;}
+.card .imgwrap img.img-second{position:absolute;inset:0;opacity:0;pointer-events:none;}
+.card .imgwrap.show-second img.img-second{opacity:1;}
+.sale-badge{position:absolute;top:10px;left:10px;background:var(--support);color:var(--support-ink);font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px;}
+.oow-badge{position:absolute;bottom:10px;right:10px;background:var(--danger);color:var(--on-ink);font-size:10.5px;font-weight:700;padding:4px 9px;border-radius:999px;box-shadow:0 2px 6px rgba(0,0,0,.25);}
+.card .body{padding:14px 14px 16px;display:flex;flex-direction:column;gap:8px;flex:1;}
+.card .cat-label{font-size:11px;color:var(--muted);}
+.card .name{font-size:14.5px;font-weight:700;line-height:1.4;min-height:40px;}
+.card .price-row{display:flex;align-items:center;justify-content:space-between;margin-top:auto;gap:8px;}
+.price{font-weight:800;font-size:15.5px;}
+.price small{font-weight:500;font-size:11.5px;color:var(--muted);}
+.price .old-price{font-weight:500;font-size:12px;color:var(--muted);text-decoration:line-through;margin-inline-end:4px;}
+.stock-status{font-size:11.5px;font-weight:700;color:var(--danger);}
+.add-btn{background:var(--ink);color:var(--on-ink);border:none;border-radius:999px;padding:9px 14px;font-size:12.5px;font-weight:700;display:flex;align-items:center;gap:5px;white-space:nowrap;transition:background .15s,transform .15s;}
+.add-btn:hover{filter:brightness(.8);}
+.add-btn.added{background:var(--ok);}
+.empty-note{text-align:center;color:var(--muted);padding:50px 10px;font-size:14px;}
+
+/* ---------- about / support ---------- */
+.about-box{background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius-lg);padding:36px;max-width:820px;margin:0 auto;text-align:center;}
+.about-box p{white-space:pre-wrap;color:var(--ink-soft);font-size:15px;}
+.contact-mini{display:flex;justify-content:center;gap:26px;margin-top:22px;flex-wrap:wrap;font-size:13.5px;color:var(--muted);}
+
+footer.site-footer{background:var(--panel);color:var(--panel-muted);padding:40px 0 26px;margin-top:20px;}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.footer-inner .brand-name{color:var(--on-ink);}
+.footer-links{display:flex;gap:22px;flex-wrap:wrap;font-size:13.5px;}
+.footer-bottom{text-align:center;font-size:12px;color:var(--panel-muted);margin-top:30px;border-top:1px solid var(--panel-line);padding-top:18px;}
+
+/* ---------- floating support ---------- */
+.support-fab{position:fixed;bottom:22px;left:22px;z-index:50;background:var(--support);color:var(--support-ink);border:none;border-radius:999px;padding:14px 20px;font-weight:700;font-size:13.5px;display:flex;align-items:center;gap:8px;box-shadow:0 10px 26px color-mix(in srgb,var(--support) 40%,transparent);}
+.support-fab:hover{transform:translateY(-2px);}
+.support-panel{position:fixed;bottom:86px;left:22px;z-index:50;width:min(320px,86vw);background:var(--surface);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);border:1px solid var(--line);overflow:hidden;display:none;}
+.support-panel.open{display:block;animation:fadeUp .2s ease both;}
+.support-panel .sp-head{background:var(--support);color:var(--support-ink);padding:14px 16px;font-weight:700;display:flex;justify-content:space-between;align-items:center;}
+.support-panel .sp-body{padding:16px;font-size:13.5px;color:var(--ink-soft);white-space:pre-wrap;max-height:260px;overflow:auto;}
+
+/* ---------- toast ---------- */
+.toast-stack{position:fixed;bottom:22px;right:22px;z-index:200;display:flex;flex-direction:column;gap:10px;}
+.toast{background:var(--ink);color:var(--on-ink);padding:13px 18px;border-radius:12px;font-size:13.5px;box-shadow:var(--shadow-lg);max-width:320px;animation:fadeUp .2s ease both;}
+.toast.ok{background:var(--ok);}
+.toast.err{background:var(--danger);}
+
+/* ---------- overlay / modal ---------- */
+.overlay{position:fixed;inset:0;background:rgba(10,10,12,.55);backdrop-filter:blur(3px);z-index:100;display:none;align-items:center;justify-content:center;padding:18px;}
+.overlay.open{display:flex;animation:fadeIn .2s ease both;}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+.modal{background:var(--surface);border-radius:var(--radius-lg);width:100%;box-shadow:var(--shadow-lg);max-height:92vh;overflow:auto;animation:pop .22s cubic-bezier(.22,1,.36,1) both;}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.98);}to{opacity:1;transform:translateY(0) scale(1);}}
+.modal-sm{max-width:420px;}
+.modal-md{max-width:560px;}
+.modal-lg{max-width:960px;}
+.modal-head{display:flex;justify-content:space-between;align-items:flex-start;padding:22px 24px 4px;}
+.modal-head h3{margin:0 0 4px;font-size:19px;font-weight:800;}
+.modal-head p{margin:0;color:var(--muted);font-size:13px;}
+.modal-close{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--surface);font-size:15px;flex-shrink:0;}
+.modal-body{padding:18px 24px 26px;}
+
+.field{margin-bottom:14px;}
+.field label{display:block;font-size:12.5px;font-weight:700;color:var(--ink-soft);margin-bottom:6px;}
+.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px 12px;font-size:14px;color:var(--ink);background:var(--surface);}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--ink);outline-offset:1px;}
+.field textarea{resize:vertical;min-height:90px;}
+.field-row{display:flex;gap:10px;}
+.field-row .field{flex:1;}
+.hint{font-size:11.5px;color:var(--muted);margin-top:5px;}
+
+.phone-row{display:flex;gap:8px;}
+.phone-row select{flex:0 0 118px;}
+.otp-inputs{display:flex;gap:8px;justify-content:center;direction:ltr;margin:6px 0 4px;}
+.otp-inputs input{width:44px;height:52px;text-align:center;font-size:20px;font-weight:800;border:1px solid var(--line);border-radius:10px;}
+
+/* ---------- cart drawer ---------- */
+.drawer-overlay{position:fixed;inset:0;background:rgba(10,10,12,.5);z-index:110;display:none;}
+.drawer-overlay.open{display:block;}
+.drawer{position:fixed;top:0;bottom:0;right:0;width:min(400px,92vw);background:var(--surface);z-index:111;transform:translateX(100%);transition:transform .28s cubic-bezier(.22,1,.36,1);display:flex;flex-direction:column;box-shadow:-20px 0 50px rgba(0,0,0,.2);}
+.drawer.open{transform:translateX(0);}
+.drawer-head{padding:20px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;}
+.drawer-head h3{margin:0;font-size:17px;font-weight:800;}
+.drawer-items{flex:1;overflow:auto;padding:16px 20px;display:flex;flex-direction:column;gap:14px;}
+.cart-row{display:flex;gap:12px;border-bottom:1px solid var(--line);padding-bottom:14px;}
+.cart-row img{width:60px;height:60px;border-radius:10px;object-fit:cover;flex-shrink:0;background:var(--surface-2);}
+.cart-row .ci-name{font-size:13.5px;font-weight:700;margin-bottom:4px;}
+.cart-row .ci-price{font-size:12.5px;color:var(--muted);}
+.qty-ctrl{display:flex;align-items:center;gap:8px;margin-top:8px;}
+.qty-ctrl button{width:24px;height:24px;border-radius:50%;border:1px solid var(--line);background:var(--surface);font-size:14px;line-height:1;}
+.qty-ctrl .rm{border:none;background:none;color:var(--danger);font-size:12px;margin-inline-start:auto;font-weight:600;}
+.drawer-foot{padding:18px 22px 22px;border-top:1px solid var(--line);}
+.total-row{display:flex;justify-content:space-between;font-weight:800;font-size:15.5px;margin-bottom:14px;}
+.btn-block{width:100%;text-align:center;}
+.btn-dark{background:var(--ink);color:var(--on-ink);}
+.btn-dark:hover{filter:brightness(.8);}
+
+.note-box{border:1px dashed var(--line);border-radius:14px;padding:16px;font-size:12.5px;color:var(--muted);background:var(--surface-2);}
+.mini-btn{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:7px 12px;font-size:12px;font-weight:600;}
+.mini-btn.edit{background:var(--ink);color:var(--on-ink);border-color:var(--ink);}
+.mini-btn.del{color:var(--danger);border-color:#f0d3cf;}
+.mini-btn.del:hover{background:#fdf0ee;}
+
+/* ---------- product detail modal ---------- */
+.card .name,.card .cat-label,.card .imgwrap{cursor:pointer;}
+.pd-grid{display:grid;grid-template-columns:220px 1fr;gap:22px;}
+@media (max-width:640px){ .pd-grid{grid-template-columns:1fr;} }
+.pd-img{width:100%;aspect-ratio:1/1;border-radius:var(--radius-md);overflow:hidden;background:var(--surface-2);position:relative;touch-action:none;}
+.pd-img img{width:100%;height:100%;object-fit:cover;transition:transform .12s ease-out;will-change:transform;}
+.pd-oow-badge{position:absolute;bottom:10px;right:10px;background:var(--danger);color:var(--on-ink);font-size:10.5px;font-weight:700;padding:4px 9px;border-radius:999px;box-shadow:0 2px 6px rgba(0,0,0,.25);}
+.pd-rotate-hint{position:absolute;bottom:10px;left:10px;background:rgba(0,0,0,.55);color:var(--on-ink);font-size:10.5px;font-weight:600;padding:4px 9px;border-radius:999px;pointer-events:none;display:none;}
+.pd-img{cursor:default;user-select:none;}
+.pd-img.rotatable{cursor:grab;}
+.pd-img.dragging{cursor:grabbing;}
+.pd-img img{-webkit-user-drag:none;}
+.pd-color-toggle{background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:12.5px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px;}
+.pd-color-list{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;}
+.pd-color-swatch{width:30px;height:30px;border-radius:50%;border:2px solid var(--line);cursor:pointer;}
+.pd-color-swatch.selected{border-color:var(--ink);box-shadow:0 0 0 2px var(--surface) inset;}
+.pd-arrow{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.9);border:none;font-size:20px;line-height:1;display:none;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.18);color:var(--ink);}
+.pd-arrow-prev{right:10px;}
+.pd-arrow-next{left:10px;}
+.pd-img.has-slider .pd-arrow{display:flex;}
+.pd-dots{position:absolute;bottom:10px;left:0;right:0;display:flex;justify-content:center;gap:6px;}
+.pd-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.6);border:1px solid rgba(0,0,0,.15);cursor:pointer;padding:0;}
+.pd-dot.active{background:var(--ink);}
+.pd-cat{font-size:11.5px;color:var(--muted);}
+.pd-name{font-size:18px;font-weight:800;margin:4px 0 8px;}
+.pd-price{font-size:17px;font-weight:800;margin-bottom:6px;}
+.pd-price small{font-weight:500;font-size:12px;color:var(--muted);}
+.pd-stock-status{font-size:12px;font-weight:700;color:var(--danger);margin-bottom:14px;}
+.pd-desc{font-size:13.5px;color:var(--ink-soft);white-space:pre-wrap;margin-bottom:16px;}
+.spec-table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:16px;overflow:hidden;border-radius:10px;border:1px solid var(--line);}
+.spec-table tr{border-top:1px solid var(--line);}
+.spec-table tr:first-child{border-top:none;}
+.spec-table td{padding:9px 12px;vertical-align:top;}
+.spec-table td:first-child{color:var(--muted);font-weight:600;width:38%;background:var(--surface-2);}
+.pd-suggest{margin-top:26px;padding-top:22px;border-top:1px solid var(--line);}
+.suggest-title{font-size:15px;font-weight:800;margin:0 0 14px;}
+.suggest-grid{grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;}
+
+/* ============ account page ============ */
+.account-page{position:fixed;inset:0;z-index:90;background:var(--surface-2);overflow:auto;display:none;}
+.account-page.open{display:block;}
+.account-page-inner{padding:22px 0 60px;}
+.account-topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;}
+.account-back{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;}
+.account-layout{display:grid;grid-template-columns:1fr 300px;gap:18px;align-items:start;}
+@media (max-width:800px){ .account-layout{grid-template-columns:1fr;} }
+.account-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:20px;}
+.account-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;text-align:center;margin-top:14px;}
+@media (max-width:520px){ .account-stats{grid-template-columns:1fr;} }
+.account-stat{padding:16px 8px;}
+.account-stat .ic{font-size:26px;display:block;margin-bottom:8px;}
+.account-stat b{display:block;font-size:13px;font-weight:800;}
+.account-section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;}
+.account-section-head h3{font-size:16px;margin:0;}
+.account-user-card{display:flex;align-items:center;gap:12px;position:relative;padding-bottom:16px;margin-bottom:12px;border-bottom:1px solid var(--line);}
+.account-avatar{width:52px;height:52px;border-radius:50%;background:var(--surface-2);display:grid;place-items:center;font-size:24px;flex-shrink:0;}
+.account-user-info{flex:1;min-width:0;}
+.account-user-name{font-weight:800;font-size:15px;}
+.account-user-phone{font-size:12px;color:var(--muted);direction:ltr;text-align:right;}
+.account-edit-pencil{background:var(--surface-2);border:1px solid var(--line);border-radius:50%;width:32px;height:32px;flex-shrink:0;font-size:14px;}
+.account-menu{display:flex;flex-direction:column;gap:2px;}
+.account-menu button{display:flex;align-items:center;gap:10px;padding:11px 10px;border-radius:10px;font-size:13.5px;font-weight:600;color:var(--ink-soft);background:transparent;border:none;text-align:right;width:100%;}
+.account-menu button:hover{background:var(--surface-2);color:var(--ink);}
+.account-menu button.active{background:var(--ink);color:var(--on-ink);}
+.account-menu button.danger{color:var(--danger);}
+.account-empty{color:var(--muted);font-size:13px;text-align:center;padding:30px 10px;}
+.account-field-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);}
+.account-field-row:last-child{border-bottom:none;}
+.account-field-label{font-size:12px;color:var(--muted);margin-bottom:6px;}
+.account-field-value{font-size:14.5px;font-weight:700;white-space:pre-wrap;}
+.account-field-edit{background:var(--surface-2);border:1px solid var(--line);border-radius:50%;width:30px;height:30px;flex-shrink:0;font-size:13px;}
+.account-field-input{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:8px;font-size:13.5px;font-family:var(--font);margin-top:4px;}
+.account-field-editing textarea.account-field-input{min-height:60px;resize:vertical;}
+.account-field-save{margin-top:8px;background:var(--ink);color:var(--on-ink);border:none;border-radius:8px;padding:7px 14px;font-size:12.5px;font-weight:700;}
+.account-order-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;}
+.account-order-row:last-child{border-bottom:none;}
+.spec-empty{font-size:12.5px;color:var(--muted);padding:10px 0;}
+
+/* ---------- admin ---------- */
+.admin-link{background:none;border:none;color:var(--panel-muted);font-size:12px;cursor:pointer;font-family:var(--font);padding:0;}
+.admin-link:hover{color:var(--panel-muted);}
+.admin-toolbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;}
+.admin-table-wrap{overflow-x:auto;}
+table.admin-table{width:100%;border-collapse:collapse;font-size:13px;min-width:560px;}
+table.admin-table th{text-align:right;color:var(--muted);font-size:11.5px;font-weight:700;padding:8px 10px;border-bottom:1px solid var(--line);}
+table.admin-table td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:middle;}
+table.admin-table img{width:36px;height:36px;border-radius:8px;object-fit:cover;}
+.admin-actions{display:flex;gap:6px;}
+.specs-editor-row{display:flex;gap:8px;margin-bottom:8px;align-items:center;}
+.specs-editor-row input{flex:1;}
+.specs-editor-row .rm-spec{flex:0 0 auto;border:none;background:none;color:var(--danger);font-size:16px;padding:4px 6px;}
+.add-spec-btn{border:1px dashed var(--line);background:var(--surface-2);border-radius:10px;padding:9px;width:100%;font-size:12.5px;font-weight:600;color:var(--ink-soft);}
+
+/* ---------- responsive ---------- */
+/* Tablet (up to 1024px): tighten spacing, keep grid comfortable */
+@media (max-width:1024px){
+  .wrap{padding:0 16px;}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;}
+}
+/* Tablet/mobile nav collapse */
+@media (max-width:900px){
+  nav.main-nav{display:none;}
+  .burger{display:block;}
+  .mobile-menu.open{display:flex;}
+  .hero-title{letter-spacing:-.01em;}
+}
+/* Small tablets / large phones */
+@media (max-width:760px){
+  .grid{grid-template-columns:repeat(3,1fr);gap:12px;}
+  .header-inner{gap:12px;padding:12px 0;}
+  .brand-tag{display:none;}
+  .section{padding:38px 0;}
+  .drawer{width:100%;}
+}
+/* Phones */
+@media (max-width:640px){
+  .grid{grid-template-columns:repeat(2,1fr);gap:12px;}
+  .hero{min-height:360px;}
+  .hero-inner{padding:44px 0;}
+  .modal-lg,.modal-md{max-width:100%;}
+  .footer-inner{flex-direction:column;}
+  .field-row{flex-direction:column;gap:0;}
+  .phone-row{flex-wrap:wrap;}
+  .phone-row select{flex:1 1 100%;}
+  .phone-row input{flex:1 1 100%;}
+  .otp-inputs input{width:38px;height:46px;font-size:18px;}
+  .stat-grid{grid-template-columns:repeat(2,1fr);}
+  .about-box{padding:24px 18px;}
+  .modal-head{padding:18px 18px 4px;}
+  .modal-body{padding:14px 18px 22px;}
+}
+/* Very small phones */
+@media (max-width:380px){
+  .grid{grid-template-columns:1fr 1fr;gap:10px;}
+  .wrap{padding:0 12px;}
+  .header-icons{gap:4px;}
+  .brand-mark{width:36px;height:36px;font-size:17px;}
+  .brand-tag{display:none;}
+  .icon-btn{width:36px;height:36px;font-size:15px;}
+  .burger{width:38px;height:38px;}
+  .burger span{right:9px;left:9px;}
+  .hero-eyebrow{font-size:11.5px;padding:5px 11px;}
+  .support-fab{padding:12px 16px;}
+  .otp-inputs input{width:34px;height:42px;font-size:16px;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important;}
+}
+
+/* ---------- out of stock / support channels ---------- */
+.add-btn[disabled]{opacity:.45;cursor:not-allowed;pointer-events:none;}
+.cart-row.oos{opacity:.6;}
+.oos-note{font-size:11.5px;font-weight:700;color:var(--danger);}
+.sp-links{display:flex;flex-direction:column;gap:8px;padding:0 16px 16px;}
+.sp-links a{display:flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:var(--radius-md);font-size:13.5px;font-weight:600;color:var(--ink);background:var(--surface);transition:background .15s;}
+.sp-links a:hover{background:var(--surface-2);}
+.sp-hours{padding:0 16px 12px;font-size:12px;color:var(--muted);}
+
+/* ---------- live chat ---------- */
+.support-fab{position:fixed;}
+.support-fab .chat-dot{display:none;width:10px;height:10px;border-radius:50%;background:var(--support-ink);box-shadow:0 0 0 3px color-mix(in srgb,var(--support-ink) 35%,transparent);}
+.support-fab.has-new .chat-dot{display:inline-block;}
+.support-panel.chat-on .sp-body{max-height:84px;padding:12px 16px;font-size:12.5px;border-bottom:1px solid var(--line);}
+.chat-box{display:none;flex-direction:column;}
+.support-panel.chat-on .chat-box{display:flex;}
+.chat-msgs{height:230px;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:8px;background:var(--surface-2);}
+.chat-msg{max-width:84%;padding:8px 12px;border-radius:14px;font-size:13px;line-height:1.7;white-space:pre-wrap;word-break:break-word;}
+.chat-msg.me{align-self:flex-start;background:var(--ink);color:var(--on-ink);border-end-start-radius:4px;}
+.chat-msg.bot{align-self:flex-end;background:color-mix(in srgb,var(--support) 22%,var(--surface));color:var(--ink);border:1px solid color-mix(in srgb,var(--support) 35%,var(--line));border-end-end-radius:4px;}
+.chat-msg.sup{align-self:flex-end;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-end-end-radius:4px;}
+.chat-msg small{display:block;font-size:10px;opacity:.6;margin-top:2px;}
+.chat-form{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line);background:var(--surface);}
+.chat-form textarea{flex:1;resize:none;height:42px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:13px;background:var(--surface);color:var(--ink);}
+.chat-form button{border:none;border-radius:12px;padding:0 16px;background:var(--support);color:var(--support-ink);font-weight:700;font-size:13px;}
+.chat-form button:disabled{opacity:.5;}
+.chat-chips{display:flex;flex-wrap:wrap;gap:6px;padding:8px 10px;border-top:1px solid var(--line);background:var(--surface);}
+.chat-chips:empty{display:none;}
+.chat-chips button{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:5px 11px;font-size:11.5px;cursor:pointer;}
+.chat-chips button:hover{background:var(--surface-2);}
+.chat-err{padding:6px 12px;font-size:11.5px;color:var(--danger);display:none;}
+
+/* ---- نظرات، موجودی، پشتیبانی ---- */
+.rv-badge{position:absolute;top:10px;right:10px;z-index:2;background:rgba(16,16,18,.82);color:#fff;font-size:11px;font-weight:700;padding:4px 9px;border-radius:999px;}
+.rv-badge.hot{background:#e11d1d;color:#fff;}
+.stock-count{font-size:11.5px;font-weight:600;color:var(--ok);}
+.pd-stock-count{font-size:12.5px;font-weight:700;color:var(--ok);margin-bottom:12px;}
+.pd-reviews{margin-top:26px;padding-top:22px;border-top:1px solid var(--line);}
+.rv-form{border:1px solid var(--line);border-radius:var(--radius-md);padding:14px;margin-bottom:16px;}
+.rv-stars{display:flex;gap:4px;margin-bottom:8px;direction:ltr;justify-content:flex-end;}
+.rv-stars button{background:none;border:0;font-size:26px;line-height:1;color:#c9c9cf;padding:0 2px;}
+.rv-stars button.on{color:#f5a623;}
+.rv-form textarea{width:100%;min-height:80px;border:1px solid var(--line);border-radius:var(--radius-sm);padding:10px;margin-bottom:10px;resize:vertical;}
+.rv-item{border-bottom:1px solid var(--line);padding:12px 2px;}
+.rv-item b{font-size:13.5px;} .rv-item .st{color:#f5a623;font-size:13px;margin-inline-start:8px;}
+.rv-item small{color:var(--muted);display:block;margin-top:2px;}
+.rv-item p{margin:6px 0 0;font-size:14px;white-space:pre-wrap;}
+
+/* ---- تب‌های صفحه محصول ---- */
+.pd-tabs{margin-top:26px;border:1px solid var(--line);border-radius:var(--radius-md);overflow:hidden;}
+.pd-tabbar{display:flex;overflow-x:auto;background:var(--surface-2);border-bottom:1px solid var(--ink);scrollbar-width:thin;}
+.pd-tab{flex:0 0 auto;border:0;background:transparent;padding:14px 20px;font-size:13.5px;font-weight:700;color:var(--ink-soft);white-space:nowrap;border-inline-start:1px solid var(--line);}
+.pd-tab:first-child{border-inline-start:0;}
+.pd-tab.on{background:var(--ink);color:var(--on-ink);}
+.pd-tabpanel{display:none;padding:18px 20px;font-size:14px;color:var(--ink-soft);min-height:120px;}
+.pd-tabpanel.on{display:block;}
+.pd-lines{margin:0;padding:0;list-style:none;}
+.pd-lines li{padding:9px 0;font-weight:600;color:var(--ink);border-bottom:1px dashed var(--line);}
+.pd-lines li:last-child{border-bottom:0;}
+.pd-text{white-space:pre-wrap;line-height:2;}
+.pd-video{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:var(--radius-sm);overflow:hidden;}
+.pd-video iframe,.pd-video video{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.pd-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.pd-tag{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 14px;font-size:13px;color:var(--ink);}
+.pd-tag:hover{background:var(--ink);color:var(--on-ink);}
+.pd-tabpanel .spec-table{margin-bottom:0;}
+.pd-tabpanel .pd-reviews{margin:0;padding:0;border:0;}
+/* ---- کد امنیتی ---- */
+.captcha-row{display:flex;align-items:center;gap:8px;margin:12px 0;}
+.captcha-row canvas{border:1px solid var(--line);border-radius:10px;background:#f4f4f6;width:150px;height:50px;flex:0 0 auto;user-select:none;}
+.captcha-row .cap-refresh{flex:0 0 auto;width:42px;height:42px;border-radius:10px;border:1px solid var(--line);background:var(--surface);font-size:20px;line-height:1;}
+.captcha-row .cap-refresh:hover{background:var(--surface-2);}
+.captcha-row input{flex:1 1 90px;min-width:0;border:1px solid var(--line);border-radius:10px;padding:11px 12px;font-size:15px;direction:ltr;text-align:center;letter-spacing:3px;text-transform:uppercase;}
+
+/* ---- زیرمجموعه: اندازه‌ی کادر بر اساس تعداد ---- */
+.subcat-box{width:fit-content;max-width:100%;min-width:min(100%,300px);margin-inline:auto;}
+.subcat-grid{grid-template-columns:repeat(var(--cols,2),132px);justify-content:center;}
+@media (max-width:640px){ .subcat-box{width:100%;} .subcat-grid{grid-template-columns:repeat(auto-fill,minmax(100px,1fr));} }
+/* ---- گالری بندانگشتی، تماس سریع، بالا رفتن ---- */
+.hero-cta .btn-light{background:#ffffff;color:#101012;}
+.hero-cta .btn-light:hover{filter:brightness(.95);}
+.pd-gallery{min-width:0;}
+.pd-thumbs{display:flex;gap:8px;margin-top:10px;overflow-x:auto;padding-bottom:4px;}
+.pd-thumb{flex:0 0 auto;width:54px;height:54px;border:2px solid var(--line);border-radius:10px;overflow:hidden;padding:0;background:var(--surface);}
+.pd-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+.pd-thumb.active{border-color:var(--support);box-shadow:0 0 0 2px color-mix(in srgb,var(--support) 40%,transparent);}
+.pd-quickcall{margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:10px;background:color-mix(in srgb,var(--support) 22%,var(--surface));border:1px solid color-mix(in srgb,var(--support) 60%,var(--line));border-radius:var(--radius-sm);padding:10px 14px;font-size:13px;font-weight:700;color:var(--ink);}
+.pd-quickcall a{direction:ltr;font-weight:800;}
+.to-top{position:fixed;bottom:22px;right:22px;z-index:45;width:46px;height:46px;border-radius:12px;border:0;background:var(--ink);color:var(--on-ink);font-size:22px;line-height:1;display:none;box-shadow:var(--shadow);}
+.to-top.show{display:grid;place-items:center;}
+.to-top:hover{background:var(--support);color:var(--support-ink);}
+/* ---- ویدیوها ---- */
+.pd-vlist{display:flex;flex-direction:column;gap:12px;}
+.pd-vitem{border:1px solid var(--line);border-radius:var(--radius-sm);padding:10px;}
+.pd-vitem .vhead{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:13px;font-weight:700;}
+.pd-vitem .vbox{margin-top:10px;}
+/* ---- ورود و ثبت‌نام ---- */
+select.pf-select,.field select{background:var(--surface);}
+.btn:disabled{opacity:.45;cursor:not-allowed;}
+.otp-actions{display:flex;gap:8px;margin-top:10px;}
+.otp-actions .mini-btn{flex:1;}
+.req-hint{font-size:11.5px;color:var(--danger);margin-top:8px;min-height:16px;}
+</style>
+</head>
+<body>
+
+<div class="topbar" id="topbarText">ارسال رایگان برای خرید بالای ۲٬۰۰۰٬۰۰۰ تومان · پرداخت امن کارت‌به‌کارت</div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <div class="brand-mark" id="brandMark">⚡</div>
+      <div class="brand-text">
+        <span class="brand-name" id="brandName">الکترولند</span>
+        <span class="brand-tag" id="brandTag">لوازم برقی خانه و ساختمان</span>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="#hero" class="nav-link active" data-target="hero">خانه</a>
+      <a href="#shop" class="nav-link" data-target="shop">فروشگاه</a>
+      <a href="#categories" class="nav-link" data-target="categories">دسته‌بندی‌ها</a>
+      <a href="#about" class="nav-link" data-target="about">درباره ما</a>
+      <a href="#contact" class="nav-link" data-target="contact">تماس</a>
+    </nav>
+    <div class="header-icons">
+      <button class="icon-btn" id="searchBtn" title="جستجو">🔍</button>
+      <button class="icon-btn" id="accountBtn" title="حساب کاربری">👤</button>
+      <button class="icon-btn" id="cartBtn" title="سبد خرید">🛒<span class="icon-badge" id="cartBadge" style="display:none">0</span></button>
+      <button class="burger" id="burgerBtn"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="wrap mobile-menu" id="mobileMenu">
+    <a href="#hero" class="nav-link" data-target="hero">خانه</a>
+    <a href="#shop" class="nav-link" data-target="shop">فروشگاه</a>
+    <a href="#categories" class="nav-link" data-target="categories">دسته‌بندی‌ها</a>
+    <a href="#about" class="nav-link" data-target="about">درباره ما</a>
+    <a href="#contact" class="nav-link" data-target="contact">تماس</a>
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-bgimg" id="heroBgImg"></div>
+  <svg class="hero-circuit" viewBox="0 0 800 400" preserveAspectRatio="none" id="heroCircuit">
+    <g stroke="#ffffff" stroke-width="1.4" fill="none">
+      <path d="M0 60 H180 V140 H340 V40 H520 V200 H800"/>
+      <path d="M0 320 H140 V240 H300 V360 H480 V260 H700 V320 H800"/>
+      <circle cx="180" cy="60" r="5" fill="#fff"/>
+      <circle cx="340" cy="140" r="5" fill="#fff"/>
+      <circle cx="520" cy="40" r="5" fill="#fff"/>
+      <circle cx="140" cy="320" r="5" fill="#fff"/>
+      <circle cx="480" cy="360" r="5" fill="#fff"/>
+    </g>
+  </svg>
+  <div class="wrap hero-inner">
+    <div id="heroSlides"></div>
+    <div class="hero-dots" id="heroDots"></div>
+  </div>
+</section>
+
+<section class="section" id="categories">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">دسته‌بندی محصولات</h2>
+        <div class="section-desc">هر آنچه برای برق‌کشی و روشنایی نیاز دارید</div>
+      </div>
+    </div>
+    <div class="cat-row" id="catRow"></div>
+    <div class="subcat-box" id="subcatBox" hidden></div>
+  </div>
+</section>
+
+<section class="section" id="shop">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title" id="shopTitle">همه محصولات</h2>
+        <div class="section-desc" id="shopDesc">کیفیت استاندارد، قیمت مناسب</div>
+      </div>
+      <div class="field search-field" style="margin:0;display:none" id="searchWrap">
+        <input type="text" id="searchInput" placeholder="جستجوی محصول...">
+      </div>
+    </div>
+    <div class="grid" id="productGrid"></div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head" style="justify-content:center;text-align:center;flex-direction:column;">
+      <h2 class="section-title">درباره ما</h2>
+    </div>
+    <div class="about-box">
+      <p id="aboutText">هنوز متنی برای «درباره ما» ثبت نشده است.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap" style="text-align:center;">
+    <h2 class="section-title">راه‌های ارتباطی</h2>
+    <div class="contact-mini" id="contactMini">
+      <span>📞 ثبت نشده</span>
+      <span>✉️ ثبت نشده</span>
+      <span>📍 ثبت نشده</span>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <span class="brand-name" id="footerBrand">الکترولند</span>
+      <div style="font-size:12.5px;color:#9a9a9e;margin-top:8px;max-width:280px;">فروشگاه آنلاین لوازم برقی، روشنایی و تجهیزات ساختمانی.</div>
+    </div>
+    <div class="footer-links">
+      <a href="#shop">فروشگاه</a>
+      <a href="#about">درباره ما</a>
+      <a href="#contact">تماس با ما</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© <span id="yearNow"></span> تمامی حقوق برای فروشگاه محفوظ است. · <button class="admin-link" id="adminEntryBtn">ورود مدیر</button></div>
+</footer>
+
+<button class="support-fab" id="supportFab">💬 <span class="lbl">پشتیبانی</span><span class="chat-dot"></span></button>
+<div class="support-panel" id="supportPanel">
+  <div class="sp-head"><span>💬 پشتیبانی الکترولند</span><button class="modal-close" id="supportClose" style="background:rgba(255,255,255,.25);border-color:transparent;color:#fff;">✕</button></div>
+  <div class="sp-body" id="supportBody">در حال حاضر متنی برای پشتیبانی ثبت نشده است. برای ارتباط از بخش «تماس» استفاده کنید.</div>
+  <div class="chat-box" id="chatBox">
+    <div class="chat-msgs" id="chatMsgs"></div>
+    <div class="chat-err" id="chatErr"></div>
+    <div class="chat-chips" id="chatChips"></div>
+    <div class="chat-form"><textarea id="chatInput" maxlength="1000" placeholder="سؤال خود را بنویسید..."></textarea><button id="chatSend" type="button">ارسال</button></div>
+  </div>
+  <div class="sp-hours" id="supportHours" style="display:none;"></div>
+  <div class="sp-links" id="supportLinks"></div>
+</div>
+
+<button type="button" class="to-top" id="toTopBtn" aria-label="بازگشت به بالا">⌃</button>
+<div class="toast-stack" id="toastStack"></div>
+
+<!-- cart drawer -->
+<div class="drawer-overlay" id="cartOverlay"></div>
+<div class="drawer" id="cartDrawer">
+  <div class="drawer-head">
+    <h3>سبد خرید</h3>
+    <button class="modal-close" id="cartClose">✕</button>
+  </div>
+  <div class="drawer-items" id="cartItems"></div>
+  <div class="drawer-foot">
+    <div class="total-row"><span>جمع کل</span><span id="cartTotal">۰ تومان</span></div>
+    <button class="btn btn-dark btn-block" id="checkoutBtn">تسویه حساب</button>
+  </div>
+</div>
+
+<!-- ============ MODALS ============ -->
+
+<!-- login modal -->
+<div class="overlay" id="loginOverlay">
+  <div class="modal modal-sm">
+    <div class="modal-head">
+      <div>
+        <h3>خوش آمدید 👋</h3>
+        <p id="loginSubtitle">برای ورود به سایت شماره همراه خود را وارد کنید</p>
+      </div>
+      <button class="modal-close" data-close="loginOverlay">✕</button>
+    </div>
+    <div class="modal-body">
+      <div id="loginStep0">
+        <button class="btn btn-dark btn-block" id="chooseRegisterBtn" style="margin-bottom:10px;">🆕 ساخت حساب کاربری</button>
+        <button class="btn btn-outline-light" style="color:var(--ink);border-color:var(--line);width:100%;" id="chooseLoginBtn">ورود به حساب</button>
+      </div>
+      <div id="loginStep1" style="display:none;">
+        <div class="field">
+          <label>شماره همراه (اجباری)</label>
+          <div class="phone-row">
+            <select id="countrySelect"></select>
+            <input type="tel" id="phoneInput" placeholder="912xxxxxxx" inputmode="numeric">
+          </div>
+          <div class="hint">کد تایید به‌صورت پیامک ارسال می‌شود.</div>
+        </div>
+        <div class="field"><label>کد امنیتی (اجباری)</label>
+          <div class="captcha-row">
+            <canvas id="capCanvas1" width="150" height="50" aria-label="کد امنیتی"></canvas>
+            <button type="button" class="cap-refresh" id="capRefresh1" title="کد جدید" aria-label="دریافت کد امنیتی جدید">↻</button>
+            <input type="text" id="capInput1" maxlength="5" autocomplete="off" placeholder="کد تصویر" inputmode="latin">
+          </div>
+          <div class="hint">حروف و اعداد داخل تصویر را وارد کنید. اگر خوانا نیست، دکمه ↻ را بزنید.</div>
+        </div>
+        <button class="btn btn-dark btn-block" id="sendOtpBtn">ارسال کد ورود</button>
+        <button class="mini-btn" id="backToChoiceBtn" style="width:100%;margin-top:10px;">↩ بازگشت</button>
+      </div>
+      <div id="loginStep2" style="display:none;">
+        <p style="font-size:13px;color:var(--muted);text-align:center;margin-top:0;">کد ۵ رقمی ارسال‌شده به <b id="otpPhoneShow" style="color:var(--ink)"></b> را وارد کنید</p>
+        <div class="otp-inputs" id="otpInputs">
+          <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
+        </div>
+        <button class="btn btn-dark btn-block" id="verifyOtpBtn" style="margin-top:14px;">تایید و ورود</button>
+        <div class="captcha-row" id="resendCapRow" style="margin-top:14px;display:none;">
+          <canvas id="capCanvas2" width="150" height="50" aria-label="کد امنیتی"></canvas>
+          <button type="button" class="cap-refresh" id="capRefresh2" title="کد جدید" aria-label="دریافت کد امنیتی جدید">↻</button>
+          <input type="text" id="capInput2" maxlength="5" autocomplete="off" placeholder="کد تصویر" inputmode="latin">
+        </div>
+        <div class="otp-actions">
+          <button class="mini-btn" id="editPhoneBtn" type="button">✎ ویرایش شماره</button>
+          <button class="mini-btn" id="resendOtpBtn" type="button" disabled>ارسال مجدد کد</button>
+        </div>
+      </div>
+      <div id="loginStepName" style="display:none;">
+        <div class="field"><label>نام (اجباری)</label><input type="text" id="regFirstName" placeholder="نام"></div>
+        <div class="field"><label>نام خانوادگی (اجباری)</label><input type="text" id="regLastName" placeholder="نام خانوادگی"></div>
+        <div class="field"><label>استان (اجباری)</label><select id="regProvince"></select></div>
+        <div class="field"><label>شهر (اجباری)</label><select id="regCity" disabled></select></div>
+        <div class="field"><label>آدرس (اجباری)</label><textarea id="regAddress" rows="3" placeholder="خیابان، کوچه، پلاک، واحد"></textarea></div>
+        <div class="req-hint" id="regHint"></div>
+        <button class="btn btn-dark btn-block" id="submitNameBtn" disabled>ساخت حساب و ورود</button>
+      </div>
+      <div id="loginStep3" style="display:none;text-align:center;">
+        <div style="font-size:40px;margin-bottom:10px;">✅</div>
+        <p>شما با شماره <b id="loggedPhoneShow"></b> وارد شده‌اید.</p>
+        <button class="btn btn-outline-light" style="color:var(--ink);border-color:var(--line);width:100%;" id="logoutBtn">خروج از حساب</button>
+      </div>
+      <div id="recaptcha-container"></div>
+    </div>
+  </div>
+</div>
+
+<!-- product quick view / checkout modal -->
+<div class="overlay" id="checkoutOverlay">
+  <div class="modal modal-md">
+    <div class="modal-head">
+      <div>
+        <h3>پرداخت کارت‌به‌کارت</h3>
+        <p>مبلغ را به شماره کارت زیر واریز کرده و اطلاعات را ثبت کنید</p>
+      </div>
+      <button class="modal-close" data-close="checkoutOverlay">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="note-box" style="text-align:center;margin-bottom:16px;">
+        <div style="font-size:11.5px;color:var(--muted);">شماره کارت فروشگاه</div>
+        <div id="checkoutCardNumber" style="font-size:19px;font-weight:800;letter-spacing:1px;direction:ltr;margin-top:4px;">6037-9917-XXXX-XXXX</div>
+        <div id="checkoutCardHolder" style="font-size:12px;margin-top:4px;">به نام: فروشگاه الکترولند</div>
+      </div>
+      <div class="field"><label>مبلغ قابل پرداخت (خودکار)</label><input type="text" id="checkoutAmount" disabled></div>
+      <div class="field"><label>نام و نام خانوادگی واریزکننده (اجباری)</label><input type="text" id="payerName" placeholder="مثلاً: علی رضایی"></div>
+      <div class="field"><label>شماره تماس (اجباری)</label><input type="tel" id="payerPhone" placeholder="09xxxxxxxxx"></div>
+      <div class="field"><label>کد پیگیری واریز (اجباری)</label><input type="text" id="trackingCode" placeholder="کد پیگیری تراکنش بانکی"></div>
+      <div class="req-hint" id="checkoutHint"></div>
+      <button class="btn btn-dark btn-block" id="submitOrderBtn" disabled>ثبت سفارش</button>
+      <div class="hint" style="text-align:center;margin-top:10px;">سفارش شما پس از بررسی توسط پشتیبانی تایید می‌شود.</div>
+    </div>
+  </div>
+</div>
+
+<!-- product detail modal -->
+<div class="overlay" id="productOverlay">
+  <div class="modal modal-lg">
+    <div class="modal-head">
+      <div><h3>مشخصات محصول</h3></div>
+      <button class="modal-close" data-close="productOverlay">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="pd-grid">
+        <div class="pd-gallery">
+        <div class="pd-img" id="pdImgWrap">
+          <img id="pdImg" src="" alt="">
+          <span class="pd-rotate-hint" id="pdRotateHint">🔄 برای چرخش، تصویر را بکشید</span>
+          <button type="button" class="pd-arrow pd-arrow-prev" id="pdArrowPrev" aria-label="عکس قبلی">‹</button>
+          <button type="button" class="pd-arrow pd-arrow-next" id="pdArrowNext" aria-label="عکس بعدی">›</button>
+          <div class="pd-dots" id="pdDots"></div>
+        </div>
+        <div class="pd-thumbs" id="pdThumbs"></div>
+        </div>
+        <div>
+          <div class="pd-cat" id="pdCat"></div>
+          <div class="pd-name" id="pdName"></div>
+          <div class="pd-price" id="pdPrice"></div>
+          <p class="pd-desc" id="pdDesc" style="display:none"></p>
+          <div id="pdSpecsWrap" style="display:none"></div>
+          <div id="pdColorWrap" style="display:none;margin-bottom:14px;">
+            <button type="button" class="pd-color-toggle" id="pdColorToggle">🎨 رنگ بدنه</button>
+            <div class="pd-color-list" id="pdColorList" style="display:none;"></div>
+          </div>
+          <div class="qty-ctrl" id="pdQtyCtrl" style="margin-bottom:14px;">
+            <button id="pdQtyDec" type="button">−</button>
+            <span id="pdQtyVal">1</span>
+            <button id="pdQtyInc" type="button">+</button>
+          </div>
+          <button class="btn btn-dark" id="pdAddBtn">🛒 افزودن به سبد خرید</button>
+          <div class="pd-quickcall" id="pdQuickCall" style="display:none"></div>
+        </div>
+      </div>
+      <div class="pd-tabs" id="pdTabs">
+        <div class="pd-tabbar" id="pdTabBar" role="tablist">
+          <button type="button" class="pd-tab on" data-tab="specs">مشخصات محصول</button>
+          <button type="button" class="pd-tab" data-tab="review">نقد و بررسی محصول</button>
+          <button type="button" class="pd-tab" data-tab="video">ویدیو محصول</button>
+          <button type="button" class="pd-tab" data-tab="features">خصوصیات محصول</button>
+          <button type="button" class="pd-tab" data-tab="tags">برچسب ها</button>
+          <button type="button" class="pd-tab" data-tab="reviews">نظرات <span id="rvCountTitle">(۰)</span></button>
+        </div>
+        <div class="pd-tabpanel on" id="pdPanel-specs"></div>
+        <div class="pd-tabpanel" id="pdPanel-review"></div>
+        <div class="pd-tabpanel" id="pdPanel-video"></div>
+        <div class="pd-tabpanel" id="pdPanel-features"></div>
+        <div class="pd-tabpanel" id="pdPanel-tags"></div>
+        <div class="pd-tabpanel" id="pdPanel-reviews">
+          <div class="pd-reviews" id="pdReviews">
+            <div id="rvFormWrap"></div>
+            <div id="rvList"></div>
+          </div>
+        </div>
+      </div>
+      <div class="pd-suggest" id="pdSuggestWrap">
+        <h4 class="suggest-title">🎁 پیشنهادات ما</h4>
+        <div class="grid suggest-grid" id="pdSuggestGrid"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- admin login modal -->
+<div class="overlay" id="adminLoginOverlay">
+  <div class="modal modal-sm">
+    <div class="modal-head">
+      <div><h3>ورود به پنل مدیریت</h3><p>رمز عبور مدیریت را وارد کنید</p></div>
+      <button class="modal-close" data-close="adminLoginOverlay">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="field"><label>رمز عبور</label><input type="password" id="adminPassInput" placeholder="رمز عبور"></div>
+      <button class="btn btn-dark btn-block" id="adminLoginBtn">ورود</button>
+    </div>
+  </div>
+</div>
+
+<!-- admin panel modal -->
+<div class="overlay" id="adminPanelOverlay">
+  <div class="modal modal-lg">
+    <div class="modal-head">
+      <div><h3>پنل مدیریت محصولات</h3><p>مشخصات و جدول هر محصول را از اینجا ویرایش کنید</p></div>
+      <button class="modal-close" data-close="adminPanelOverlay">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="admin-toolbar">
+        <button class="mini-btn edit" id="adminAddProductBtn">➕ افزودن محصول جدید</button>
+        <button class="mini-btn" id="adminLogoutBtn">خروج از پنل</button>
+      </div>
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead><tr><th></th><th>نام محصول</th><th>دسته</th><th>قیمت</th><th>عملیات</th></tr></thead>
+          <tbody id="adminProductsBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- admin product edit modal -->
+<div class="overlay" id="adminEditOverlay">
+  <div class="modal modal-lg">
+    <div class="modal-head">
+      <div><h3 id="adminEditTitle">ویرایش محصول</h3><p>توضیحات و جدول مشخصات مخصوص این محصول را تنظیم کنید</p></div>
+      <button class="modal-close" data-close="adminEditOverlay">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="field-row">
+        <div class="field"><label>نام محصول</label><input type="text" id="apName"></div>
+        <div class="field"><label>قیمت (تومان)</label><input type="number" id="apPrice"></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label>دسته‌بندی</label><select id="apCat"></select></div>
+        <div class="field"><label>زیرمجموعه</label><select id="apSub"></select></div>
+        <div class="field"><label>فروش ویژه؟</label><select id="apSale"><option value="0">خیر</option><option value="1">بله</option></select></div>
+      </div>
+      <div class="field-row">
+        <div class="field" id="apChildSubWrap" style="display:none;"><label>زیرمجموعهٔ دوم</label><select id="apChildSub"></select></div>
+      </div>
+      <div class="field"><label>آدرس تصویر (اختیاری)</label><input type="text" id="apImg" placeholder="خالی بگذارید تا تصویر پیش‌فرض ساخته شود"></div>
+      <div class="field"><label>توضیحات محصول</label><textarea id="apDesc" placeholder="توضیحات کوتاه درباره محصول..."></textarea></div>
+      <div class="field">
+        <label>جدول مشخصات محصول</label>
+        <div id="apSpecsRows"></div>
+        <button class="add-spec-btn" id="apAddSpecBtn">➕ افزودن ردیف مشخصات</button>
+      </div>
+      <button class="btn btn-dark btn-block" id="apSaveBtn" style="margin-top:8px;">ذخیره محصول</button>
+    </div>
+  </div>
+</div>
+
+<!-- account page (full page, shown after login) -->
+<div class="account-page" id="accountPage">
+  <div class="account-page-inner wrap">
+    <div class="account-topbar">
+      <button class="account-back" id="accountBackBtn">→ بازگشت به فروشگاه</button>
+    </div>
+    <div class="account-layout">
+      <div id="accountMain"></div>
+      <aside class="account-card">
+        <div class="account-user-card">
+          <button class="account-edit-pencil" id="acEditPencil" title="ویرایش اطلاعات">✎</button>
+          <div class="account-user-info">
+            <div class="account-user-name" id="acUserName"></div>
+            <div class="account-user-phone" id="acUserPhone"></div>
+          </div>
+          <div class="account-avatar">👤</div>
+        </div>
+        <nav class="account-menu" id="acMenu">
+          <button data-tab="summary">🏠 خلاصه فعالیت‌ها</button>
+          <button data-tab="orders">🛍️ سفارش‌ها</button>
+          <button data-tab="wishlist">🤍 لیست‌های من</button>
+          <button data-tab="addresses">📍 آدرس‌ها</button>
+          <button data-tab="messages">🔔 پیغام‌ها</button>
+          <button data-tab="transactions">⏱️ تراکنش‌های اخیر</button>
+          <button data-tab="edit">👤 اطلاعات حساب کاربری</button>
+          <button id="acLogoutBtn" class="danger">🚪 خروج</button>
+        </nav>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ==================================================================
+   ⚙️  تنظیم دیتابیس آنلاین (فقط همین یک خط)
+   آدرس Realtime Database فایربیس را بین دو کوتیشن بگذارید، مثلاً:
+   "https://my-shop-default-rtdb.firebaseio.com"
+   این آدرس باید در هر دو فایل (سایت اصلی و پنل مدیریت) یکسان باشد.
+   ================================================================== */
+window.CLOUD_DB_URL = "https://ancient-forest-3336.amirrezafani16.workers.dev"; /* واسط Cloudflare Worker به Firebase */
+</script>
+<!-- Firebase SDK (Compat) — فقط برای ورود با شماره موبایل (OTP واقعی). به دیتابیس محصولات/سفارش‌ها ربطی ندارد. -->
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+<script>
+/* ==================================================================
+   ⚙️  تنظیمات Firebase (برای ورود با شماره موبایل / OTP واقعی)
+   این مقادیر را از Firebase Console → آیکن چرخ‌دنده ⚙️ کنار «Project Overview» →
+   Project settings → پایین صفحه بخش «Your apps» → روی برنامه‌ی وب (</>) بزنید →
+   شیء firebaseConfig را دقیقاً همینجا کپی کنید.
+   این مقادیر (برخلاف رمزها) برای استفاده در سمت کاربر طراحی شده‌اند و مخفی‌کردنشان
+   لازم نیست، ولی حتماً طبق راهنمای پایان پاسخ، کلید API را به دامنه‌ی سایتتان محدود کنید.
+   ================================================================== */
+window.FIREBASE_CONFIG = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT_ID.appspot.com",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
+(function(){
+  try{
+    if(window.FIREBASE_CONFIG && window.FIREBASE_CONFIG.apiKey && window.FIREBASE_CONFIG.apiKey!=='YOUR_API_KEY' && window.firebase){
+      firebase.initializeApp(window.FIREBASE_CONFIG);
+      firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL).catch(function(e){ console.warn('Firebase persistence error:', e); });
+    } else {
+      console.warn('FIREBASE_CONFIG هنوز تنظیم نشده — ورود با پیامک واقعی کار نخواهد کرد تا این مقادیر را پر کنید.');
+    }
+  }catch(e){ console.warn('Firebase init failed:', e); }
+})();
+</script>
+<script>
+/* ============ Cloud: ارتباط با Firebase Realtime Database از طریق REST (بدون نیاز به SDK) ============ */
+window.Cloud = (function(){
+  var RAW = String(window.CLOUD_DB_URL||'').trim().replace(/\/+$/,'');
+  var ROOT = 'electroland_v1';
+  var ready = /^https:\/\/[^\s"']+$/.test(RAW);
+  function u(path){ return RAW+'/'+ROOT+path+'.json'; }
+  function http(method, path, body){
+    var opts = { method:method, cache:'no-store' };
+    if(body!==undefined) opts.body = JSON.stringify(body);
+    var ctrl = (typeof AbortController!=='undefined') ? new AbortController() : null;
+    var timer = null;
+    if(ctrl){ opts.signal = ctrl.signal; timer = setTimeout(function(){ ctrl.abort(); }, 25000); }
+    return fetch(u(path), opts).then(function(r){
+      if(timer) clearTimeout(timer);
+      if(!r.ok){ var e = new Error('HTTP '+r.status); e.status = r.status; throw e; }
+      return r.text();
+    }).then(function(t){ return t ? JSON.parse(t) : null; })
+    .catch(function(e){ if(timer) clearTimeout(timer); throw e; });
+  }
+  function newId(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,7); }
+  function phoneKey(phone){ var d = String(phone||'').replace(/\D/g,''); return d ? 'p'+d : ''; }
+  function parseVal(v){ if(typeof v!=='string') return null; try{ return JSON.parse(v); }catch(e){ return null; } }
+  function listOf(obj){ if(!obj) return []; return Object.keys(obj).map(function(k){ return parseVal(obj[k]); }).filter(Boolean); }
+  return {
+    ready: ready,
+    newId: newId,
+    explain: function(err){
+      if(!err) return '';
+      if(err.status===401 || err.status===403) return 'دسترسی رد شد — «Rules» دیتابیس فایربیس را طبق راهنما تنظیم کنید';
+      if(err.status===404) return 'آدرس دیتابیس اشتباه است یا دیتابیس ساخته نشده';
+      if(err.name==='AbortError') return 'پاسخی از سرور نیامد (اینترنت کند یا قطع است)';
+      if(err.status) return 'خطای سرور ('+err.status+')';
+      return 'اتصال اینترنت/فیلترشکن را بررسی کنید یا آدرس دیتابیس را چک کنید';
+    },
+    /* --- کاتالوگ (محصولات، دسته‌ها، اسلایدها، تنظیمات سایت، برندها) --- */
+    getCatalogRev: function(){ return http('GET','/catalog/rev'); },
+    getCatalog: function(){
+      return http('GET','/catalog').then(function(d){
+        if(!d || typeof d.payload!=='string') return null;
+        var data = parseVal(d.payload); if(!data) return null;
+        return { data:data, rev:d.rev };
+      });
+    },
+    putCatalog: function(obj){
+      var rev = newId();
+      return http('PUT','/catalog',{ payload:JSON.stringify(obj), rev:rev }).then(function(){ return rev; });
+    },
+    /* --- سفارش‌ها --- */
+    putOrder: function(o){ return http('PUT','/orders/'+o.cid, JSON.stringify(o)); },
+    getOrders: function(){ return http('GET','/orders').then(listOf); },
+    /* --- کاربران (کلید = شماره موبایل) --- */
+    putUser: function(user){ return http('PUT','/users/'+phoneKey(user.phone), JSON.stringify(user)); },
+    getUser: function(phone){ var k = phoneKey(phone); if(!k) return Promise.resolve(null); return http('GET','/users/'+k).then(parseVal); },
+    getUsers: function(){ return http('GET','/users').then(listOf); },
+    clearPeople: function(){ return Promise.all([ http('DELETE','/orders'), http('DELETE','/users') ]); },
+    putPing: function(id, obj){ return http('PUT','/pings/'+id, JSON.stringify(obj)); },
+    getPings: function(){ return http('GET','/pings').then(listOf); }
+  };
+})();
+</script>
+<script>
+(function(){
+"use strict";
+
+/* ============ helpers ============ */
+const $ = (sel,el)=> (el||document).querySelector(sel);
+const $$ = (sel,el)=> Array.from((el||document).querySelectorAll(sel));
+const uid = ()=> Math.random().toString(36).slice(2,9);
+const fmt = n => Number(n||0).toLocaleString('fa-IR');
+function finalPrice(p){
+  if(p.inStock===false) return 0; /* ناموجود ⇒ قیمت نمایشی ۰ تومان (قیمت اصلی محصول دست‌نخورده می‌ماند) */
+  if(p.sale && p.salePercent>0){
+    return Math.round(p.price * (100-p.salePercent) / 100);
+  }
+  return p.price;
+}
+const escapeHtml = s => String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+function placeholderImg(emoji,hue){
+  const svg = "<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='hsl("+hue+",70%,93%)'/><stop offset='1' stop-color='hsl("+hue+",55%,80%)'/></linearGradient></defs><rect width='400' height='400' fill='url(#g)'/><text x='50%' y='54%' font-size='150' text-anchor='middle' dominant-baseline='middle'>"+emoji+"</text></svg>";
+  return 'data:image/svg+xml;utf8,'+encodeURIComponent(svg);
+}
+
+function toast(msg,type){
+  const t=document.createElement('div');
+  t.className='toast'+(type?(' '+type):'');
+  t.textContent=msg;
+  $('#toastStack').appendChild(t);
+  setTimeout(()=>{ t.style.transition='opacity .3s'; t.style.opacity='0'; setTimeout(()=>t.remove(),300); },3800);
+}
+
+/* ============ default data ============ */
+const STORAGE_KEY='electroland_store_v2';
+
+function defaultData(){
+  const cats=[
+    {id:'c1',name:'درب بازکن تصویری',emoji:'📹'},
+    {id:'c2',name:'روشنایی فضای داخلی',emoji:'💡'},
+    {id:'c3',name:'روشنایی فضای آزاد',emoji:'🔦'},
+    {id:'c4',name:'کلید و پریز',emoji:'🔌'},
+    {id:'c5',name:'سیم و کابل',emoji:'🧵'},
+    {id:'c6',name:'چندراهی و محافظ برق',emoji:'🔋'},
+    {id:'c7',name:'آنتن و گیرنده',emoji:'📡'},
+    {id:'c8',name:'داکت و لوله برق',emoji:'🧰'},
+    {id:'c9',name:'سایر محصولات',emoji:'📦'},
+    {id:'c10',name:'فروش ویژه',emoji:'🏷️'}
+  ];
+  cats.forEach(c=>{ if(!Array.isArray(c.subs)) c.subs=[]; });
+  const hueOf = id => { let h=0; for(const c of id) h=(h*31+c.charCodeAt(0))%360; return h; };
+  const products=[
+    {id:uid(),name:'درب بازکن تصویری دو واحدی',price:2450000,catId:'c1',sale:false,img:null,desc:'درب بازکن تصویری دو واحدی مناسب ساختمان‌های دو خانواره، با کیفیت تصویر بالا و نصب آسان.',specs:[{k:'تعداد واحد',v:'۲ واحد'},{k:'نوع صفحه',v:'رنگی LCD'},{k:'گارانتی',v:'۱۸ ماه'}]},
+    {id:uid(),name:'لامپ LED حبابی ۱۵ وات',price:85000,catId:'c2',sale:false,img:null,desc:'لامپ کم‌مصرف LED با نور مناسب فضاهای داخلی و عمر طولانی.',specs:[{k:'توان مصرفی',v:'۱۵ وات'},{k:'نوع پایه',v:'E27'},{k:'طول عمر',v:'۲۵٬۰۰۰ ساعت'}]},
+    {id:uid(),name:'هالوژن سقفی SMD',price:120000,catId:'c2',sale:true,img:null,desc:'',specs:[]},
+    {id:uid(),name:'پروژکتور LED فضای باز ۵۰ وات',price:620000,catId:'c3',sale:false,img:null,desc:'',specs:[]},
+    {id:uid(),name:'چراغ خورشیدی حیاطی',price:340000,catId:'c3',sale:true,img:null,desc:'',specs:[]},
+    {id:uid(),name:'کلید و پریز سری آنیس',price:45000,catId:'c4',sale:false,img:null,desc:'',specs:[]},
+    {id:uid(),name:'پریز برق سه‌فاز صنعتی',price:210000,catId:'c4',sale:false,img:null,desc:'',specs:[]},
+    {id:uid(),name:'سیم افشان نمره ۱.۵ (متری)',price:12000,catId:'c5',sale:false,img:null,desc:'',specs:[]},
+    {id:uid(),name:'کابل برق دوردار نمره ۲.۵ (متری)',price:23000,catId:'c5',sale:false,img:null,desc:'',specs:[]},
+    {id:uid(),name:'محافظ برق چندراهی ۶ خانه',price:210000,catId:'c6',sale:true,img:null,desc:'',specs:[]},
+    {id:uid(),name:'محافظ ولتاژ یخچال و فریزر',price:165000,catId:'c6',sale:false,img:null,desc:'',specs:[]},
+    {id:uid(),name:'آنتن دیجیتال هوایی',price:180000,catId:'c7',sale:false,img:null,desc:'',specs:[]},
+    {id:uid(),name:'گیرنده دیجیتال خانگی',price:390000,catId:'c7',sale:false,img:null,desc:'',specs:[]},
+    {id:uid(),name:'داکت کابل ۲۰×۱۲ (شاخه)',price:25000,catId:'c8',sale:false,img:null,desc:'',specs:[]},
+    {id:uid(),name:'لوله برق خرطومی (متری)',price:9500,catId:'c8',sale:false,img:null,desc:'',specs:[]},
+    {id:uid(),name:'جعبه ابزار برقکاری',price:480000,catId:'c9',sale:false,img:null,desc:'',specs:[]}
+  ];
+  products.forEach(p=>{ p.img = placeholderImg(cats.find(c=>c.id===p.catId).emoji, hueOf(p.catId)); });
+
+  return {
+    site:{
+      name:'الکترولند',
+      tag:'لوازم برقی خانه و ساختمان',
+      logoEmoji:'⚡',
+      logo:null,
+      topbar:'ارسال رایگان برای خرید بالای ۲٬۰۰۰٬۰۰۰ تومان · پرداخت امن کارت‌به‌کارت',
+      about:'',
+      support:'',
+      phone:'',
+      email:'',
+      address:''
+    },
+    slides:[
+      {eyebrow:'فروش ویژه این هفته',title:'روشنایی خانه‌تان را مدرن کنید',sub:'انواع لامپ و پروژکتور LED با گارانتی اصالت کالا',img:null,buttons:[{label:'مشاهده محصولات',link:'#shop'},{label:'دسته‌بندی‌ها',link:'#categories'}]},
+      {eyebrow:'محصولات پرفروش',title:'کلید و پریز، سیم و کابل استاندارد',sub:'تنوع کامل برای برق‌کشی ساختمان با قیمت مناسب',img:null,buttons:[{label:'مشاهده محصولات',link:'#shop'},{label:'دسته‌بندی‌ها',link:'#categories'}]},
+      {eyebrow:'ارسال به سراسر کشور',title:'خرید آسان، تحویل مطمئن',sub:'پرداخت امن کارت‌به‌کارت و پیگیری سفارش',img:null,buttons:[{label:'مشاهده محصولات',link:'#shop'},{label:'دسته‌بندی‌ها',link:'#categories'}]}
+    ],
+    categories:cats,
+    products:products,
+    brands:[],
+    adminPassword:'1395',
+    cart:[],
+    orders:[],
+    users:[],
+    auth:{loggedIn:false,phone:null,userId:null,uid:null}
+  };
+}
+
+
+const DEFAULT_BOT_FAQ = [{"id":"seed1","q":"این محصول موجوده؟","keys":"موجود|موجوده|موجودی|دارید","a":"اگر محصول در سایت نمایش داده می‌شود، وضعیت موجودی آن را در صفحه محصول بررسی کنید. برای اطمینان از موجودی لحظه‌ای، نام محصول را برای پشتیبانی بفرستید.","chip":true},{"id":"seed2","q":"قیمت این محصول چقدره؟","keys":"قیمت|چنده|چقدر|چند","a":"قیمت به‌روز محصول در صفحه همان محصول نمایش داده می‌شود. اگر قیمت را پیدا نکردید، نام محصول را بفرستید تا راهنمایی‌تان کنیم.","chip":true},{"id":"seed3","q":"چطور سفارش بدم؟","keys":"سفارش|خرید|سفارش بدم","a":"محصول را به سبد خرید اضافه کنید و مراحل ثبت سفارش را ادامه دهید. اگر در هر مرحله‌ای مشکل داشتید، پشتیبانی راهنمایی‌تان می‌کند.","chip":true},{"id":"seed4","q":"هزینه ارسال چقدره؟","keys":"هزینه ارسال|کرایه|ارسال چقدر","a":"هزینه ارسال بر اساس روش ارسال و مقصد محاسبه می‌شود. برای خریدهای مشمول ارسال رایگان، شرایط نمایش‌داده‌شده در سایت را بررسی کنید.","chip":true},{"id":"seed5","q":"چند روزه به دستم می‌رسه؟","keys":"چند روز|کی میرسه|زمان تحویل","a":"زمان تحویل به شهر مقصد و روش ارسال بستگی دارد. بعد از ارسال، اطلاعات پیگیری در اختیار شما قرار می‌گیرد.","chip":true},{"id":"seed6","q":"گارانتی داره؟","keys":"گارانتی|ضمانت","a":"اگر محصول دارای گارانتی باشد، اطلاعات آن در صفحه محصول یا مشخصات کالا درج می‌شود. اگر مطمئن نیستید، نام محصول را بفرستید.","chip":true},{"id":"seed7","q":"این محصول اصل هست؟","keys":"اصل|اصالت|اورجینال","a":"الکترولند محصولات را از نظر مشخصات و برند معرفی می‌کند. برای بررسی اصالت یا گارانتی یک محصول خاص، نام دقیق آن را برای پشتیبانی ارسال کنید.","chip":false},{"id":"seed8","q":"امکان تخفیف دارید؟","keys":"تخفیف|تخفیف دارید|تخفیف میدید","a":"برای بعضی محصولات یا خریدهای تعداد بالا ممکن است شرایط ویژه در نظر گرفته شود. نام محصول و تعداد مورد نیازتان را بفرستید.","chip":false},{"id":"seed9","q":"فروش همکاری دارید؟","keys":"همکاری|قیمت همکاری|همکار","a":"برای خرید همکاری یا تعداد بالا، محصول و تعداد مورد نیازتان را برای پشتیبانی بفرستید تا شرایط بررسی شود.","chip":false},{"id":"seed10","q":"فروش عمده دارید؟","keys":"عمده|عمده فروشی|تعداد بالا","a":"برای خرید عمده، نام محصول و تعداد مورد نیاز را ارسال کنید تا شرایط و قیمت بررسی شود.","chip":false},{"id":"seed11","q":"به شهرستان ارسال دارید؟","keys":"شهرستان|شهرهای دیگر|ارسال شهرستان","a":"بله، سفارش‌ها را می‌توان برای شهرهای مختلف ارسال کرد. روش و هزینه ارسال به مقصد و نوع سفارش بستگی دارد.","chip":false},{"id":"seed12","q":"ارسال فوری دارید؟","keys":"فوری|ارسال فوری|سریع","a":"امکان ارسال سریع به مقصد و شرایط سفارش بستگی دارد. شهر مقصد و محصول موردنظر را بفرستید تا بررسی شود.","chip":false},{"id":"seed13","q":"تحویل حضوری دارید؟","keys":"تحویل حضوری|حضوری","a":"برای اطلاع از امکان تحویل حضوری و شرایط آن، با پشتیبانی تماس بگیرید.","chip":false},{"id":"seed14","q":"روش پرداخت چیه؟","keys":"پرداخت|روش پرداخت","a":"روش پرداخت فعلی فروشگاه طبق تنظیمات سایت انجام می‌شود. در صورت انتخاب کارت‌به‌کارت، اطلاعات پرداخت در مرحله پرداخت نمایش داده می‌شود.","chip":false},{"id":"seed15","q":"پرداخت کارت‌به‌کارت چطوریه؟","keys":"کارت به کارت|کارت‌به‌کارت|واریز","a":"پس از ثبت سفارش، اطلاعات پرداخت کارت‌به‌کارت را در صفحه پرداخت مشاهده می‌کنید و سپس رسید پرداخت را طبق راهنمای سایت ارسال می‌کنید.","chip":false},{"id":"seed16","q":"پرداخت در محل دارید؟","keys":"پرداخت در محل|در محل","a":"برای اطلاع از امکان پرداخت در محل، لطفاً شهر و نوع سفارش را بفرستید تا پشتیبانی بررسی کند.","chip":false},{"id":"seed17","q":"پرداخت قسطی دارید؟","keys":"قسطی|اقساط","a":"برای اطلاع از شرایط پرداخت قسطی، با پشتیبانی تماس بگیرید تا شرایط فعلی فروشگاه بررسی شود.","chip":false},{"id":"seed18","q":"چطور سفارشم رو پیگیری کنم؟","keys":"پیگیری سفارش|سفارشم کجاست|پیگیری","a":"اگر سفارش ثبت کرده‌اید، اطلاعات سفارش و وضعیت ارسال را از بخش پیگیری سفارش بررسی کنید یا با پشتیبانی تماس بگیرید.","chip":false},{"id":"seed19","q":"کد رهگیری سفارش کجاست؟","keys":"کد رهگیری|رهگیری|کد پیگیری","a":"پس از ارسال سفارش، کد رهگیری در صورت ارائه توسط شرکت حمل برای شما اعلام می‌شود. اگر کد را دریافت نکرده‌اید، با پشتیبانی تماس بگیرید.","chip":false},{"id":"seed20","q":"سفارشم هنوز ارسال نشده، چرا؟","keys":"ارسال نشده|چرا ارسال نشده|تاخیر","a":"وضعیت سفارش می‌تواند به تأیید پرداخت، آماده‌سازی کالا یا زمان ارسال وابسته باشد. شماره سفارش را برای پشتیبانی بفرستید.","chip":false},{"id":"seed21","q":"چطور سفارشم رو لغو کنم؟","keys":"لغو سفارش|کنسل سفارش|لغو","a":"هرچه سریع‌تر شماره سفارش را برای پشتیبانی ارسال کنید تا امکان لغو قبل از ارسال بررسی شود.","chip":false},{"id":"seed22","q":"می‌تونم سفارش رو تغییر بدم؟","keys":"تغییر سفارش|اصلاح سفارش","a":"اگر سفارش هنوز ارسال نشده باشد، ممکن است امکان اصلاح آن وجود داشته باشد. شماره سفارش و تغییر موردنظر را برای پشتیبانی ارسال کنید.","chip":false},{"id":"seed23","q":"محصولی که می‌خوام تو سایت نیست، چیکار کنم؟","keys":"محصول ندارید|تو سایت نیست|پیدا نمی‌کنم","a":"نام محصول یا عکس آن را برای پشتیبانی ارسال کنید؛ موجودی و امکان تهیه آن بررسی می‌شود.","chip":false},{"id":"seed24","q":"محصول مشابه دارید؟","keys":"مشابه|مدل مشابه|جایگزین","a":"بله، اگر مدل موردنظر در دسترس نباشد می‌توانیم مدل‌های مشابه را بررسی کنیم. نام یا کاربرد محصول را بفرستید.","chip":false},{"id":"seed25","q":"ارزون‌ترش رو دارید؟","keys":"ارزان‌تر|ارزونتر|اقتصادی","a":"اگر مدل اقتصادی‌تر یا محصول مشابهی داشته باشیم، می‌توانیم معرفی کنیم. نام محصول موردنظر را بفرستید.","chip":false},{"id":"seed26","q":"کدوم مدل بهتره؟","keys":"کدوم بهتره|بهتر|پیشنهاد","a":"انتخاب مدل مناسب به کاربرد، بودجه و مشخصات موردنیاز شما بستگی دارد. کاربردتان را بگویید تا گزینه‌های مناسب را بررسی کنیم.","chip":false},{"id":"seed27","q":"تفاوت این دو مدل چیه؟","keys":"تفاوت مدل|فرق|مقایسه","a":"نام یا لینک هر دو مدل را بفرستید تا مشخصاتشان را با هم مقایسه کنیم.","chip":false},{"id":"seed28","q":"برای خرید راهنمایی می‌خوام","keys":"راهنمایی خرید|مشاوره خرید|مشاوره","a":"حتماً. کاربرد، بودجه و تعداد موردنیازتان را بگویید تا برای انتخاب محصول مناسب راهنمایی‌تان کنیم.","chip":false},{"id":"seed29","q":"این محصول برای چه کاریه؟","keys":"کاربرد|به چه دردی میخوره|برای چی","a":"کاربرد محصول در صفحه مشخصات آن نوشته شده است. اگر نام محصول را بفرستید، کاربرد و ویژگی‌هایش را توضیح می‌دهیم.","chip":false},{"id":"seed30","q":"مشخصات فنی محصول رو می‌خوام","keys":"مشخصات فنی|مشخصات|فنی","a":"نام محصول را بفرستید تا مشخصات فنی موجود در سایت را برایتان بررسی کنیم.","chip":false},{"id":"seed31","q":"عکس واقعی محصول دارید؟","keys":"عکس واقعی|عکس محصول|تصویر","a":"اگر عکس محصول در سایت موجود باشد، در صفحه محصول نمایش داده می‌شود. برای عکس یا ویدیوی بیشتر، نام محصول را بفرستید.","chip":false},{"id":"seed32","q":"از محصول فیلم دارید؟","keys":"فیلم محصول|ویدیو محصول|فیلم","a":"اگر برای محصول ویدیویی موجود باشد، در صفحه یا شبکه‌های اجتماعی فروشگاه قرار می‌گیرد. نام محصول را بفرستید تا بررسی کنیم.","chip":false},{"id":"seed33","q":"نصب محصول هم انجام میدید؟","keys":"نصب|نصب می‌کنید|نصاب","a":"برای بعضی تجهیزات ممکن است خدمات نصب یا معرفی نصاب وجود داشته باشد. نام محصول و شهر خود را بفرستید تا بررسی شود.","chip":false},{"id":"seed34","q":"آموزش نصب دارید؟","keys":"آموزش نصب|راهنمای نصب","a":"اگر برای محصول راهنمای نصب موجود باشد، پشتیبانی می‌تواند راهنمایی کند. نام دقیق محصول را بفرستید.","chip":false},{"id":"seed35","q":"این محصول با دستگاه من سازگاره؟","keys":"سازگاره|سازگاری|وصل میشه","a":"مدل دقیق دستگاه و محصول را بفرستید تا سازگاری آن‌ها از روی مشخصات بررسی شود.","chip":false},{"id":"seed36","q":"محصول نو هست یا کارکرده؟","keys":"نو|کارکرده|آکبند","a":"وضعیت کالا در مشخصات محصول یا توضیحات آن مشخص می‌شود. اگر درباره یک محصول خاص سؤال دارید، نامش را بفرستید.","chip":false},{"id":"seed37","q":"محصول استوک دارید؟","keys":"استوک|استوک دارید","a":"موجودی کالاهای استوک ممکن است تغییر کند. نام محصول موردنظر را بفرستید تا بررسی شود.","chip":false},{"id":"seed38","q":"شرایط مرجوعی چیه؟","keys":"مرجوعی|مرجوع کردن|پس دادن","a":"شرایط مرجوعی به نوع کالا و وضعیت سفارش بستگی دارد. قبل از ارسال کالا، با پشتیبانی هماهنگ کنید تا شرایط دقیق بررسی شود.","chip":false},{"id":"seed39","q":"اگه کالا خراب به دستم برسه چی؟","keys":"خراب|خرابی|آسیب","a":"اگر کالا هنگام تحویل مشکل داشت، قبل از هر اقدامی با پشتیبانی تماس بگیرید و عکس یا ویدیو و شماره سفارش را ارسال کنید.","chip":false},{"id":"seed40","q":"اگه محصول اشتباهی ارسال بشه چی؟","keys":"اشتباه ارسال|کالای اشتباه","a":"در صورت دریافت کالای اشتباه، شماره سفارش و عکس کالا را برای پشتیبانی ارسال کنید تا موضوع بررسی شود.","chip":false},{"id":"seed41","q":"چطور با پشتیبانی تماس بگیرم؟","keys":"تماس با پشتیبانی|پشتیبانی|تماس","a":"از بخش پشتیبانی سایت می‌توانید پیام بفرستید. راه‌های ارتباطی فعال فروشگاه نیز در همان بخش نمایش داده می‌شوند.","chip":false},{"id":"seed42","q":"واتساپ دارید؟","keys":"واتساپ|واتس اپ","a":"اگر شماره واتساپ در بخش پشتیبانی سایت فعال شده باشد، همان‌جا نمایش داده می‌شود. برای ارتباط، از راه‌های فعال‌شده در سایت استفاده کنید.","chip":false},{"id":"seed43","q":"اینستاگرام الکترولند چیه؟","keys":"اینستاگرام|اینستا","a":"آیدی اینستاگرام فروشگاه در بخش پشتیبانی و اطلاعات تماس سایت قرار می‌گیرد، اگر فعال شده باشد.","chip":false},{"id":"seed44","q":"ساعات پاسخگویی چیه؟","keys":"ساعات کاری|ساعت پاسخگویی|پشتیبانی کی","a":"ساعات پاسخگویی در بخش پشتیبانی سایت نمایش داده می‌شود. اگر پیام بفرستید، در اولین فرصت بررسی می‌شود.","chip":false},{"id":"seed45","q":"می‌تونم عکس مشکل رو بفرستم؟","keys":"عکس مشکل|ارسال عکس|عکس","a":"بله، اگر امکان ارسال فایل در کانال ارتباطی انتخابی وجود داشته باشد، عکس یا ویدیوی مشکل را همراه شماره سفارش ارسال کنید.","chip":false},{"id":"seed46","q":"چطور حساب کاربری بسازم؟","keys":"ثبت نام|حساب کاربری|عضویت","a":"از بخش حساب کاربری سایت می‌توانید مراحل ثبت‌نام را انجام دهید. اطلاعات خواسته‌شده را وارد کنید و ادامه دهید.","chip":false},{"id":"seed47","q":"ورود به حسابم مشکل داره","keys":"ورود|لاگین|حسابم","a":"شماره یا اطلاعات ورود را بررسی کنید و دوباره تلاش کنید. اگر مشکل ادامه داشت، از پشتیبانی کمک بگیرید.","chip":false},{"id":"seed48","q":"رمز عبورم رو فراموش کردم","keys":"رمز عبور|رمزم|فراموش کردم","a":"اگر گزینه بازیابی رمز در سایت نمایش داده می‌شود، از همان بخش استفاده کنید؛ در غیر این صورت با پشتیبانی تماس بگیرید.","chip":false},{"id":"seed49","q":"چطور آدرس ارسال رو تغییر بدم؟","keys":"تغییر آدرس|آدرس سفارش","a":"اگر سفارش هنوز نهایی یا ارسال نشده، تغییر آدرس ممکن است قابل بررسی باشد. شماره سفارش و آدرس جدید را برای پشتیبانی ارسال کنید.","chip":false},{"id":"seed50","q":"فاکتور میدید؟","keys":"فاکتور|صورتحساب","a":"برای اطلاع از امکان صدور فاکتور و نوع فاکتور، شماره سفارش یا جزئیات خرید را برای پشتیبانی ارسال کنید.","chip":false},{"id":"seed51","q":"برای پروژه ساختمانی قیمت میدید؟","keys":"پروژه|ساختمان|قیمت پروژه","a":"بله، برای پروژه می‌توانید لیست اقلام و تعداد موردنیاز را برای پشتیبانی ارسال کنید تا قیمت و موجودی بررسی شود.","chip":false},{"id":"seed52","q":"برای تعداد بالا تخفیف دارید؟","keys":"تعداد بالا|تخفیف تعداد","a":"برای خرید تعداد بالا، نام محصول و تعداد موردنیاز را بفرستید تا شرایط تخفیف بررسی شود.","chip":false},{"id":"seed53","q":"لیست قیمت همکاری دارید؟","keys":"لیست قیمت|قیمت همکاری","a":"برای دریافت قیمت همکاری، محصولات و تعداد موردنیاز را برای پشتیبانی ارسال کنید.","chip":false},{"id":"seed54","q":"پیش‌فاکتور میدید؟","keys":"پیش فاکتور|پیش‌فاکتور","a":"برای بررسی امکان صدور پیش‌فاکتور، لیست محصولات و تعداد موردنیاز را برای پشتیبانی ارسال کنید.","chip":false},{"id":"seed55","q":"چراغ دکوراتیو دارید؟","keys":"چراغ دکوراتیو|دکوراتیو","a":"دسته‌بندی روشنایی سایت را بررسی کنید. اگر مدل خاصی می‌خواهید، نام یا عکس آن را برای پشتیبانی بفرستید.","chip":false},{"id":"seed56","q":"چراغ روکار دارید؟","keys":"چراغ روکار|روکار","a":"برای مشاهده چراغ‌های روکار، محصولات روشنایی سایت را بررسی کنید. برای انتخاب مدل مناسب می‌توانید از پشتیبانی کمک بگیرید.","chip":false},{"id":"seed57","q":"چراغ توکار دارید؟","keys":"چراغ توکار|توکار","a":"مدل‌های روشنایی موجود را در سایت بررسی کنید. اگر مدل خاصی مدنظر دارید، نام یا عکس آن را بفرستید.","chip":false},{"id":"seed58","q":"پروژکتور دارید؟","keys":"پروژکتور|پروژکتور دارید","a":"پروژکتورهای موجود در سایت را بررسی کنید. اگر توان یا مدل خاصی می‌خواهید، مشخصات موردنیازتان را بفرستید.","chip":false},{"id":"seed59","q":"لامپ LED دارید؟","keys":"لامپ|ال ای دی|LED","a":"محصولات روشنایی و لامپ‌های موجود را در سایت بررسی کنید. برای انتخاب توان و رنگ نور مناسب، پشتیبانی راهنمایی می‌کند.","chip":false},{"id":"seed60","q":"لامپ آفتابی دارید؟","keys":"آفتابی|نور آفتابی","a":"مدل‌های دارای نور آفتابی را از بخش روشنایی بررسی کنید یا نام محصول موردنظر را برای پشتیبانی بفرستید.","chip":false},{"id":"seed61","q":"لامپ مهتابی دارید؟","keys":"مهتابی|نور مهتابی","a":"مدل‌های دارای نور مهتابی را از بخش روشنایی بررسی کنید یا نام محصول را برای پشتیبانی بفرستید.","chip":false},{"id":"seed62","q":"چراغ سنسوردار دارید؟","keys":"سنسوردار|سنسور","a":"اگر چراغ سنسوردار موجود باشد در دسته‌بندی روشنایی نمایش داده می‌شود. برای مدل مناسب می‌توانید از پشتیبانی راهنمایی بگیرید.","chip":false},{"id":"seed63","q":"کلید هوشمند دارید؟","keys":"کلید هوشمند|کلید هوشمند دارید","a":"محصولات هوشمند و کلیدهای موجود را در سایت بررسی کنید. برای انتخاب مدل سازگار با سیم‌کشی منزل، از پشتیبانی راهنمایی بگیرید.","chip":false},{"id":"seed64","q":"کلید هوشمند با موبایل کار می‌کنه؟","keys":"کنترل با موبایل|موبایل|گوشی","a":"بعضی مدل‌های کلید هوشمند امکان کنترل با موبایل دارند. مدل دقیق محصول را بفرستید تا قابلیت‌های آن بررسی شود.","chip":false},{"id":"seed65","q":"پریز هوشمند دارید؟","keys":"پریز هوشمند|پریز","a":"اگر پریز هوشمند موجود باشد در محصولات سایت نمایش داده می‌شود. برای بررسی مدل و موجودی، نام محصول را بفرستید.","chip":false},{"id":"seed66","q":"آیفون تصویری دارید؟","keys":"آیفون تصویری|آیفون","a":"محصولات آیفون تصویری و تجهیزات مرتبط را در سایت بررسی کنید. برای انتخاب مدل مناسب، تعداد واحد و امکانات موردنیاز را بگویید.","chip":false},{"id":"seed67","q":"پنل دم‌دری دارید؟","keys":"پنل دم دری|پنل دم‌دری|پنل","a":"پنل‌های دم‌دری موجود را می‌توانید در سایت بررسی کنید. برای انتخاب مدل مناسب، نوع ساختمان و امکانات موردنیاز را بفرستید.","chip":false},{"id":"seed68","q":"پنل کدینگ دارید؟","keys":"پنل کدینگ|کدینگ","a":"مدل‌های پنل کدینگ موجود را در سایت بررسی کنید. اگر مدل خاصی می‌خواهید، نام آن را بفرستید.","chip":false},{"id":"seed69","q":"مانیتور آیفون چند اینچی دارید؟","keys":"چند اینچی|اینچ|مانیتور","a":"سایز مانیتور به مدل محصول بستگی دارد. نام مدل موردنظر را بفرستید تا مشخصات دقیق آن را بررسی کنیم.","chip":false},{"id":"seed70","q":"آیفون برای ساختمان چند واحدی می‌خوام","keys":"چند واحد|ساختمان چند واحدی","a":"تعداد واحدهای ساختمان و امکانات موردنیازتان را بگویید تا مدل مناسب بررسی شود.","chip":false},{"id":"seed71","q":"این مانیتور دوربین می‌خوره؟","keys":"دوربین|دوربین میخوره|دوربین می‌خوره","a":"بسته به مدل مانیتور، تعداد و نوع ورودی دوربین متفاوت است. مدل دقیق را بفرستید تا بررسی شود.","chip":false},{"id":"seed72","q":"سیم و کابل دارید؟","keys":"سیم و کابل|کابل|سیم","a":"سیم و کابل‌های موجود را می‌توانید از دسته‌بندی مربوطه در سایت بررسی کنید. برای انتخاب سایز مناسب، کاربردتان را بگویید.","chip":false},{"id":"seed73","q":"برای برق‌کشی ساختمان چه کابلی بخرم؟","keys":"برق کشی|برق‌کشی|کابل ساختمان","a":"سایز و نوع کابل به کاربرد، مسیر و شرایط پروژه بستگی دارد. مشخصات پروژه را بفرستید تا راهنمایی دقیق‌تری بگیرید.","chip":false},{"id":"seed74","q":"جعبه ابزار دارید؟","keys":"جعبه ابزار|ابزار","a":"محصولات ابزار موجود را در سایت بررسی کنید. برای مدل یا اندازه خاص، نام موردنظر را بفرستید.","chip":false},{"id":"seed75","q":"محصولات البرز کالیوز دارید؟","keys":"کالیوز|البرز کالیوز","a":"نام دقیق محصول کالیوز را بفرستید تا موجودی و مشخصات آن بررسی شود.","chip":false},{"id":"seed76","q":"محصولات پارس شعاع دارید؟","keys":"پارس شعاع|پارسی شعاع","a":"برای دیدن محصولات پارس شعاع، نام دقیق محصول یا نوع چراغ را بفرستید تا موجودی بررسی شود.","chip":false},{"id":"seed77","q":"برندهای دیگه هم دارید؟","keys":"برند|برندهای دیگر","a":"برندها و محصولات موجود در سایت را بررسی کنید. اگر برند خاصی مدنظر دارید، نام آن را برای پشتیبانی بفرستید.","chip":false},{"id":"seed78","q":"چطور محصول رو جستجو کنم؟","keys":"جستجو|پیدا کردن محصول|سرچ","a":"از بخش جستجوی سایت نام محصول یا بخشی از نام آن را وارد کنید تا محصولات مرتبط نمایش داده شوند.","chip":false},{"id":"seed79","q":"دسته‌بندی محصولات کجاست؟","keys":"دسته بندی|دسته‌بندی","a":"از بخش دسته‌بندی‌های سایت می‌توانید محصولات را بر اساس نوع کالا بررسی کنید.","chip":false},{"id":"seed80","q":"سبد خرید کجاست؟","keys":"سبد خرید|سبد","a":"محصولات انتخاب‌شده در سبد خرید قرار می‌گیرند. از آیکون سبد خرید در سایت می‌توانید سفارش خود را مشاهده کنید.","chip":false},{"id":"seed81","q":"محصول رو به سبد اضافه کردم، بعدش چی؟","keys":"بعد از سبد|ادامه خرید","a":"وارد سبد خرید شوید، محصولات و تعداد را بررسی کنید و سپس مراحل ثبت سفارش و پرداخت را ادامه دهید.","chip":false},{"id":"seed82","q":"چطور تعداد محصول رو زیاد کنم؟","keys":"تعداد محصول|زیاد کردن تعداد","a":"در سبد خرید می‌توانید تعداد کالا را تغییر دهید، در صورتی که موجودی کافی باشد.","chip":false},{"id":"seed83","q":"اگر محصول ناموجود شد چی؟","keys":"ناموجود|اتمام موجودی","a":"اگر محصول ناموجود باشد، می‌توانید مدل مشابه را بررسی کنید یا از پشتیبانی درباره زمان تأمین دوباره سؤال کنید.","chip":false},{"id":"seed84","q":"چطور از تخفیف‌های جدید باخبر بشم؟","keys":"تخفیف جدید|خبر تخفیف|محصول جدید","a":"اعلام تخفیف‌ها و محصولات جدید از طریق بخش‌های اطلاع‌رسانی فروشگاه و شبکه‌های اجتماعی انجام می‌شود.","chip":false},{"id":"seed85","q":"الکترولند کجاست؟","keys":"آدرس فروشگاه|کجاست|آدرس","a":"اطلاعات آدرس فروشگاه در بخش اطلاعات تماس سایت نمایش داده می‌شود، اگر آدرس ثبت شده باشد.","chip":false},{"id":"seed86","q":"شماره تماس الکترولند چنده؟","keys":"شماره تماس|تلفن|شماره","a":"شماره تماس در بخش پشتیبانی سایت نمایش داده می‌شود، در صورتی که در تنظیمات فروشگاه ثبت شده باشد.","chip":false},{"id":"seed87","q":"سایت الکترولند چیه؟","keys":"سایت|الکترولند","a":"شما همین حالا در سایت الکترولند هستید؛ برای مشاهده محصولات می‌توانید از بخش فروشگاه و دسته‌بندی‌ها استفاده کنید.","chip":false},{"id":"seed88","q":"چطور با کارشناس فنی صحبت کنم؟","keys":"کارشناس فنی|فنی","a":"در چت پشتیبانی پیام بفرستید و مدل محصول و سؤال فنی‌تان را بنویسید تا بررسی شود.","chip":false},{"id":"seed89","q":"پشتیبانی چه زمانی جواب میده؟","keys":"جواب میدید|پاسخ|کی جواب","a":"پیام شما ثبت می‌شود و در ساعات پاسخگویی توسط پشتیبانی بررسی خواهد شد. ساعات فعال در بخش پشتیبانی سایت نمایش داده می‌شود.","chip":false},{"id":"seed90","q":"چرا ربات جواب سؤال من رو نداد؟","keys":"ربات|جواب نمیده|پاسخ نمیده","a":"سؤال را با نام محصول یا چند کلمه کلیدی کوتاه‌تر دوباره بفرستید. اگر باز هم پاسخ نگرفتید، پیام را برای پشتیبانی ارسال کنید.","chip":false},{"id":"seed91","q":"می‌تونم لینک محصول رو بفرستم؟","keys":"لینک محصول|لینک","a":"بله، ارسال لینک محصول به پشتیبانی کمک می‌کند مدل دقیق را سریع‌تر بررسی کنیم.","chip":false},{"id":"seed92","q":"می‌تونم عکس محصولی که می‌خوام رو بفرستم؟","keys":"عکس محصولی|عکس بفرستم","a":"بله، اگر محصول را با عکس دیده‌اید، تصویر را برای پشتیبانی ارسال کنید تا مدل مشابه یا موجودی آن بررسی شود.","chip":false},{"id":"seed93","q":"برای خرید چه اطلاعاتی لازمه؟","keys":"اطلاعات خرید|چی لازمه","a":"برای راهنمایی خرید، نام یا عکس محصول، تعداد موردنیاز، شهر مقصد و کاربرد را بفرستید.","chip":false},{"id":"seed94","q":"حداقل خرید دارید؟","keys":"حداقل خرید|کمترین خرید","a":"برای اطلاع از حداقل مقدار خرید، نوع محصول و تعداد موردنظر را برای پشتیبانی بفرستید.","chip":false},{"id":"seed95","q":"برای خرید تعداد کم هم می‌فروشید؟","keys":"تعداد کم|یک عدد|تکی","a":"نوع فروش به محصول و موجودی بستگی دارد. نام محصول و تعداد موردنظر را بفرستید تا بررسی شود.","chip":false},{"id":"seed96","q":"می‌تونم قبل از خرید سؤال فنی بپرسم؟","keys":"سؤال فنی|قبل خرید","a":"حتماً. سؤال فنی و مدل محصول را بفرستید تا مشخصات آن بررسی شود.","chip":false},{"id":"seed97","q":"این محصول برای خانه مناسبه؟","keys":"برای خانه|خونه|منزل","a":"بسته به نوع محصول و کاربرد، می‌تواند برای خانه مناسب باشد. نام محصول و محل استفاده را بفرستید تا راهنمایی کنیم.","chip":false},{"id":"seed98","q":"برای مغازه چه محصولی پیشنهاد می‌کنید؟","keys":"برای مغازه|مغازه","a":"نوع مغازه، متراژ و کاربردتان را بگویید تا گزینه‌های مناسب از محصولات موجود بررسی شوند.","chip":false},{"id":"seed99","q":"برای حیاط چه چراغی مناسبه؟","keys":"چراغ حیاط|حیاط","a":"برای انتخاب چراغ حیاط، شرایط نصب، میزان روشنایی موردنیاز و فضای موردنظر مهم است. این اطلاعات را بفرستید تا راهنمایی کنیم.","chip":false},{"id":"seed100","q":"برای پارکینگ چه چراغی مناسبه؟","keys":"پارکینگ|چراغ پارکینگ","a":"متراژ پارکینگ و نوع سقف یا دیوار را بگویید تا گزینه‌های مناسب روشنایی بررسی شوند.","chip":false},{"id":"seed101","q":"برای نمای ساختمان چی پیشنهاد می‌کنید؟","keys":"نمای ساختمان|نور نما|نما","a":"نوع نما، محل نصب و میزان نور موردنیاز را بگویید تا مدل‌های مناسب روشنایی نما بررسی شوند.","chip":false},{"id":"seed102","q":"چطور از پشتیبانی آنلاین استفاده کنم؟","keys":"چت|پشتیبانی آنلاین|چت آنلاین","a":"در کادر پشتیبانی پیام خود را بنویسید و ارسال کنید. می‌توانید از سؤال‌های آماده هم استفاده کنید.","chip":false},{"id":"seed103","q":"آیا پشتیبانی آنلاین رایگانه؟","keys":"رایگان|پشتیبانی رایگان","a":"بله، برای پرسش درباره محصولات و سفارش‌ها می‌توانید از پشتیبانی سایت استفاده کنید.","chip":false},{"id":"seed104","q":"چطور سفارش قبلی رو ببینم؟","keys":"سفارش قبلی|سفارش های من|سفارش‌ها","a":"وارد حساب کاربری شوید و بخش مربوط به سفارش‌ها را بررسی کنید. اگر سفارش را پیدا نکردید، با پشتیبانی تماس بگیرید.","chip":false},{"id":"seed105","q":"شماره سفارش رو گم کردم","keys":"شماره سفارش|سفارش گم شده","a":"اطلاعات حساب کاربری یا پیام‌های مربوط به ثبت سفارش را بررسی کنید. اگر پیدا نشد، اطلاعات خرید را برای پشتیبانی ارسال کنید.","chip":false},{"id":"seed106","q":"رسید پرداخت رو کجا بفرستم؟","keys":"رسید پرداخت|رسید|فیش","a":"رسید پرداخت را طبق راهنمای نمایش‌داده‌شده بعد از پرداخت ارسال کنید. اگر مسیر را پیدا نکردید، به پشتیبانی پیام دهید.","chip":false},{"id":"seed107","q":"پرداخت کردم ولی سفارش ثبت نشده","keys":"پرداخت کردم|ثبت نشده","a":"رسید پرداخت و اطلاعات سفارش را برای پشتیبانی ارسال کنید تا پرداخت بررسی شود.","chip":false},{"id":"seed108","q":"اشتباهی پول واریز کردم","keys":"اشتباهی واریز|واریز اشتباه","a":"رسید واریز و اطلاعات سفارش را سریع برای پشتیبانی ارسال کنید تا موضوع بررسی شود.","chip":false},{"id":"seed109","q":"چطور شماره کارت رو ببینم؟","keys":"شماره کارت|کارت فروشگاه","a":"در مرحله پرداخت، اطلاعات کارت‌به‌کارت ثبت‌شده برای فروشگاه نمایش داده می‌شود. اگر نمایش داده نشد، با پشتیبانی تماس بگیرید.","chip":false},{"id":"seed110","q":"محصولی که گرفتم با سفارش فرق داره","keys":"فرق داره|مطابق سفارش نیست","a":"شماره سفارش و عکس کالای دریافت‌شده را برای پشتیبانی ارسال کنید تا بررسی شود.","chip":false},{"id":"seed111","q":"بسته من آسیب دیده","keys":"بسته آسیب دیده|بسته خراب","a":"از بسته و کالا عکس بگیرید و همراه شماره سفارش برای پشتیبانی ارسال کنید تا موضوع بررسی شود.","chip":false},{"id":"seed112","q":"بسته به دستم نرسیده","keys":"بسته نرسیده|نرسیده","a":"شماره سفارش یا کد رهگیری را برای پشتیبانی ارسال کنید تا وضعیت ارسال بررسی شود.","chip":false},{"id":"seed113","q":"آیا امکان ارسال به خارج از شهر هست؟","keys":"خارج شهر|شهر دیگر","a":"ارسال به شهرهای مختلف امکان‌پذیر است؛ روش و هزینه به مقصد و سفارش بستگی دارد.","chip":false},{"id":"seed114","q":"هزینه ارسال رایگانه؟","keys":"ارسال رایگان|رایگان","a":"شرایط ارسال رایگان در سایت اعلام می‌شود و ممکن است به مبلغ خرید یا شرایط سفارش وابسته باشد.","chip":false},{"id":"seed115","q":"برای خرید بالای دو میلیون ارسال رایگانه؟","keys":"دو میلیون|2000000|بالای دو میلیون","a":"در تنظیمات فعلی سایت، ارسال رایگان برای خرید بالای ۲٬۰۰۰٬۰۰۰ تومان اعلام شده است؛ در صورت تغییر شرایط، اطلاعات سایت ملاک است.","chip":false},{"id":"seed116","q":"محصولات تخفیف‌خورده کجان؟","keys":"تخفیف خورده|تخفیف‌خورده","a":"محصولات دارای تخفیف در بخش فروشگاه و در صورت فعال بودن، با برچسب تخفیف نمایش داده می‌شوند.","chip":false},{"id":"seed117","q":"محصولات پرفروش کجان؟","keys":"پرفروش|محصولات پرفروش","a":"محصولات پرفروش را از بخش‌های معرفی‌شده در صفحه فروشگاه بررسی کنید.","chip":false},{"id":"seed118","q":"محصول جدید دارید؟","keys":"محصول جدید|جدیدترین","a":"محصولات جدید پس از اضافه شدن در فروشگاه نمایش داده می‌شوند. برای محصول خاص می‌توانید از جستجو یا پشتیبانی کمک بگیرید.","chip":false}];
+function ensureBotFaq(){
+  if(!DB.site) DB.site={};
+  if(!Array.isArray(DB.site.botFaq) || !DB.site.botFaq.length){
+    DB.site.botFaq = DEFAULT_BOT_FAQ.map(x=>Object.assign({},x));
+    DB.site.botRules = '';
+    DB.cloudDirty = true;
+    save();
+    return true;
+  }
+  return false;
+}
+
+let DB = load();
+ensureBotFaq();
+function load(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(!raw) return defaultData();
+    const parsed = JSON.parse(raw);
+    if(!parsed.categories || !parsed.products) return defaultData();
+    parsed.products.forEach(p=>{
+      if(!Array.isArray(p.specs)) p.specs=[];
+      if(typeof p.desc!=='string') p.desc='';
+      if(!Array.isArray(p.images)) p.images = p.img ? [p.img] : [];
+      if(typeof p.colorOptionEnabled!=='boolean') p.colorOptionEnabled=false;
+      if(!Array.isArray(p.colorOptions)) p.colorOptions=[];
+      if(typeof p.salePercent!=='number' || p.salePercent<0) p.salePercent=0;
+      if(typeof p.subId==='undefined') p.subId=null;
+      if(typeof p.childSubId==='undefined') p.childSubId=null;
+      if(typeof p.brandId==='undefined') p.brandId=null;
+    });
+    parsed.categories.forEach(c=>{
+      if(!Array.isArray(c.subs)) c.subs=[];
+      c.subs.forEach(s=>{
+        if(typeof s.image==='undefined') s.image=null;
+        if(!Array.isArray(s.subs)) s.subs=[];
+        s.subs.forEach(ch=>{ if(typeof ch.image==='undefined') ch.image=null; });
+      });
+    });
+    if(!Array.isArray(parsed.brands)) parsed.brands=[];
+    if(!Array.isArray(parsed.users)) parsed.users=[];
+    parsed.users.forEach(u=>{
+      if(typeof u.shopName!=='string') u.shopName='';
+      if(typeof u.nationalCode!=='string') u.nationalCode='';
+      if(typeof u.birthDate!=='string') u.birthDate='';
+      if(typeof u.address!=='string') u.address='';
+      if(typeof u.province!=='string') u.province='';
+      if(typeof u.city!=='string') u.city='';
+    });
+    if(!parsed.auth) parsed.auth={loggedIn:false,phone:null,userId:null,uid:null};
+    if(typeof parsed.auth.userId==='undefined') parsed.auth.userId=null;
+    if(typeof parsed.auth.uid==='undefined') parsed.auth.uid=null;
+    if(!Array.isArray(parsed.slides)) parsed.slides=[];
+    normalizeSlides(parsed.slides);
+    if(Array.isArray(parsed.cart)){
+      parsed.cart.forEach(c=>{
+        if(typeof c.color==='undefined') c.color=null;
+        if(!c.key) c.key = c.id+'::'+(c.color||'');
+      });
+    }
+    if(typeof parsed.adminPassword!=='string') parsed.adminPassword='1395';
+    return parsed;
+  }catch(e){ return defaultData(); }
+}
+function save(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(DB)); }
+
+/* ============ cloud sync (Firebase Realtime Database) — همگام‌سازی بین همه دستگاه‌ها ============ */
+let cloudSaving=false, cloudResave=false, pushingPending=false;
+function catalogSnapshot(){ return { categories:DB.categories, products:DB.products, slides:DB.slides, site:DB.site, brands:DB.brands }; }
+function normalizeProducts(list){
+  list.forEach(p=>{
+    if(!Array.isArray(p.specs)) p.specs=[];
+    if(typeof p.desc!=='string') p.desc='';
+    if(!Array.isArray(p.images)) p.images = p.img ? [p.img] : [];
+    if(typeof p.colorOptionEnabled!=='boolean') p.colorOptionEnabled=false;
+    if(!Array.isArray(p.colorOptions)) p.colorOptions=[];
+    if(typeof p.salePercent!=='number' || p.salePercent<0) p.salePercent=0;
+    if(typeof p.subId==='undefined') p.subId=null;
+    if(typeof p.childSubId==='undefined') p.childSubId=null;
+    if(typeof p.brandId==='undefined') p.brandId=null;
+  });
+}
+function normalizeCategories(list){
+  list.forEach(c=>{
+    if(!Array.isArray(c.subs)) c.subs=[];
+    c.subs.forEach(s=>{
+      if(typeof s.image==='undefined') s.image=null;
+      if(!Array.isArray(s.subs)) s.subs=[];
+      s.subs.forEach(ch=>{ if(typeof ch.image==='undefined') ch.image=null; });
+    });
+  });
+}
+function normalizeSlides(list){
+  (list||[]).forEach(s=>{
+    if(!Array.isArray(s.buttons) || !s.buttons.length){
+      s.buttons=[{label:'مشاهده محصولات',link:'#shop'},{label:'دسته‌بندی‌ها',link:'#categories'}];
+    }
+  });
+}
+/* ذخیره کاتالوگ در دیتابیس آنلاین (فقط از پنل مدیریت فراخوانی می‌شود) */
+async function saveCloud(){
+  if(!Cloud.ready) return;
+  DB.cloudDirty=true; save();
+  if(cloudSaving){ cloudResave=true; return; }
+  cloudSaving=true;
+  try{
+    do{ cloudResave=false; DB.cloudRev = await Cloud.putCatalog(catalogSnapshot()); }while(cloudResave);
+    DB.cloudDirty=false; save();
+  }catch(err){
+    console.warn('Cloud save failed:', err);
+    toast('ذخیره آنلاین ناموفق بود ('+Cloud.explain(err)+'). تغییرات روی این دستگاه ذخیره شد و دوباره تلاش می‌شود','err');
+  }finally{ cloudSaving=false; }
+}
+function applyCatalog(remote){
+  const data = remote.data || {};
+  if(Array.isArray(data.categories)){ DB.categories=data.categories; normalizeCategories(DB.categories); }
+  if(Array.isArray(data.products)){ DB.products=data.products; normalizeProducts(DB.products); }
+  if(Array.isArray(data.slides)){ DB.slides=data.slides; normalizeSlides(DB.slides); }
+  if(data.site) DB.site=Object.assign({},DB.site,data.site);
+  if(Array.isArray(data.brands)) DB.brands=data.brands;
+  ensureBotFaq();
+  DB.cloudRev = remote.rev;
+  save();
+  if(activeCat!=='all' && !DB.categories.some(c=>c.id===activeCat)){ activeCat='all'; activeSub='all'; activeChildSub='all'; }
+  if(activeSub!=='all' && !subsOf(activeCat).some(s=>s.id===activeSub)){ activeSub='all'; activeChildSub='all'; }
+  if(activeSub!=='all' && activeChildSub!=='all'){
+    const parentSub = subsOf(activeCat).find(s=>s.id===activeSub);
+    if(!parentSub || !(parentSub.subs||[]).some(ch=>ch.id===activeChildSub)) activeChildSub='all';
+  }
+  renderBrand(); renderHero(); resetHeroTimer(); renderCategories();
+  if(document.getElementById('subcatBox') && !document.getElementById('subcatBox').hidden && activeCat!=='all') openSubcatPage(activeCat);
+  renderProducts(); updateShopTitle();
+  if(document.getElementById('adminPanelOverlay').style.display==='flex') renderAdminProducts();
+}
+/* ارسال سفارش‌ها و کاربرانی که هنوز به دیتابیس آنلاین نرفته‌اند */
+function stripLocal(o){ const c=Object.assign({},o); delete c.synced; return c; }
+async function pushPending(){
+  if(!Cloud.ready || pushingPending) return;
+  pushingPending=true;
+  try{
+    for(const o of DB.orders){
+      if(o.synced) continue;
+      if(!o.cid) o.cid=Cloud.newId();
+      if(!o.ts) o.ts=Date.now();
+      await Cloud.putOrder(stripLocal(o)); o.synced=true;
+    }
+    for(const u of DB.users){
+      if(u.synced || !u.phone) continue;
+      await Cloud.putUser(stripLocal(u)); u.synced=true;
+    }
+    save();
+  }catch(err){ console.warn('Pending push failed:', err); }
+  finally{ pushingPending=false; }
+}
+/* گزارش حضور این دستگاه به دیتابیس (پنل مدیریت می‌بیند چند دستگاه به دیتابیس می‌رسند) */
+const DEVICE_ID = (function(){
+  try{ let d=localStorage.getItem('electroland_dev'); if(!d){ d=Cloud.newId(); localStorage.setItem('electroland_dev',d); } return d; }
+  catch(e){ return 'x'+Math.random().toString(36).slice(2,8); }
+})();
+let lastPingAt=0;
+async function pingCloud(){
+  if(!Cloud.ready || Date.now()-lastPingAt<60000) return;
+  lastPingAt=Date.now();
+  try{ await Cloud.putPing(DEVICE_ID, { id:DEVICE_ID, ts:Date.now(), rev:DB.cloudRev||'' }); }
+  catch(e){ console.warn('Ping failed:', e); }
+}
+async function initCloudSync(){
+  if(!Cloud.ready){ console.info('Cloud sync غیرفعال است (CLOUD_DB_URL خالی است) — سایت فقط از داده محلی استفاده می‌کند.'); return; }
+  try{
+    const remote = await Cloud.getCatalog();
+    if(DB.cloudDirty) await saveCloud();
+    else if(remote && remote.rev!==DB.cloudRev) applyCatalog(remote);
+    /* سایت اصلی هرگز کاتالوگ را از خودش نمی‌سازد؛ اولین بار پنل مدیریت آن را می‌سازد. */
+  }catch(err){ console.warn('Initial cloud load failed:', err); }
+  await pushPending();
+  pingCloud();
+  const tick = async ()=>{
+    if(document.hidden || cloudSaving) return;
+    try{
+      if(DB.cloudDirty){ await saveCloud(); }
+      else{
+        const rev = await Cloud.getCatalogRev();
+        if(rev && rev!==DB.cloudRev){
+          const remote = await Cloud.getCatalog();
+          if(remote && !cloudSaving) applyCatalog(remote);
+        }
+      }
+      await pushPending();
+      pingCloud();
+    }catch(err){ console.warn('Cloud poll failed:', err); }
+  };
+  setInterval(tick, 8000);
+  document.addEventListener('visibilitychange', ()=>{ if(!document.hidden) tick(); });
+  window.addEventListener('online', tick);
+}
+
+/* ============ countries ============ */
+const COUNTRIES=[
+  {code:'98',flag:'🇮🇷',name:'ایران'},{code:'971',flag:'🇦🇪',name:'امارات'},
+  {code:'90',flag:'🇹🇷',name:'ترکیه'},{code:'964',flag:'🇮🇶',name:'عراق'},
+  {code:'93',flag:'🇦🇫',name:'افغانستان'},{code:'992',flag:'🇹🇯',name:'تاجیکستان'},
+  {code:'1',flag:'🇺🇸',name:'آمریکا'},{code:'44',flag:'🇬🇧',name:'بریتانیا'},
+  {code:'49',flag:'🇩🇪',name:'آلمان'},{code:'33',flag:'🇫🇷',name:'فرانسه'},
+  {code:'39',flag:'🇮🇹',name:'ایتالیا'},{code:'34',flag:'🇪🇸',name:'اسپانیا'},
+  {code:'31',flag:'🇳🇱',name:'هلند'},{code:'46',flag:'🇸🇪',name:'سوئد'},
+  {code:'41',flag:'🇨🇭',name:'سوئیس'},{code:'7',flag:'🇷🇺',name:'روسیه'},
+  {code:'86',flag:'🇨🇳',name:'چین'},{code:'91',flag:'🇮🇳',name:'هند'},
+  {code:'81',flag:'🇯🇵',name:'ژاپن'},{code:'82',flag:'🇰🇷',name:'کره جنوبی'},
+  {code:'966',flag:'🇸🇦',name:'عربستان'},{code:'974',flag:'🇶🇦',name:'قطر'},
+  {code:'965',flag:'🇰🇼',name:'کویت'},{code:'968',flag:'🇴🇲',name:'عمان'},
+  {code:'973',flag:'🇧🇭',name:'بحرین'},{code:'962',flag:'🇯🇴',name:'اردن'},
+  {code:'961',flag:'🇱🇧',name:'لبنان'},{code:'20',flag:'🇪🇬',name:'مصر'},
+  {code:'61',flag:'🇦🇺',name:'استرالیا'},{code:'1',flag:'🇨🇦',name:'کانادا'}
+];
+
+
+/* ============ چت زنده پشتیبانی ============
+   پیام‌ها فقط در یک بخش جدید و جداگانه‌ی دیتابیس (chats) ذخیره می‌شوند؛ به کاتالوگ، سفارش‌ها و کاربران دست زده نمی‌شود. */
+const LiveChat = (function(){
+  const KEY='electroland_chat_id', SEEN='electroland_chat_seen';
+  let msgs=[], timer=null, sending=false, lastSend=0, failCount=0;
+  function base(){ return String(window.CLOUD_DB_URL||'').trim().replace(/\/+$/,''); }
+  function http(method,path,body){
+    const opts={method:method,cache:'no-store'};
+    if(body!==undefined) opts.body=JSON.stringify(body);
+    return fetch(base()+'/electroland_v1'+path+'.json',opts).then(r=>{
+      if(!r.ok){ const e=new Error('HTTP '+r.status); e.status=r.status; throw e; }
+      return r.text();
+    }).then(t=>t?JSON.parse(t):null);
+  }
+  function enabled(){ return Cloud.ready && DB.site.chatEnabled!==false; }
+  function accCid(){ const u=currentUser(); const d=u&&u.phone?String(u.phone).replace(/\D/g,''):''; return d?('acc'+d):null; }
+  /* هر حساب کاربری شناسه‌ی چت مخصوص خودش را دارد (بر اساس شماره موبایل)؛ مهمان‌ها شناسه‌ی مرورگر */
+  function getCid(create){
+    const a=accCid(); if(a) return a;
+    let g=null; try{ g=localStorage.getItem(KEY); }catch(e){}
+    if(!g && create){ g='c'+Cloud.newId(); try{ localStorage.setItem(KEY,g); }catch(e){} }
+    return g;
+  }
+  function seenKey(){ return SEEN+':'+(getCid(false)||'guest'); }
+  function parse(obj){
+    if(!obj) return [];
+    return Object.keys(obj).map(k=>{ try{ return typeof obj[k]==='string'?JSON.parse(obj[k]):null; }catch(e){ return null; } })
+      .filter(m=>m && m.text).sort((a,b)=>a.ts-b.ts);
+  }
+  function timeStr(ts){ try{ return new Date(ts).toLocaleTimeString('fa-IR',{hour:'2-digit',minute:'2-digit'}); }catch(e){ return ''; } }
+  function render(){
+    const box=$('#chatMsgs'); if(!box) return;
+    const nearBottom = box.scrollHeight-box.scrollTop-box.clientHeight<60;
+    const hello='<div class="chat-msg sup">سلام 👋 سؤال خود را همین‌جا بنویسید؛ همکاران ما در اولین فرصت پاسخ می‌دهند.</div>';
+    box.innerHTML = hello + msgs.map(m=>'<div class="chat-msg '+(m.from==='a'?'sup':(m.from==='b'?'bot':'me'))+'">'+escapeHtml(m.text)+'<small>'+(m.from==='b'?'🤖 پاسخ خودکار · ':'')+timeStr(m.ts)+'</small></div>').join('');
+    if(nearBottom || !box.dataset.init){ box.scrollTop=box.scrollHeight; box.dataset.init='1'; }
+  }
+  function lastAdminTs(){ let t=0; msgs.forEach(m=>{ if(m.from==='a' && m.ts>t) t=m.ts; }); return t; }
+  function seenTs(){ try{ return Number(localStorage.getItem(seenKey()))||0; }catch(e){ return 0; } }
+  function markSeen(){ try{ localStorage.setItem(seenKey(),String(lastAdminTs())); }catch(e){} $('#supportFab').classList.remove('has-new'); }
+  function isOpen(){ return $('#supportPanel').classList.contains('open'); }
+  function showErr(t){ const e=$('#chatErr'); e.textContent=t||''; e.style.display=t?'block':'none'; }
+  async function poll(){
+    if(!enabled() || !getCid(false) || document.hidden) return;
+    try{
+      const myCid=getCid(false); const remote=parse(await http('GET','/chats/'+myCid)); if(myCid!==getCid(false)) return;
+      const pend=msgs.filter(x=>x.from==='b' && Date.now()-x.ts<15000 && !remote.some(r=>r.mid===x.mid));
+      msgs=remote.concat(pend).sort((a,b)=>a.ts-b.ts);
+      failCount=0; showErr('');
+      render();
+      if(isOpen()) markSeen(); else if(lastAdminTs()>seenTs()) $('#supportFab').classList.add('has-new');
+    }catch(e){ failCount++; if(isOpen() && failCount>=2) showErr('ارتباط با پشتیبانی برقرار نشد؛ از راه‌های ارتباطی پایین استفاده کنید.'); }
+  }
+  function schedule(){ clearInterval(timer); if(enabled()) timer=setInterval(poll, isOpen()?4000:20000); }
+  async function send(){
+    if(sending) return;
+    const inp=$('#chatInput'); const text=inp.value.trim();
+    if(!text) return;
+    if(Date.now()-lastSend<1500){ return; }
+    const id=getCid(true);
+    const u=currentUser();
+    const m={ mid:'m'+Cloud.newId(), cid:id, from:'u', text:text.slice(0,1000), ts:Date.now(), name:u?((u.firstName||'')+' '+(u.lastName||'')).trim():'', phone:u?(u.phone||''):'', shop:u?(u.shopName||''):'' };
+    sending=true; lastSend=Date.now(); $('#chatSend').disabled=true;
+    try{
+      const hadUser = msgs.some(x=>x.from==='u');
+      await http('PUT','/chats/'+id+'/'+m.mid, JSON.stringify(m));
+      msgs.push(m); inp.value=''; showErr(''); render();
+      const box=$('#chatMsgs'); box.scrollTop=box.scrollHeight;
+      botReply(m, hadUser);
+    }catch(e){ showErr('ارسال نشد؛ اینترنت را بررسی کنید و دوباره تلاش کنید.'); }
+    sending=false; $('#chatSend').disabled=false;
+  }
+  /* ---- ربات پاسخ خودکار ---- */
+  const norm = t => String(t||'').replace(/ي/g,'ی').replace(/ك/g,'ک').toLowerCase();
+  function faqAnswer(text){
+    const list=(Array.isArray(DB.site.botFaq)?DB.site.botFaq:[]).filter(x=>x && x.q && x.a);
+    if(!list.length) return null;
+    const t=norm(digits(text)).trim();
+    for(const f of list){ if(norm(digits(f.q)).trim()===t) return f.a; }
+    for(const f of list){
+      const keys=String(f.keys||'').split(/[|،,]/).map(k=>norm(k).trim()).filter(Boolean);
+      if(keys.length && keys.some(k=>t.includes(k))) return f.a;
+    }
+    const tt=toks(text).filter(w=>!STOP.has(w)); let best=null, bs=0;
+    for(const f of list){
+      if(String(f.keys||'').trim()) continue;
+      const qt=toks(f.q).filter(w=>!STOP.has(w)); if(!qt.length) continue;
+      const n=qt.filter(w=>tt.some(x=>hit(x,w))).length;
+      if(n>=Math.ceil(qt.length*0.6) && n>bs){ bs=n; best=f; }
+    }
+    return best?best.a:null;
+  }
+  function renderChips(){
+    const el=$('#chatChips'); if(!el) return;
+    const list=(Array.isArray(DB.site.botFaq)?DB.site.botFaq:[]).filter(x=>x && x.q && x.a && x.chip!==false).slice(0,6);
+    el.innerHTML=list.map((f,i)=>'<button type="button" data-faq="'+i+'">'+escapeHtml(f.q)+'</button>').join('');
+    $$('button',el).forEach(b=>b.onclick=()=>{ $('#chatInput').value=list[Number(b.dataset.faq)].q; send(); });
+  }
+  function rulesAnswer(text){
+    const fa=faqAnswer(text); if(fa) return fa;
+    const t=norm(text);
+    const lines=String(DB.site.botRules||'').split('\n');
+    for(const ln of lines){
+      const i=ln.indexOf('='); if(i<1) continue;
+      const keys=ln.slice(0,i).split(/[|،,]/).map(k=>norm(k).trim()).filter(Boolean);
+      const ans=ln.slice(i+1).trim();
+      if(ans && keys.some(k=>t.includes(k))) return ans;
+    }
+    return null;
+  }
+  /* ---- پاسخ خودکار از روی خودِ محصولات سایت (بدون نیاز به متن‌نویسی دستی و بدون کلید API) ---- */
+  const STOP=new Set(['سلام','ببخشید','لطفا','لطفاً','قیمت','چنده','چند','چقدر','هزینه','موجوده','موجود','ناموجود','دارید','دارین','دارد','هست','هستش','میخوام','می‌خوام','میخواستم','برای','یک','یه','این','اون','آیا','را','رو','از','به','در','با','که','و','تومان','گارانتی','مشخصات','تخفیف','حراج','ارزان','چی','چه','کدام','کدوم','هم','من','شما','می','نمی','بود','باشه','است','کنم','میشه','می‌شه','خرید','سفارش']);
+  const digits = t => String(t).replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d)).replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d));
+  const toks = t => norm(digits(t)).replace(/[^\p{L}\p{N}\s]/gu,' ').replace(/[\u200c]/g,' ').split(/\s+/).filter(w=>w.length>=2);
+  const hit = (a,b) => a===b || (a.length>=3 && b.length>=3 && (a.includes(b)||b.includes(a)));
+  function priceLine(p){ return p.inStock===false ? 'ناموجود' : fmt(finalPrice(p))+' تومان'+((p.sale&&p.salePercent>0)?' (با تخفیف)':''); }
+  function catalogAnswer(text){
+    const q=norm(digits(text)); const qt=toks(text); if(!qt.length) return null;
+    const core=qt.filter(w=>!STOP.has(w));
+    const askPrice=/قیمت|چنده|چقدر|هزینه|چند/.test(q), askStock=/موجود|ناموجود|دارید|دارین/.test(q), askWar=/گارانتی|ضمانت/.test(q), askSpec=/مشخصات|ویژگی|جزئیات|توان|ابعاد/.test(q), askSale=/تخفیف|حراج|ارزان|فروش ویژه/.test(q);
+    const catOf=id=>{ const c=DB.categories.find(x=>x.id===id); return c?c.name:''; };
+    const scored=DB.products.map(p=>{
+      const nameT=toks(p.name), catT=toks(catOf(p.catId)), restT=toks((p.desc||'')+' '+(p.specs||[]).map(x=>x.k+' '+x.v).join(' '));
+      let sc=0, nameHit=0;
+      core.forEach(w=>{ if(nameT.some(n=>hit(n,w))){ sc+=3; nameHit++; } else if(catT.some(n=>hit(n,w))) sc+=1.5; else if(restT.some(n=>hit(n,w))) sc+=.5; });
+      return {p:p,sc:sc,nameHit:nameHit};
+    }).filter(x=>x.sc>=1.5).sort((a,b)=>b.sc-a.sc);
+    if(scored.length){
+      const top=scored[0], close=scored.filter(x=>x.sc>=top.sc-0.1);
+      if(close.length===1 || top.nameHit>=Math.max(2,core.length)){
+        const p=top.p; const sp=p.specs||[];
+        let out='';
+        if(askWar){ const w=sp.find(x=>/گارانتی|ضمانت/.test(x.k)); out = w ? 'گارانتی «'+p.name+'»: '+w.v+'.' : 'درباره‌ی گارانتی «'+p.name+'» اطلاعاتی در سایت ثبت نشده؛ همکاران ما به‌زودی همین‌جا جواب می‌دهند.'; }
+        else if(askSpec && sp.length){ out='مشخصات «'+p.name+'»: '+sp.slice(0,6).map(x=>x.k+': '+x.v).join('، ')+'.'; }
+        else if(p.inStock===false){ out='«'+p.name+'» در حال حاضر ناموجود است.'; }
+        else { out='«'+p.name+'» موجود است و قیمتش '+priceLine(p)+' می‌باشد.'; }
+        if(!askWar && !askSpec && p.inStock!==false){ const w=sp.find(x=>/گارانتی/.test(x.k)); if(w) out+=' گارانتی: '+w.v+'.'; }
+        return out+' اگر سؤال دیگری دارید بپرسید 🙂';
+      }
+      const list=close.slice(0,5).map(x=>'• '+x.p.name+' — '+priceLine(x.p)).join('\n');
+      return 'این محصولات مرتبط را داریم:\n'+list+'\nنام محصول موردنظر را بنویسید تا جزئیاتش را بگویم.';
+    }
+    if(askSale){
+      const sale=DB.products.filter(p=>p.sale && p.salePercent>0 && p.inStock!==false).slice(0,5);
+      if(sale.length) return 'محصولات تخفیف‌دار فعلی:\n'+sale.map(p=>'• '+p.name+' — '+priceLine(p)).join('\n');
+    }
+    if(/چه (کالا|محصول)|دسته|محصولاتی/.test(q)){
+      const names=DB.categories.map(c=>c.name).filter(Boolean).slice(0,10).join('، ');
+      if(names) return 'دسته‌بندی‌های فروشگاه: '+names+'. نام محصول یا دسته‌ی موردنظر را بنویسید.';
+    }
+    return null;
+  }
+  function botAnswer(text){
+    const d=String(DB.site.botReply||'').trim();
+    return rulesAnswer(text) || catalogAnswer(text) || d || 'پیام شما دریافت شد ✅ همکاران ما در اولین فرصت همین‌جا پاسخ می‌دهند.';
+  }
+  /* ---- هوش مصنوعی (از طریق Worker جداگانه؛ کلید API داخل سایت نیست) ---- */
+  function aiOn(){ return DB.site.aiEnabled===true && /^https:\/\//.test(String(DB.site.aiUrl||'').trim()); }
+  function aiContext(){
+    const s=DB.site, cat=id=>{ const c=DB.categories.find(x=>x.id===id); return c?c.name:''; };
+    let t='اطلاعات فروشگاه:\nنام: '+(s.name||'')+(s.phone?'\nتلفن: '+s.phone:'')+(s.address?'\nآدرس: '+s.address:'')+(s.supportHours?'\nساعات پاسخگویی: '+s.supportHours:'')+'\n';
+    if(s.aiKnowledge&&s.aiKnowledge.trim()) t+=s.aiKnowledge.trim()+'\n';
+    t+='\nفهرست محصولات (نام | دسته | قیمت به تومان | وضعیت | توضیح):\n';
+    for(const p of DB.products.slice(0,80)){
+      const price = p.inStock===false ? '—' : fmt(finalPrice(p));
+      const sp=(p.specs||[]).slice(0,5).map(x=>x.k+': '+x.v).join('، ');
+      t+='- '+p.name+' | '+cat(p.catId)+' | '+price+' | '+(p.inStock===false?'ناموجود':'موجود')+(p.sale&&p.inStock!==false?' (تخفیف‌دار)':'')+' | '+String(p.desc||'').slice(0,120)+(sp?' ['+sp+']':'')+'\n';
+    }
+    return t.slice(0,13500);
+  }
+  function aiHistory(){
+    return msgs.slice(-10).map(m=>({ role: m.from==='u'?'user':'assistant', content:m.text }));
+  }
+  let typingEl=null;
+  function typing(on){
+    const box=$('#chatMsgs'); if(!box) return;
+    if(on && !typingEl){ typingEl=document.createElement('div'); typingEl.className='chat-msg bot'; typingEl.textContent='🤖 در حال نوشتن...'; box.appendChild(typingEl); box.scrollTop=box.scrollHeight; }
+    if(!on && typingEl){ typingEl.remove(); typingEl=null; }
+  }
+  async function askAI(){
+    const ctrl=new AbortController(); const to=setTimeout(()=>ctrl.abort(),20000);
+    try{
+      const r=await fetch(String(DB.site.aiUrl).trim(),{ method:'POST', signal:ctrl.signal, headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ messages: aiHistory(), context: aiContext() }) });
+      if(!r.ok) throw new Error('ai '+r.status);
+      const d=await r.json(); return (d.reply||'').trim() || null;
+    }catch(e){ return null; } finally{ clearTimeout(to); }
+  }
+  function humanActive(){ const t=lastAdminTs(); return t && Date.now()-t < 10*60*1000; }
+  function postBot(userMsg, text){
+    const bm={ mid:'b'+userMsg.mid, cid:userMsg.cid, from:'b', text:String(text).slice(0,1000), ts:Date.now() };
+    if(!msgs.some(x=>x.mid===bm.mid)) msgs.push(bm);
+    render(); const box=$('#chatMsgs'); if(box) box.scrollTop=box.scrollHeight;
+    http('PUT','/chats/'+bm.cid+'/'+bm.mid, JSON.stringify(bm)).catch(()=>{});
+  }
+  function botReply(userMsg, hadUser){
+    if(DB.site.botEnabled===false) return;
+    if(aiOn()){
+      if(humanActive()) return; /* اگر پشتیبان انسانی تازه جواب داده، هوش مصنوعی ساکت می‌ماند */
+      typing(true);
+      askAI().then(ans=>{ typing(false); postBot(userMsg, ans || botAnswer(userMsg.text)); });
+      return;
+    }
+    const real = rulesAnswer(userMsg.text) || catalogAnswer(userMsg.text);
+    if(!real && (DB.site.botMode||'first')==='first' && hadUser) return;
+    setTimeout(()=>postBot(userMsg, real || botAnswer(userMsg.text)), 500);
+  }
+  function init(){
+    const panel=$('#supportPanel');
+    if(!enabled()){ panel.classList.remove('chat-on'); clearInterval(timer); return; }
+    panel.classList.add('chat-on');
+    $('#chatSend').onclick=send;
+    $('#chatInput').onkeydown=e=>{ if(e.key==='Enter' && !e.shiftKey){ e.preventDefault(); send(); } };
+    getCid(false); render(); renderChips(); schedule(); poll();
+  }
+  function onToggle(){ if(!enabled()) return; schedule(); if(isOpen()){ render(); markSeen(); poll(); setTimeout(()=>{ const i=$('#chatInput'); if(i) i.focus(); },60); } }
+  function refresh(){ msgs=[]; const b=$('#chatMsgs'); if(b) delete b.dataset.init; showErr(''); render(); if($('#supportFab')) $('#supportFab').classList.remove('has-new'); poll(); }
+  document.addEventListener('visibilitychange',()=>{ if(!document.hidden) poll(); });
+  return { init:init, onToggle:onToggle, refresh:refresh };
+})();
+
+
+/* ============ نظرات کاربران (بخش جدا در دیتابیس: reviews و reviewCounts) ============ */
+let pendingReviewPid=null;
+const Reviews=(function(){
+  const counts={}; let curPid=null, curRating=0, curList=[];
+  function base(){ return String(window.CLOUD_DB_URL||'').trim().replace(/\/+$/,''); }
+  function http(method,path,body){
+    const opts={method:method,cache:'no-store'};
+    if(body!==undefined) opts.body=JSON.stringify(body);
+    return fetch(base()+'/electroland_v1'+path+'.json',opts).then(r=>{
+      if(!r.ok){ const e=new Error('HTTP '+r.status); e.status=r.status; throw e; }
+      return r.text();
+    }).then(t=>t?JSON.parse(t):null);
+  }
+  const on=()=>Cloud.ready;
+  const count=pid=>counts[pid]||0;
+  function badge(pid){ const n=count(pid); if(!n) return ''; const hot=n>100; return '<span class="rv-badge'+(hot?' hot':'')+'" title="تعداد نظرات">💬 '+(hot?'۱۰۰+':fmt(n))+'</span>'; }
+  function ukey(u){ return 'p'+String(u.phone||'').replace(/\D/g,''); }
+  function parse(obj){ if(!obj) return []; return Object.keys(obj).map(k=>{ try{ return typeof obj[k]==='string'?JSON.parse(obj[k]):null; }catch(e){ return null; } }).filter(r=>r && r.text).sort((a,b)=>b.ts-a.ts); }
+  async function loadCounts(){
+    if(!on()) return;
+    try{ const d=await http('GET','/reviewCounts'); Object.keys(d||{}).forEach(k=>{ counts[k]=Number(d[k])||0; }); renderProducts(); }catch(e){}
+  }
+  function paintBadge(){
+    const w=document.getElementById('pdImgWrap'); if(!w) return;
+    const o=w.querySelector('.rv-badge'); if(o) o.remove();
+    const h=badge(curPid); if(h) w.insertAdjacentHTML('beforeend',h);
+    const t=$('#rvCountTitle'); if(t) t.textContent='('+fmt(count(curPid))+')';
+  }
+  function renderForm(){
+    const box=$('#rvFormWrap'); if(!box) return;
+    const u=currentUser();
+    if(!u){
+      box.innerHTML='<div class="rv-form"><p style="margin:0 0 10px;font-size:13.5px;">برای ثبت نظر ابتدا وارد حساب کاربری خود شوید.</p><button type="button" class="btn btn-dark" id="rvLoginBtn">ورود / ساخت حساب</button></div>';
+      $('#rvLoginBtn').onclick=()=>{ pendingReviewPid=curPid; closeModal('productOverlay'); openAccount(); };
+      return;
+    }
+    const mine=curList.find(r=>r.mid===ukey(u));
+    curRating=mine?mine.rating:0;
+    box.innerHTML='<div class="rv-form"><div class="rv-stars" id="rvStars">'+[1,2,3,4,5].map(i=>'<button type="button" data-s="'+i+'" aria-label="'+i+' ستاره">★</button>').join('')+'</div>'+
+      '<textarea id="rvText" maxlength="600" placeholder="نظر خود را درباره این محصول بنویسید...">'+escapeHtml(mine?mine.text:'')+'</textarea>'+
+      '<button type="button" class="btn btn-dark" id="rvSubmit">'+(mine?'ویرایش نظر من':'ثبت نظر')+'</button></div>';
+    const paint=()=>$$('#rvStars button').forEach(b=>b.classList.toggle('on',+b.dataset.s<=curRating));
+    $$('#rvStars button').forEach(b=>b.onclick=()=>{ curRating=+b.dataset.s; paint(); });
+    paint(); $('#rvSubmit').onclick=submit;
+  }
+  function renderList(){
+    const el=$('#rvList'); if(!el) return;
+    el.innerHTML=curList.length?curList.map(r=>'<div class="rv-item"><b>'+escapeHtml(r.name||'کاربر')+'</b><span class="st">'+'★'.repeat(r.rating||0)+'</span><small>'+new Date(r.ts).toLocaleDateString('fa-IR')+'</small><p>'+escapeHtml(r.text)+'</p></div>').join(''):'<div class="empty-note" style="padding:20px 10px;">هنوز نظری ثبت نشده است. اولین نفر باشید!</div>';
+  }
+  async function show(p){
+    curPid=p.id; curList=[]; curRating=0;
+    renderForm(); paintBadge();
+    const el=$('#rvList');
+    if(!on()){ el.innerHTML='<div class="empty-note" style="padding:20px 10px;">بخش نظرات در حال حاضر در دسترس نیست.</div>'; $('#rvFormWrap').innerHTML=''; return; }
+    el.innerHTML='<div class="empty-note" style="padding:20px 10px;">در حال بارگذاری نظرات...</div>';
+    try{
+      const list=parse(await http('GET','/reviews/'+p.id));
+      if(curPid!==p.id) return;
+      curList=list; counts[p.id]=list.length;
+      renderForm(); renderList(); paintBadge();
+    }catch(e){ if(curPid===p.id) el.innerHTML='<div class="empty-note" style="padding:20px 10px;">بارگذاری نظرات انجام نشد.</div>'; }
+  }
+  async function submit(){
+    const u=currentUser(); if(!u) return;
+    const text=$('#rvText').value.trim();
+    if(!curRating){ toast('لطفاً امتیاز را انتخاب کنید','err'); return; }
+    if(text.length<3){ toast('متن نظر را بنویسید','err'); return; }
+    const pid=curPid, key=ukey(u), ln=(u.lastName||'').trim();
+    const o={ mid:key, pid:pid, name:((u.firstName||'کاربر')+(ln?' '+ln.charAt(0)+'.':'')).trim(), rating:curRating, text:text.slice(0,600), ts:Date.now() };
+    $('#rvSubmit').disabled=true;
+    try{
+      await http('PUT','/reviews/'+pid+'/'+key, JSON.stringify(o));
+      const list=parse(await http('GET','/reviews/'+pid));
+      counts[pid]=list.length;
+      await http('PUT','/reviewCounts/'+pid, list.length).catch(()=>{});
+      if(curPid===pid){ curList=list; renderForm(); renderList(); paintBadge(); }
+      renderProducts();
+      toast('نظر شما ثبت شد','ok');
+    }catch(e){ toast('ثبت نظر انجام نشد؛ اینترنت را بررسی کنید','err'); const b=$('#rvSubmit'); if(b) b.disabled=false; }
+  }
+  return { badge:badge, loadCounts:loadCounts, show:show };
+})();
+
+
+/* ============ تب‌های صفحه محصول: کمکی‌ها ============ */
+function setPdTab(name){
+  $$('#pdTabBar .pd-tab').forEach(b=>b.classList.toggle('on',b.dataset.tab===name));
+  $$('#pdTabs .pd-tabpanel').forEach(pn=>pn.classList.toggle('on',pn.id==='pdPanel-'+name));
+  if(name!=='video'){ $$('#pdPanel-video video').forEach(v=>{ try{ v.pause(); }catch(e){} }); }
+}
+document.addEventListener('click',e=>{ const b=e.target.closest('#pdTabBar .pd-tab'); if(b) setPdTab(b.dataset.tab); });
+function videoHtml(url){
+  url=String(url||'').trim();
+  if(!/^https:\/\//i.test(url)) return '';
+  let m;
+  if((m=url.match(/aparat\.com\/v\/([A-Za-z0-9]+)/i))) return '<div class="pd-video"><iframe src="https://www.aparat.com/video/video/embed/videohash/'+m[1]+'/vt/frame" allowfullscreen loading="lazy"></iframe></div>';
+  if((m=url.match(/(?:youtube\.com\/watch\?(?:.*&)?v=|youtu\.be\/|youtube\.com\/embed\/)([A-Za-z0-9_-]{6,15})/i))) return '<div class="pd-video"><iframe src="https://www.youtube.com/embed/'+m[1]+'" allowfullscreen loading="lazy"></iframe></div>';
+  if(/\.(mp4|webm|ogg)(\?|#|$)/i.test(url)) return '<div class="pd-video"><video controls preload="metadata" src="'+escapeHtml(url)+'"></video></div>';
+  return '<p><a href="'+escapeHtml(url)+'" target="_blank" rel="noopener">▶ مشاهده ویدیو</a></p>';
+}
+
+/* ============ کد امنیتی (کپچا) ============ */
+function makeCaptcha(canvasId, inputId, btnId){
+  const cv=document.getElementById(canvasId), inp=document.getElementById(inputId), btn=document.getElementById(btnId);
+  let code='';
+  const CH='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  function rnd(n){ return Math.floor(Math.random()*n); }
+  function draw(){
+    code=''; for(let i=0;i<5;i++) code+=CH[rnd(CH.length)];
+    const dpr=window.devicePixelRatio||1, W=150, H=50;
+    cv.width=W*dpr; cv.height=H*dpr;
+    const c=cv.getContext('2d'); c.setTransform(dpr,0,0,dpr,0,0);
+    c.clearRect(0,0,W,H);
+    const g=c.createLinearGradient(0,0,W,H); g.addColorStop(0,'#f1f1f4'); g.addColorStop(1,'#e2e2e8'); c.fillStyle=g; c.fillRect(0,0,W,H);
+    for(let i=0;i<6;i++){ c.strokeStyle='hsla('+rnd(360)+',45%,45%,.55)'; c.lineWidth=1+Math.random()*1.5; c.beginPath(); c.moveTo(rnd(W),rnd(H)); c.bezierCurveTo(rnd(W),rnd(H),rnd(W),rnd(H),rnd(W),rnd(H)); c.stroke(); }
+    for(let i=0;i<40;i++){ c.fillStyle='hsla('+rnd(360)+',40%,40%,.5)'; c.fillRect(rnd(W),rnd(H),2,2); }
+    c.textBaseline='middle';
+    for(let i=0;i<code.length;i++){
+      c.save();
+      c.translate(16+i*25, H/2+(Math.random()*8-4));
+      c.rotate((Math.random()-.5)*.6);
+      c.font='bold '+(26+rnd(6))+'px Tahoma,Arial,sans-serif';
+      c.fillStyle='hsl('+rnd(360)+',55%,28%)';
+      c.fillText(code[i],0,0);
+      c.restore();
+    }
+    inp.value='';
+  }
+  btn.addEventListener('click',()=>{ draw(); inp.focus(); });
+  draw();
+  return {
+    refresh:draw,
+    check:function(){ const ok = inp.value.trim().toUpperCase()===code; if(!ok) draw(); return ok; },
+    isEmpty:function(){ return !inp.value.trim(); }
+  };
+}
+let capSend=null, capResend=null;
+
+
+/* ============ استان‌ها و شهرهای ایران ============ */
+const IRAN_RAW = `آذربایجان شرقی:تبریز،مراغه،مرند،میانه،اهر،بناب،سراب،شبستر،هادی‌شهر،جلفا،آذرشهر،اسکو،بستان‌آباد،ملکان،ورزقان،هشترود،کلیبر،عجب‌شیر،ایلخچی،صوفیان،خسروشهر،ترکمانچای
+آذربایجان غربی:ارومیه،خوی،مهاباد،بوکان،میاندوآب،سلماس،پیرانشهر،نقده،شاهین‌دژ،ماکو،سردشت،تکاب،اشنویه،چالدران،پلدشت،چایپاره،بازرگان،قره‌ضیاءالدین
+اردبیل:اردبیل،پارس‌آباد،مشگین‌شهر،خلخال،گرمی،بیله‌سوار،نمین،نیر،کوثر،سرعین،اصلاندوز
+اصفهان:اصفهان،کاشان،خمینی‌شهر،نجف‌آباد،شاهین‌شهر،زرین‌شهر،فولادشهر،مبارکه،گلپایگان،نطنز،سمیرم،فلاورجان،اردستان،آران و بیدگل،شهرضا،دهاقان،خوانسار،نائین،تیران،چادگان،میمه،بوئین و میاندشت،فریدونشهر،دولت‌آباد،زواره،گز،باغ‌بهادران،علویجه،کلیشاد و سودرجان
+البرز:کرج،فردیس،نظرآباد،اشتهارد،طالقان،هشتگرد،محمدشهر،ماهدشت،کمال‌شهر،مشکین‌دشت،گرمدره،چهارباغ
+ایلام:ایلام،دهلران،آبدانان،مهران،ایوان،دره‌شهر،سرابله،چوار،بدره،موسیان
+بوشهر:بوشهر،برازجان،گناوه،کنگان،جم،دیر،دیلم،خورموج،عسلویه،بندر ریگ،اهرم،بنک،کلمه
+تهران:تهران،شهریار،اسلامشهر،ورامین،پاکدشت،قدس،ملارد،رباط‌کریم،بهارستان،دماوند،پردیس،قرچک،پیشوا،فیروزکوه،نسیم‌شهر،صباشهر،کهریزک،چهاردانگه،لواسان،جوادآباد،باقرشهر،آبسرد،رودهن،بومهن
+چهارمحال و بختیاری:شهرکرد،بروجن،فارسان،لردگان،فرخ‌شهر،سامان،کیار،هفشجان،ناغان،جونقان،اردل،سودجان
+خراسان جنوبی:بیرجند،قائن،طبس،فردوس،نهبندان،سرایان،بشرویه،سربیشه،درمیان،خوسف،زیرکوه
+خراسان رضوی:مشهد،نیشابور،سبزوار،تربت حیدریه،قوچان،کاشمر،گناباد،تایباد،تربت جام،چناران،سرخس،فریمان،درگز،بردسکن،خلیل‌آباد،طرقبه،شاندیز،خواف،رشتخوار،بجستان،فیروزه،جغتای،صالح‌آباد،کلات،رضویه
+خراسان شمالی:بجنورد،شیروان،اسفراین،آشخانه،جاجرم،گرمه،فاروج،راز،پیش‌قلعه،سنخواست
+خوزستان:اهواز،آبادان،خرمشهر،دزفول،اندیمشک،ماهشهر،بهبهان،ایذه،شوشتر،شوش،مسجدسلیمان،بندر امام خمینی،رامهرمز،هندیجان،باغ‌ملک،شادگان،دهدز،حمیدیه،سوسنگرد،لالی،گتوند،رامشیر،هویزه،الوان،میانرود
+زنجان:زنجان،ابهر،خرمدره،قیدار،هیدج،آب‌بر،ماهنشان،سلطانیه،زرین‌آباد
+سمنان:سمنان،شاهرود،دامغان،گرمسار،مهدی‌شهر،ایوانکی،سرخه،بسطام،میامی،آرادان،شهمیرزاد
+سیستان و بلوچستان:زاهدان،چابهار،زابل،ایرانشهر،سراوان،خاش،کنارک،نیک‌شهر،سرباز،میرجاوه،راسک،زهک،دلگان،قصرقند،جکیگور
+فارس:شیراز،مرودشت،جهرم،فسا،کازرون،لار،داراب،فیروزآباد،آباده،لامرد،اقلید،نی‌ریز،سپیدان،ممسنی،صفاشهر،استهبان،زرین‌دشت،خنج،سروستان،بوانات،گراش،مهر،اوز،قیر،کوار،خرامه،بالاده،ارسنجان
+قزوین:قزوین،البرز،آبیک،تاکستان،بوئین‌زهرا،محمدیه،الوند،آوج،اسفرورین،شال
+قم:قم،جمکران،قنوات،کهک،دستجرد
+کردستان:سنندج،سقز،بانه،مریوان،قروه،کامیاران،بیجار،دیواندره،دهگلان،سروآباد
+کرمان:کرمان،رفسنجان،سیرجان،جیرفت،بم،زرند،کهنوج،بردسیر،شهربابک،راور،منوجان،بافت،عنبرآباد،فهرج،رودبار جنوب،قلعه‌گنج،ریگان،کوهبنان،ماهان
+کرمانشاه:کرمانشاه،اسلام‌آباد غرب،سنقر،هرسین،کنگاور،جوانرود،پاوه،صحنه،قصر شیرین،گیلان غرب،سرپل ذهاب،روانسر،ثلاث باباجانی،نودشه
+کهگیلویه و بویراحمد:یاسوج،دهدشت،دوگنبدان،لیکک،سی‌سخت،چرام،باشت،چیتاب،مادوان
+گلستان:گرگان،گنبدکاووس،علی‌آباد کتول،آق‌قلا،آزادشهر،کردکوی،بندر ترکمن،مینودشت،رامیان،گالیکش،کلاله،بندر گز،خان‌ببین،مراوه‌تپه،گمیشان،فاضل‌آباد
+گیلان:رشت،بندر انزلی،لاهیجان،لنگرود،آستارا،تالش،رودسر،صومعه‌سرا،فومن،آستانه اشرفیه،رودبار،شفت،سیاهکل،ماسال،املش،رضوانشهر،کیاشهر،خمام،لوشان،منجیل،چابکسر
+لرستان:خرم‌آباد،بروجرد،دورود،کوهدشت،ازنا،الیگودرز،نورآباد،الشتر،پلدختر،سپیددشت،رومشکان،مومن‌آباد
+مازندران:ساری،بابل،آمل،قائم‌شهر،بابلسر،نوشهر،چالوس،تنکابن،رامسر،بهشهر،نکا،محمودآباد،فریدونکنار،جویبار،سوادکوه،میاندورود،عباس‌آباد،کلاردشت،گلوگاه،نور،پل‌سفید،سرخرود،کتالم،رویان،کجور
+مرکزی:اراک،ساوه،خمین،محلات،دلیجان،شازند،آشتیان،تفرش،کمیجان،زرندیه،خنداب،نوبران
+هرمزگان:بندرعباس،میناب،قشم،بندر لنگه،کیش،رودان،حاجی‌آباد،بستک،جاسک،پارسیان،بندر خمیر،سیریک،ابوموسی،کوهستک،پارسیان،درگهان
+همدان:همدان،ملایر،نهاوند،تویسرکان،اسدآباد،کبودرآهنگ،بهار،رزن،فامنین،لالجین،دمق
+یزد:یزد،میبد،اردکان،بافق،ابرکوه،تفت،مهریز،اشکذر،هرات،خاتم،بهاباد،زارچ`;
+const IRAN = IRAN_RAW.split('\n').map(l=>{ const i=l.indexOf(':'); return { name:l.slice(0,i).trim(), cities:Array.from(new Set(l.slice(i+1).split('،').map(x=>x.trim()).filter(Boolean))) }; });
+function fillProvinceSelect(sel, selected){
+  sel.innerHTML='<option value="">انتخاب استان...</option>'+IRAN.map(p=>'<option value="'+escapeHtml(p.name)+'"'+(p.name===selected?' selected':'')+'>'+escapeHtml(p.name)+'</option>').join('');
+}
+function fillCitySelect(sel, province, selected){
+  const pr=IRAN.find(p=>p.name===province);
+  sel.disabled=!pr;
+  sel.innerHTML=pr ? '<option value="">انتخاب شهر...</option>'+pr.cities.map(c=>'<option value="'+escapeHtml(c)+'"'+(c===selected?' selected':'')+'>'+escapeHtml(c)+'</option>').join('') : '<option value="">ابتدا استان را انتخاب کنید</option>';
+}
+const toFa = str => String(str).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+
+
+/* ============ ویدیوهای بارگذاری‌شده از گالری (چانک‌شده در بخش جدا: videos) ============ */
+const videoBlobCache={};
+async function playGalleryVideo(btn, v){
+  const box=btn.closest('.pd-vitem').querySelector('.vbox');
+  if(!v||!Cloud.ready){ box.textContent='ویدیو در دسترس نیست.'; return; }
+  btn.disabled=true; box.innerHTML='<div class="hint">در حال بارگذاری ویدیو...</div>';
+  try{
+    let url=videoBlobCache[v.id];
+    if(!url){
+      const base=String(window.CLOUD_DB_URL||'').trim().replace(/\/+$/,'');
+      const r=await fetch(base+'/electroland_v1/videos/'+v.id+'.json',{cache:'no-store'});
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      const d=await r.json();
+      if(!d) throw new Error('empty');
+      const parts=[]; for(let i=0;i<(v.chunks||0);i++){ if(typeof d['c'+i]!=='string') throw new Error('missing chunk'); parts.push(d['c'+i]); }
+      const blob=await (await fetch('data:'+(v.type||'video/mp4')+';base64,'+parts.join(''))).blob();
+      url=URL.createObjectURL(blob); videoBlobCache[v.id]=url;
+    }
+    box.innerHTML='<div class="pd-video"><video controls autoplay playsinline src="'+url+'"></video></div>';
+    btn.style.display='none';
+  }catch(e){ box.innerHTML='<div class="hint" style="color:var(--danger)">بارگذاری ویدیو انجام نشد؛ دوباره تلاش کنید.</div>'; btn.disabled=false; }
+}
+(function(){
+  const b=document.getElementById('toTopBtn');
+  window.addEventListener('scroll',()=>b.classList.toggle('show',window.scrollY>500),{passive:true});
+  b.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+})();
+
+/* ============ render: header/brand ============ */
+function renderBrand(){
+  $('#brandName').textContent=DB.site.name;
+  $('#brandTag').textContent=DB.site.tag;
+  $('#brandMark').innerHTML = DB.site.logo ? '<img src="'+DB.site.logo+'" alt="">' : DB.site.logoEmoji;
+  $('#footerBrand').textContent=DB.site.name;
+  $('#topbarText').textContent=DB.site.topbar;
+  document.title=DB.site.name+' | فروشگاه لوازم برقی';
+  $('#aboutText').textContent = DB.site.about && DB.site.about.trim() ? DB.site.about : 'هنوز متنی برای «درباره ما» ثبت نشده است.';
+  $('#supportBody').textContent = DB.site.support && DB.site.support.trim() ? DB.site.support : 'در حال حاضر متنی برای پشتیبانی ثبت نشده است. برای ارتباط از بخش «تماس» استفاده کنید.';
+  $('#contactMini').innerHTML =
+    '<span>📞 '+escapeHtml(DB.site.phone||'ثبت نشده')+'</span>'+
+    '<span>✉️ '+escapeHtml(DB.site.email||'ثبت نشده')+'</span>'+
+    '<span>📍 '+escapeHtml(DB.site.address||'ثبت نشده')+'</span>';
+  $('#yearNow').textContent = new Date().getFullYear();
+  applyTheme(); renderPaymentCard(); renderSupportChannels(); LiveChat.init();
+}
+
+/* ============ theme (رنگ‌ها از پنل مدیریت) ============ */
+const THEME_KEYS=['--bg','--surface','--surface-2','--ink','--ink-soft','--muted','--line','--panel','--panel-text','--panel-muted','--panel-line','--support','--on-ink','--danger','--ok'];
+function applyTheme(){
+  const t=(DB.site&&DB.site.theme)||{};
+  const root=document.documentElement;
+  THEME_KEYS.forEach(k=>{ if(t[k] && /^#[0-9a-fA-F]{3,8}$/.test(t[k])) root.style.setProperty(k,t[k]); else root.style.removeProperty(k); });
+}
+/* ============ شماره کارت پرداخت (از پنل مدیریت) ============ */
+function renderPaymentCard(){
+  const n=(DB.site.cardNumber||'').trim(), h=(DB.site.cardHolder||'').trim();
+  if(n) $('#checkoutCardNumber').textContent=n;
+  if(h) $('#checkoutCardHolder').textContent='به نام: '+h;
+}
+/* ============ کانال‌های پشتیبانی آنلاین ============ */
+let tawkLoaded=false;
+function renderSupportChannels(){
+  const s=DB.site, links=[];
+  const digits=v=>String(v||'').replace(/[^\d+]/g,'');
+  const wa=digits(s.supportWhatsapp).replace(/^\+/,'').replace(/^0/,'98');
+  const tg=String(s.supportTelegram||'').trim().replace(/^@/,'').replace(/^https?:\/\/t\.me\//,'');
+  const ig=String(s.supportInstagram||'').trim().replace(/^@/,'').replace(/^https?:\/\/(www\.)?instagram\.com\//,'').replace(/\/$/,'');
+  if(s.phone && s.phone.trim()) links.push('<a href="tel:'+escapeHtml(digits(s.phone))+'">📞 تماس تلفنی: '+escapeHtml(s.phone)+'</a>');
+  if(wa) links.push('<a href="https://wa.me/'+wa+'" target="_blank" rel="noopener">🟢 گفتگو در واتساپ</a>');
+  if(tg) links.push('<a href="https://t.me/'+encodeURIComponent(tg)+'" target="_blank" rel="noopener">✈️ گفتگو در تلگرام</a>');
+  if(ig) links.push('<a href="https://instagram.com/'+encodeURIComponent(ig)+'" target="_blank" rel="noopener">📷 پیام در اینستاگرام</a>');
+  $('#supportLinks').innerHTML=links.join('');
+  const hrs=$('#supportHours'); const h=(s.supportHours||'').trim();
+  hrs.style.display=h?'':'none'; hrs.textContent=h?('🕒 ساعات پاسخگویی: '+h):'';
+  const tk=String(s.supportTawk||'').trim();
+  if(tk && !tawkLoaded && /^[\w]+\/[\w]+$/.test(tk)){
+    tawkLoaded=true;
+    window.Tawk_API=window.Tawk_API||{}; window.Tawk_LoadStart=new Date();
+    const sc=document.createElement('script'); sc.async=true; sc.src='https://embed.tawk.to/'+tk; sc.charset='UTF-8'; sc.setAttribute('crossorigin','*');
+    document.head.appendChild(sc);
+  }
+}
+
+/* ============ hero slides ============ */
+let heroIdx=0, heroTimer=null;
+function renderHero(){
+  const wrap=$('#heroSlides'); const dots=$('#heroDots');
+  wrap.innerHTML = DB.slides.map((s,i)=>{
+    const btns = (Array.isArray(s.buttons) && s.buttons.length) ? s.buttons : [{label:'مشاهده محصولات',link:'#shop'},{label:'دسته‌بندی‌ها',link:'#categories'}];
+    return '<div class="hero-slide'+(i===heroIdx?' active':'')+'">'+
+      '<span class="hero-eyebrow">'+escapeHtml(s.eyebrow||'')+'</span>'+
+      '<h1 class="hero-title">'+escapeHtml(s.title||'')+'</h1>'+
+      '<p class="hero-sub">'+escapeHtml(s.sub||'')+'</p>'+
+      '<div class="hero-cta">'+btns.map((b,bi)=>'<a href="'+escapeHtml(b.link||'#shop')+'" class="btn '+(bi===0?'btn-light':'btn-outline-light')+'">'+escapeHtml(b.label||'')+'</a>').join('')+'</div>'+
+    '</div>';
+  }).join('');
+  dots.innerHTML = DB.slides.map((s,i)=>'<button class="'+(i===heroIdx?'active':'')+'" data-i="'+i+'"></button>').join('');
+  $$('#heroDots button').forEach(b=>b.addEventListener('click',()=>{ heroIdx=+b.dataset.i; renderHero(); resetHeroTimer(); }));
+  const cur = DB.slides[heroIdx];
+  const bgEl = $('#heroBgImg'); const circuitEl = $('#heroCircuit');
+  if(cur && cur.img){
+    bgEl.style.backgroundImage = "url('"+cur.img+"')";
+    bgEl.classList.add('show');
+    circuitEl.style.opacity = '0';
+  } else {
+    bgEl.classList.remove('show');
+    circuitEl.style.opacity = '.16';
+  }
+}
+function resetHeroTimer(){
+  if(heroTimer) clearInterval(heroTimer);
+  heroTimer=setInterval(()=>{ heroIdx=(heroIdx+1)%DB.slides.length; renderHero(); },5500);
+}
+
+/* ============ categories ============ */
+let activeCat='all';
+let activeSub='all';
+let activeChildSub='all';
+function subsOf(catId){
+  const c=DB.categories.find(x=>x.id===catId);
+  return c && Array.isArray(c.subs) ? c.subs : [];
+}
+function renderCategories(){
+  const row=$('#catRow');
+  let html='<div class="cat-chip'+(activeCat==='all'?' active':'')+'" data-cat="all"><span class="em">🛍️</span><span class="nm">همه محصولات</span></div>';
+  html += DB.categories.map(c=>{
+    const n=(c.subs||[]).length;
+    return '<div class="cat-chip'+(activeCat===c.id?' active':'')+'" data-cat="'+c.id+'">'+
+      (c.image ? '<span class="em cat-img-em"><img src="'+c.image+'" alt="'+escapeHtml(c.name)+'"></span>' : '<span class="em">'+c.emoji+'</span>')+
+      '<span class="nm-row"><span class="nm">'+escapeHtml(c.name)+'</span>'+(n?'<span class="chip-caret">⌄</span>':'')+'</span>'+
+      '</div>';
+  }).join('');
+  row.innerHTML=html;
+  $$('.cat-chip',row).forEach(el=>el.addEventListener('click',()=>{
+    const cid=el.dataset.cat;
+    const box=$('#subcatBox');
+    if(cid==='all'){
+      activeCat='all'; activeSub='all'; activeChildSub='all';
+      if(box){ box.hidden=true; box.innerHTML=''; }
+      renderCategories(); renderProducts(); updateShopTitle();
+      document.getElementById('shop').scrollIntoView({behavior:'smooth'});
+      return;
+    }
+    activeCat=cid; activeSub='all'; activeChildSub='all';
+    renderCategories();
+    /* only categories that actually have subcategories get the small page;
+       a category with none goes straight to its filtered product list */
+    if(subsOf(cid).length>0){
+      openSubcatPage(cid);
+    } else {
+      if(box){ box.hidden=true; box.innerHTML=''; }
+      renderProducts(); updateShopTitle();
+      document.getElementById('shop').scrollIntoView({behavior:'smooth'});
+    }
+  }));
+}
+
+/* small inline box (not a popup) listing the subcategories of a category */
+function openSubcatPage(catId){
+  const cat=DB.categories.find(c=>c.id===catId);
+  const box=$('#subcatBox');
+  if(!cat){ box.hidden=true; box.innerHTML=''; return; }
+  const subs=cat.subs||[];
+  const total=DB.products.filter(p=>p.catId===catId).length;
+
+  box.hidden=false;
+  box.style.setProperty('--cols', String(Math.max(1,Math.min(subs.length||1,6))));
+  box.innerHTML =
+    '<div class="subcat-box-head">'+
+      '<div style="display:flex;align-items:center;gap:10px;">'+
+        '<span class="subcat-head-em">'+(cat.image ? '<img src="'+cat.image+'" alt="">' : cat.emoji)+'</span>'+
+        '<div><h3 style="margin:0;font-size:15px;">'+escapeHtml(cat.name)+'</h3>'+
+          '<p style="margin:2px 0 0;font-size:12.5px;color:var(--muted);">'+
+            (subs.length ? 'یک زیرمجموعه را انتخاب کنید ('+fmt(subs.length)+' زیرمجموعه)' : fmt(total)+' محصول در این دسته‌بندی')+
+          '</p>'+
+        '</div>'+
+      '</div>'+
+      '<button type="button" class="subcat-box-close" id="subcatBoxCloseBtn">✕ بستن</button>'+
+    '</div>'+
+    (subs.length
+      ? '<div class="subcat-grid">'+
+          subs.map(s=>{
+            const n=DB.products.filter(p=>p.catId===catId && p.subId===s.id).length;
+            const children = Array.isArray(s.subs) ? s.subs : [];
+            return '<div class="subcat-item-wrap">'+
+              '<button type="button" class="subcat-item'+(activeSub===s.id && activeChildSub==='all'?' active':'')+(children.length?' no-click':'')+'" data-sub="'+s.id+'" data-has-children="'+(children.length?'1':'0')+'">'+
+                (s.image
+                  ? '<img class="sc-img" src="'+s.image+'" alt="'+escapeHtml(s.name)+'">'
+                  : '<span class="sc-em">🏷️</span>')+
+                '<span class="sc-nm">'+escapeHtml(s.name)+'</span>'+
+                '<span class="sc-count">'+fmt(n)+' محصول</span>'+
+              '</button>'+
+              (children.length
+                ? '<div class="subcat-children">'+
+                    children.map(ch=>{
+                      const cn=DB.products.filter(p=>p.catId===catId && p.subId===s.id && p.childSubId===ch.id).length;
+                      return '<button type="button" class="subcat-child-pill'+(activeSub===s.id && activeChildSub===ch.id?' active':'')+'" data-sub="'+s.id+'" data-child="'+ch.id+'">'+
+                        (ch.image ? '<img src="'+ch.image+'" alt="">' : '')+
+                        '<span>'+escapeHtml(ch.name)+'</span>'+
+                        '<em>'+fmt(cn)+'</em>'+
+                      '</button>';
+                    }).join('')+
+                  '</div>'
+                : '')+
+            '</div>';
+          }).join('')+
+        '</div>'
+      : '<div class="subcat-empty">برای این دسته‌بندی هنوز زیرمجموعه‌ای ثبت نشده است.</div>')+
+    '<button type="button" class="subcat-all-btn" data-sub="all">مشاهده همه محصولات «'+escapeHtml(cat.name)+'»</button>';
+
+  $('#subcatBoxCloseBtn').addEventListener('click',()=>{ box.hidden=true; box.innerHTML=''; });
+  $$('.subcat-item',box).forEach(el=>el.addEventListener('click',()=>{
+    if(el.dataset.hasChildren==='1') return; /* زیرمجموعهٔ اول وقتی زیرمجموعهٔ دوم دارد، خودش قابل کلیک نیست */
+    activeSub=el.dataset.sub; activeChildSub='all';
+    box.hidden=true; box.innerHTML='';
+    renderProducts(); updateShopTitle();
+    document.getElementById('shop').scrollIntoView({behavior:'smooth'});
+  }));
+  $$('.subcat-all-btn',box).forEach(el=>el.addEventListener('click',()=>{
+    activeSub=el.dataset.sub; activeChildSub='all';
+    box.hidden=true; box.innerHTML='';
+    renderProducts(); updateShopTitle();
+    document.getElementById('shop').scrollIntoView({behavior:'smooth'});
+  }));
+  $$('.subcat-child-pill',box).forEach(el=>el.addEventListener('click',(ev)=>{
+    ev.stopPropagation();
+    activeSub=el.dataset.sub; activeChildSub=el.dataset.child;
+    box.hidden=true; box.innerHTML='';
+    renderProducts(); updateShopTitle();
+    document.getElementById('shop').scrollIntoView({behavior:'smooth'});
+  }));
+
+  box.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function updateShopTitle(){
+  if(activeCat==='all'){ $('#shopTitle').textContent='همه محصولات'; return; }
+  const cat=DB.categories.find(c=>c.id===activeCat);
+  if(!cat){ $('#shopTitle').textContent='همه محصولات'; return; }
+  const sub = activeSub!=='all' ? (cat.subs||[]).find(s=>s.id===activeSub) : null;
+  const childSub = sub && activeChildSub!=='all' ? (sub.subs||[]).find(ch=>ch.id===activeChildSub) : null;
+  $('#shopTitle').textContent = sub ? (cat.name+' › '+sub.name+(childSub?' › '+childSub.name:'')) : cat.name;
+}
+
+/* ============ products (storefront) ============ */
+let searchTerm='';
+function cardHtml(p){
+  const cat = DB.categories.find(c=>c.id===p.catId);
+  const sub = cat && Array.isArray(cat.subs) ? cat.subs.find(s=>s.id===p.subId) : null;
+  const childSub = sub && Array.isArray(sub.subs) ? sub.subs.find(ch=>ch.id===p.childSubId) : null;
+  const outOfStock = p.inStock===false;
+  const unavail = outOfStock || !!p.outOfWarehouse;
+  const stockN = Number(p.stock);
+  const onSale = !outOfStock && p.sale && p.salePercent>0;
+  const priceHtml = onSale
+    ? '<span class="price"><s class="old-price">'+fmt(p.price)+'</s> '+fmt(finalPrice(p))+' <small>تومان</small></span>'
+    : '<span class="price">'+fmt(outOfStock?0:p.price)+' <small>تومان</small></span>';
+  const cardImages = Array.isArray(p.images) && p.images.length ? p.images : (p.img?[p.img]:[]);
+  const secondImg = cardImages.length>1 ? cardImages[1] : null;
+  return '<div class="card" data-id="'+p.id+'">'+
+    '<div class="imgwrap">'+
+      (p.sale?'<span class="sale-badge">'+(p.salePercent>0?fmt(p.salePercent)+'٪ تخفیف':'فروش ویژه')+'</span>':'')+
+      (unavail?'<span class="oow-badge">عدم موجود در انبار</span>':'')+Reviews.badge(p.id)+
+      '<img class="img-main" src="'+p.img+'" alt="'+escapeHtml(p.name)+'">'+
+      (secondImg?'<img class="img-second" src="'+secondImg+'" alt="'+escapeHtml(p.name)+'">':'')+
+    '</div>'+
+    '<div class="body">'+
+      '<span class="cat-label">'+(cat?cat.emoji+' '+escapeHtml(cat.name):'')+(sub?' › '+escapeHtml(sub.name):'')+(childSub?' › '+escapeHtml(childSub.name):'')+'</span>'+
+      '<span class="name">'+escapeHtml(p.name)+'</span>'+
+      (!unavail && stockN>0 ? '<span class="stock-count">موجود در انبار: '+fmt(stockN)+' عدد</span>' : '')+
+      '<div class="price-row">'+
+        priceHtml+
+        (outOfStock?'<button class="add-btn" disabled>ناموجود</button>':'<button class="add-btn" data-add="'+p.id+'">🛒 افزودن</button>')+
+      '</div>'+
+      (outOfStock?'<span class="stock-status">ناموجود</span>':'')+
+    '</div>'+
+  '</div>';
+}
+function bindCards(grid){
+  $$('[data-add]',grid).forEach(b=>b.addEventListener('click',()=>{
+    addToCart(b.dataset.add);
+    b.textContent='✓ افزوده شد'; b.classList.add('added');
+    setTimeout(()=>{ b.textContent='🛒 افزودن'; b.classList.remove('added'); },1200);
+  }));
+  $$('.imgwrap',grid).forEach(wrap=>{
+    const hasSecond = !!wrap.querySelector('.img-second');
+    if(!hasSecond) return;
+    const showSecond = ()=>wrap.classList.add('show-second');
+    const hideSecond = ()=>wrap.classList.remove('show-second');
+    wrap.addEventListener('mouseenter', showSecond);
+    wrap.addEventListener('mouseleave', hideSecond);
+    wrap.addEventListener('touchstart', showSecond, {passive:true});
+    wrap.addEventListener('touchend', hideSecond);
+    wrap.addEventListener('touchcancel', hideSecond);
+  });
+  $$('.card',grid).forEach(card=>card.addEventListener('click',(e)=>{
+    if(e.target.closest('[data-add]')) return;
+    openProductDetail(card.dataset.id);
+  }));
+}
+function renderSuggestGrid(container, excludeId, count){
+  if(!container) return;
+  let pool = DB.products.filter(p=>p.id!==excludeId);
+  pool = pool.sort(()=>Math.random()-0.5).slice(0, count||4);
+  if(!pool.length){ container.innerHTML='<div class="empty-note">فعلاً پیشنهادی موجود نیست.</div>'; return; }
+  container.innerHTML = pool.map(cardHtml).join('');
+  bindCards(container);
+}
+function renderProducts(){
+  const grid=$('#productGrid');
+  let list=DB.products;
+  if(activeCat!=='all') list=list.filter(p=>p.catId===activeCat);
+  if(activeCat!=='all' && activeSub!=='all') list=list.filter(p=>p.subId===activeSub);
+  if(activeCat!=='all' && activeSub!=='all' && activeChildSub!=='all') list=list.filter(p=>p.childSubId===activeChildSub);
+  if(searchTerm.trim()) list=list.filter(p=>p.name.toLowerCase().includes(searchTerm.trim().toLowerCase()));
+  if(!list.length){ grid.innerHTML='<div class="empty-note">محصولی یافت نشد.</div>'; return; }
+  grid.innerHTML = list.map(cardHtml).join('');
+  bindCards(grid);
+}
+
+/* ============ product detail modal ============ */
+let pdImages=[]; let pdImgIdx=0;
+function pdSetImage(i){
+  if(!pdImages.length) return;
+  pdImgIdx = ((i%pdImages.length)+pdImages.length)%pdImages.length;
+  $('#pdImg').src = pdImages[pdImgIdx];
+  $$('.pd-dot', document.getElementById('pdDots')).forEach((d,idx)=>d.classList.toggle('active', idx===pdImgIdx));
+  $$('.pd-thumb', document.getElementById('pdThumbs')).forEach((t,idx)=>t.classList.toggle('active', idx===pdImgIdx));
+}
+(function initPdImageDrag(){
+  const wrap = document.getElementById('pdImgWrap');
+  const pdImgEl = document.getElementById('pdImg');
+  let startX=null;
+  const STEP=22;
+  const isOnArrow = e => !!e.target.closest('.pd-arrow');
+  const applyZoom = (clientX, clientY)=>{
+    const rect = wrap.getBoundingClientRect();
+    const x = Math.max(0,Math.min(100,((clientX-rect.left)/rect.width*100)));
+    const y = Math.max(0,Math.min(100,((clientY-rect.top)/rect.height*100)));
+    pdImgEl.style.transformOrigin = x+'% '+y+'%';
+    pdImgEl.style.transform = 'scale(1.6)';
+  };
+  const resetZoom = ()=>{ pdImgEl.style.transform=''; pdImgEl.style.transformOrigin=''; };
+  wrap.addEventListener('pointerdown',e=>{
+    if(isOnArrow(e)) return;
+    if(pdImages.length<2) return;
+    startX=e.clientX;
+    wrap.classList.add('dragging');
+    wrap.setPointerCapture(e.pointerId);
+  });
+  /* unified pointer events (mouse + touch + pen): drag changes slide, hover/touch-drag over the photo zooms, arrows never zoom */
+  wrap.addEventListener('pointermove',e=>{
+    if(isOnArrow(e)){ resetZoom(); return; }
+    if(startX!==null){
+      const dx=e.clientX-startX;
+      const steps=Math.trunc(dx/STEP);
+      if(steps!==0){ pdSetImage(pdImgIdx-steps); startX += steps*STEP; }
+      return;
+    }
+    applyZoom(e.clientX, e.clientY);
+  });
+  ['pointerup','pointerleave','pointercancel'].forEach(evt=>wrap.addEventListener(evt,()=>{
+    startX=null; wrap.classList.remove('dragging'); resetZoom();
+  }));
+  document.getElementById('pdArrowPrev').addEventListener('click',e=>{ e.stopPropagation(); resetZoom(); pdSetImage(pdImgIdx-1); });
+  document.getElementById('pdArrowNext').addEventListener('click',e=>{ e.stopPropagation(); resetZoom(); pdSetImage(pdImgIdx+1); });
+})();
+function openProductDetail(id){
+  const p=DB.products.find(x=>x.id===id);
+  if(!p) return;
+  const cat=DB.categories.find(c=>c.id===p.catId);
+  pdImages = Array.isArray(p.images) && p.images.length ? p.images : [p.img];
+  const pdImgWrapEl = document.getElementById('pdImgWrap');
+  pdImgWrapEl.classList.toggle('rotatable', pdImages.length>1);
+  pdImgWrapEl.classList.toggle('has-slider', pdImages.length>1);
+  $('#pdRotateHint').style.display = pdImages.length>1 ? '' : 'none';
+  $('#pdDots').innerHTML = pdImages.length>1
+    ? pdImages.map((_,i)=>'<button type="button" class="pd-dot" data-dot="'+i+'"></button>').join('')
+    : '';
+  $$('.pd-dot', document.getElementById('pdDots')).forEach(d=>d.addEventListener('click',()=>pdSetImage(+d.dataset.dot)));
+  $('#pdThumbs').innerHTML = pdImages.length>1 ? pdImages.map((src,i)=>'<button type="button" class="pd-thumb" data-th="'+i+'" aria-label="تصویر '+fmt(i+1)+'"><img src="'+src+'" alt=""></button>').join('') : '';
+  $$('.pd-thumb', $('#pdThumbs')).forEach(t=>t.addEventListener('click',()=>pdSetImage(+t.dataset.th)));
+  pdSetImage(0);
+  $('#pdImg').alt=p.name;
+  const existingOow=pdImgWrapEl.querySelector('.pd-oow-badge');
+  if(existingOow) existingOow.remove();
+  if(p.outOfWarehouse || p.inStock===false){
+    const badge=document.createElement('span');
+    badge.className='pd-oow-badge';
+    badge.textContent='عدم موجود در انبار';
+    pdImgWrapEl.appendChild(badge);
+  }
+  const pdSub = cat && Array.isArray(cat.subs) ? cat.subs.find(s=>s.id===p.subId) : null;
+  const pdChildSub = pdSub && Array.isArray(pdSub.subs) ? pdSub.subs.find(ch=>ch.id===p.childSubId) : null;
+  $('#pdCat').textContent = cat ? (cat.emoji+' '+cat.name+(pdSub?' › '+pdSub.name:'')+(pdChildSub?' › '+pdChildSub.name:'')) : '';
+  $('#pdName').textContent = p.name;
+  const pdOos = p.inStock===false;
+  const onSale = !pdOos && p.sale && p.salePercent>0;
+  $('#pdPrice').innerHTML = onSale
+    ? '<s class="old-price">'+fmt(p.price)+'</s> '+fmt(finalPrice(p))+' <small>تومان</small>'
+    : fmt(pdOos?0:p.price)+' <small>تومان</small>';
+  let pdStockEl=$('#pdStockStatus');
+  if(!pdStockEl){
+    pdStockEl=document.createElement('div');
+    pdStockEl.id='pdStockStatus';
+    pdStockEl.className='pd-stock-status';
+    $('#pdPrice').insertAdjacentElement('afterend', pdStockEl);
+  }
+  pdStockEl.textContent = p.inStock===false ? 'ناموجود' : '';
+  pdStockEl.style.display = p.inStock===false ? '' : 'none';
+  let pdCntEl=$('#pdStockCount');
+  if(!pdCntEl){ pdCntEl=document.createElement('div'); pdCntEl.id='pdStockCount'; pdCntEl.className='pd-stock-count'; pdStockEl.insertAdjacentElement('afterend', pdCntEl); }
+  const pdStockN=Number(p.stock), pdUnavail=(p.inStock===false||!!p.outOfWarehouse);
+  pdCntEl.textContent = (!pdUnavail && pdStockN>0) ? ('موجود در انبار: '+fmt(pdStockN)+' عدد') : '';
+  pdCntEl.style.display = pdCntEl.textContent ? '' : 'none';
+  $('#pdDesc').textContent = p.desc && p.desc.trim() ? p.desc : 'توضیحاتی برای این محصول ثبت نشده است.';
+  const specs = Array.isArray(p.specs) ? p.specs.filter(s=>s && (s.k||'').trim()) : [];
+  $('#pdSpecsWrap').innerHTML = specs.length
+    ? '<table class="spec-table">'+specs.map(s=>'<tr><td>'+escapeHtml(s.k)+'</td><td>'+escapeHtml(s.v||'')+'</td></tr>').join('')+'</table>'
+    : '<div class="spec-empty">جدول مشخصاتی برای این محصول ثبت نشده است.</div>';
+  /* ----- تب‌های صفحه محصول ----- */
+  (function(){
+    const empty='<div class="empty-note" style="padding:24px 10px;">برای این بخش هنوز محتوایی ثبت نشده است.</div>';
+    const lines=(Array.isArray(p.specLines)?p.specLines:[]).map(x=>String(x||'').trim()).filter(Boolean);
+    $('#pdPanel-specs').innerHTML = lines.length ? '<ul class="pd-lines">'+lines.map(l=>'<li>'+escapeHtml(l)+'</li>').join('')+'</ul>'
+      : ((p.desc||'').trim() ? '<div class="pd-text">'+escapeHtml(p.desc)+'</div>' : empty);
+    $('#pdPanel-review').innerHTML = (p.review||'').trim() ? '<div class="pd-text">'+escapeHtml(p.review)+'</div>' : empty;
+    const vfiles=(Array.isArray(p.videos)?p.videos:[]).filter(v=>v && v.id);
+    $('#pdPanel-video').innerHTML = (videoHtml(p.video) || vfiles.length)
+      ? (videoHtml(p.video)||'')+(vfiles.length?'<div class="pd-vlist" style="margin-top:'+(p.video?'14':'0')+'px;">'+vfiles.map(v=>'<div class="pd-vitem" data-vid="'+escapeHtml(v.id)+'"><div class="vhead"><span>🎬 '+escapeHtml(v.name||'ویدیو')+(v.size?' · '+fmt(Math.round(v.size/1048576*10)/10)+' مگابایت':'')+'</span><button type="button" class="mini-btn" data-play="'+escapeHtml(v.id)+'">▶ پخش</button></div><div class="vbox"></div></div>').join('')+'</div>':'')
+      : empty;
+    $$('#pdPanel-video [data-play]').forEach(b=>b.onclick=()=>playGalleryVideo(b,vfiles.find(v=>v.id===b.dataset.play)));
+    $('#pdPanel-features').innerHTML = specs.length ? $('#pdSpecsWrap').innerHTML : empty;
+    const tags=(Array.isArray(p.tags)?p.tags:[]).map(x=>String(x||'').trim()).filter(Boolean);
+    $('#pdPanel-tags').innerHTML = tags.length ? '<div class="pd-tags">'+tags.map(t=>'<button type="button" class="pd-tag" data-tag="'+escapeHtml(t)+'">#'+escapeHtml(t)+'</button>').join('')+'</div>' : empty;
+    $$('.pd-tag',$('#pdPanel-tags')).forEach(b=>b.onclick=()=>{
+      searchTerm=b.dataset.tag; const sw=$('#searchWrap'); if(sw) sw.style.display=''; $('#searchInput').value=searchTerm;
+      closeModal('productOverlay'); renderProducts();
+      const sh=document.getElementById('shop'); if(sh) sh.scrollIntoView({behavior:'smooth'});
+    });
+    setPdTab('specs');
+  })();
+
+  const colors = (p.colorOptionEnabled && Array.isArray(p.colorOptions)) ? p.colorOptions.filter(Boolean) : [];
+  const pdColorWrap = $('#pdColorWrap');
+  const pdColorList = $('#pdColorList');
+  let pdSelectedColor = colors[0] || null;
+  if(colors.length){
+    pdColorWrap.style.display='';
+    pdColorList.style.display='none';
+    pdColorList.innerHTML = colors.map(c=>'<span class="pd-color-swatch'+(c===pdSelectedColor?' selected':'')+'" data-color="'+c+'" style="background:'+c+';"></span>').join('');
+    $('#pdColorToggle').onclick=()=>{ pdColorList.style.display = pdColorList.style.display==='none' ? 'flex' : 'none'; };
+    $$('.pd-color-swatch',pdColorList).forEach(sw=>sw.addEventListener('click',()=>{
+      pdSelectedColor = sw.dataset.color;
+      $$('.pd-color-swatch',pdColorList).forEach(s=>s.classList.remove('selected'));
+      sw.classList.add('selected');
+    }));
+  } else {
+    pdColorWrap.style.display='none';
+    pdColorList.innerHTML='';
+  }
+
+  let pdQty = 1;
+  const pdQtyVal = $('#pdQtyVal');
+  pdQtyVal.textContent = pdQty;
+  $('#pdQtyDec').onclick = ()=>{ if(pdQty>1){ pdQty--; pdQtyVal.textContent=pdQty; } };
+  const pdMaxQty = (Number(p.stock)>0) ? Math.min(99,Number(p.stock)) : 99;
+  $('#pdQtyInc').onclick = ()=>{ if(pdQty>=pdMaxQty && pdMaxQty<99) toast('حداکثر موجودی این محصول '+fmt(pdMaxQty)+' عدد است','err'); if(pdQty<pdMaxQty){ pdQty++; pdQtyVal.textContent=pdQty; } };
+  $('#pdAddBtn').disabled = pdOos;
+  $('#pdAddBtn').style.opacity = pdOos ? '.45' : '';
+  $('#pdAddBtn').onclick=()=>{ if(pdOos){ toast('این محصول در حال حاضر ناموجود است','err'); return; } addToCart(p.id, pdQty, pdSelectedColor); toast('به سبد خرید اضافه شد','ok'); };
+  renderSuggestGrid($('#pdSuggestGrid'), p.id, 4);
+  const qc=$('#pdQuickCall'), ph=String((DB.site&&DB.site.phone)||'').trim();
+  if(ph){ qc.style.display=''; qc.innerHTML='<span>تماس سریع :</span><a href="tel:'+escapeHtml(ph.replace(/[^0-9+]/g,''))+'">'+escapeHtml(ph)+'</a>'; } else { qc.style.display='none'; qc.innerHTML=''; }
+  Reviews.show(p);
+  openModal('productOverlay');
+}
+
+/* ============ cart ============ */
+function cartKey(id,color){ return id+'::'+(color||''); }
+function addToCart(id, qty, color){
+  const _p=DB.products.find(x=>x.id===id);
+  if(_p && _p.inStock===false){ toast('این محصول در حال حاضر ناموجود است','err'); return; }
+  qty = Number(qty)>0 ? Math.floor(Number(qty)) : 1;
+  color = color || null;
+  const key = cartKey(id,color);
+  const line=DB.cart.find(c=>c.key===key);
+  if(line) line.qty+=qty; else DB.cart.push({id:id,qty:qty,color:color,key:key});
+  save(); renderCartBadge(); renderCartDrawer();
+}
+function renderCartBadge(){
+  const n=DB.cart.reduce((a,c)=>a+c.qty,0);
+  const badge=$('#cartBadge');
+  badge.style.display = n?'grid':'none'; badge.textContent=n;
+}
+function cartTotal(){
+  return DB.cart.reduce((sum,c)=>{ const p=DB.products.find(x=>x.id===c.id); return sum + (p?finalPrice(p)*c.qty:0); },0);
+}
+function renderCartDrawer(){
+  const wrap=$('#cartItems');
+  if(!DB.cart.length){ wrap.innerHTML='<div class="empty-note">سبد خرید شما خالی است.</div>'; }
+  else{
+    wrap.innerHTML = DB.cart.map(c=>{
+      const p=DB.products.find(x=>x.id===c.id);
+      if(!p) return '';
+      const colorDot = c.color ? '<span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:'+c.color+';border:1px solid var(--line);vertical-align:middle;margin-inline-start:6px;"></span>' : '';
+      const cOos = p.inStock===false;
+      return '<div class="cart-row'+(cOos?' oos':'')+'" data-line="'+c.key+'">'+
+        '<img src="'+p.img+'">'+
+        '<div style="flex:1;">'+
+          '<div class="ci-name">'+escapeHtml(p.name)+colorDot+'</div>'+
+          '<div class="ci-price">'+fmt(finalPrice(p))+' تومان'+(cOos?' <span class="oos-note">· ناموجود (در سفارش لحاظ نمی‌شود)</span>':'')+'</div>'+
+          '<div class="qty-ctrl">'+
+            '<button data-dec="'+c.key+'">−</button><span>'+c.qty+'</span><button data-inc="'+c.key+'">+</button>'+
+            '<button class="rm" data-rm="'+c.key+'">حذف</button>'+
+          '</div>'+
+        '</div>'+
+      '</div>';
+    }).join('');
+  }
+  $('#cartTotal').textContent = fmt(cartTotal())+' تومان';
+  $$('[data-inc]',wrap).forEach(b=>b.addEventListener('click',()=>{ DB.cart.find(c=>c.key===b.dataset.inc).qty++; save(); renderCartDrawer(); renderCartBadge(); }));
+  $$('[data-dec]',wrap).forEach(b=>b.addEventListener('click',()=>{
+    const line=DB.cart.find(c=>c.key===b.dataset.dec); line.qty--;
+    if(line.qty<=0) DB.cart=DB.cart.filter(c=>c.key!==b.dataset.dec);
+    save(); renderCartDrawer(); renderCartBadge();
+  }));
+  $$('[data-rm]',wrap).forEach(b=>b.addEventListener('click',()=>{
+    DB.cart=DB.cart.filter(c=>c.key!==b.dataset.rm); save(); renderCartDrawer(); renderCartBadge();
+  }));
+}
+
+/* ============ nav active state / smooth scroll on click ============ */
+function bindNav(){
+  $$('.nav-link').forEach(a=>a.addEventListener('click',(e)=>{
+    $$('.nav-link').forEach(x=>x.classList.remove('active'));
+    $$('.nav-link[data-target="'+a.dataset.target+'"]').forEach(x=>x.classList.add('active'));
+    $('#mobileMenu').classList.remove('open');
+    $('#burgerBtn').classList.remove('open');
+  }));
+}
+
+/* ============ modals generic ============ */
+function openModal(id){ $('#'+id).classList.add('open'); }
+function closeModal(id){ $('#'+id).classList.remove('open'); }
+$$('.modal-close[data-close]').forEach(b=>b.addEventListener('click',()=>closeModal(b.dataset.close)));
+$$('.overlay').forEach(ov=>ov.addEventListener('click',e=>{ if(e.target===ov) ov.classList.remove('open'); }));
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ $$('.overlay.open').forEach(o=>o.classList.remove('open')); closeCart(); } });
+
+/* ============ cart drawer open/close ============ */
+function openCart(){ $('#cartDrawer').classList.add('open'); $('#cartOverlay').classList.add('open'); }
+function closeCart(){ $('#cartDrawer').classList.remove('open'); $('#cartOverlay').classList.remove('open'); }
+$('#cartBtn').addEventListener('click',openCart);
+$('#cartClose').addEventListener('click',closeCart);
+$('#cartOverlay').addEventListener('click',closeCart);
+
+/* ============ support fab ============ */
+$('#supportFab').addEventListener('click',()=>{ $('#supportPanel').classList.toggle('open'); LiveChat.onToggle(); });
+$('#supportClose').addEventListener('click',()=>{ $('#supportPanel').classList.remove('open'); LiveChat.onToggle(); });
+
+/* ============ search ============ */
+$('#searchBtn').addEventListener('click',()=>{
+  const w=$('#searchWrap');
+  w.style.display = w.style.display==='none' ? 'block' : 'none';
+  if(w.style.display==='block'){ $('#searchInput').focus(); document.getElementById('shop').scrollIntoView({behavior:'smooth'}); }
+});
+$('#searchInput').addEventListener('input',e=>{ searchTerm=e.target.value; renderProducts(); });
+
+/* ============ mobile menu ============ */
+$('#burgerBtn').addEventListener('click',()=>{
+  $('#burgerBtn').classList.toggle('open');
+  $('#mobileMenu').classList.toggle('open');
+});
+
+/* ============ account / login / OTP ============ */
+let pendingPhoneFull=null;
+function fillCountrySelect(){
+  const sel=$('#countrySelect');
+  sel.innerHTML = COUNTRIES.map((c,i)=>'<option value="'+c.code+'" '+(c.code==='98'?'selected':'')+'>'+c.flag+' +'+c.code+'</option>').join('');
+}
+function currentUser(){
+  if(!DB.auth.userId) return null;
+  return DB.users.find(u=>u.id===DB.auth.userId) || null;
+}
+let authIntent='login', pendingCheckout=false, confirmationResult=null, pendingFbUser=null, otpSending=false;
+function firebaseReady(){ try{ return !!(window.firebase && firebase.apps && firebase.apps.length); }catch(e){ return false; } }
+function getRecaptcha(){
+  if(!window.recaptchaVerifier){
+    window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', { size:'invisible' });
+  }
+  return window.recaptchaVerifier;
+}
+function resetRecaptcha(){
+  try{ if(window.recaptchaVerifier){ window.recaptchaVerifier.clear(); } }catch(e){}
+  window.recaptchaVerifier=null;
+}
+function toE164(cc, localNum){
+  let d = String(localNum||'').replace(/\D/g,'');
+  d = d.replace(/^0+/,'');
+  return '+'+cc+d;
+}
+function openAccount(){
+  if(DB.auth.loggedIn){
+    openAccountPage('summary');
+    return;
+  }
+  $('#loginStep0').style.display='block';
+  $('#loginStep1').style.display='none'; $('#loginStep2').style.display='none'; $('#loginStepName').style.display='none'; $('#loginStep3').style.display='none';
+  $('#loginSubtitle').textContent='برای ورود به سایت شماره همراه خود را وارد کنید';
+  openModal('loginOverlay');
+}
+$('#accountBtn').addEventListener('click',openAccount);
+
+$('#chooseRegisterBtn').addEventListener('click',()=>{
+  authIntent='register'; if(!capSend) capSend=makeCaptcha('capCanvas1','capInput1','capRefresh1'); else capSend.refresh();
+  $('#loginSubtitle').textContent='برای ساخت حساب کاربری شماره همراه خود را وارد کنید';
+  $('#loginStep0').style.display='none'; $('#loginStep1').style.display='block';
+});
+$('#chooseLoginBtn').addEventListener('click',()=>{
+  authIntent='login'; if(!capSend) capSend=makeCaptcha('capCanvas1','capInput1','capRefresh1'); else capSend.refresh();
+  $('#loginSubtitle').textContent='برای ورود به سایت شماره همراه خود را وارد کنید';
+  $('#loginStep0').style.display='none'; $('#loginStep1').style.display='block';
+});
+$('#backToChoiceBtn').addEventListener('click',()=>{
+  $('#loginStep1').style.display='none'; $('#loginStep0').style.display='block';
+});
+
+$('#sendOtpBtn').addEventListener('click', async ()=>{
+  const phone=$('#phoneInput').value.trim();
+  if(phone.replace(/\D/g,'').length<6){ toast('شماره همراه معتبر وارد کنید','err'); return; }
+  if(!capSend) capSend=makeCaptcha('capCanvas1','capInput1','capRefresh1');
+  if(capSend.isEmpty()){ toast('کد امنیتی داخل تصویر را وارد کنید','err'); return; }
+  if(!capSend.check()){ toast('کد امنیتی اشتباه بود؛ کد جدید ساخته شد','err'); return; }
+  if(!firebaseReady()){ toast('سرویس ورود پیامکی هنوز تنظیم نشده است (FIREBASE_CONFIG را در کد تکمیل کنید)','err'); return; }
+  if(otpSending) return;
+  otpSending=true; $('#sendOtpBtn').disabled=true;
+  const cc=$('#countrySelect').value;
+  pendingPhoneFull = toE164(cc, phone);
+  try{
+    const appVerifier = getRecaptcha();
+    confirmationResult = await firebase.auth().signInWithPhoneNumber(pendingPhoneFull, appVerifier);
+    $('#otpPhoneShow').textContent=pendingPhoneFull;
+    if(!capResend) capResend=makeCaptcha('capCanvas2','capInput2','capRefresh2'); else capResend.refresh();
+    startOtpTimer(120);
+    $('#loginStep1').style.display='none'; $('#loginStep2').style.display='block';
+    $$('#otpInputs input').forEach(i=>i.value='');
+    $$('#otpInputs input')[0].focus();
+    toast('کد تایید برای '+pendingPhoneFull+' پیامک شد','ok');
+  }catch(err){
+    console.warn('sendOtp error:', err);
+    toast('ارسال کد ناموفق بود: '+(err && err.message ? err.message : 'خطای ناشناخته'),'err'); if(capSend) capSend.refresh();
+    resetRecaptcha();
+  }finally{ otpSending=false; $('#sendOtpBtn').disabled=false; }
+});
+$('#resendOtpBtn').addEventListener('click', async ()=>{
+  if($('#resendOtpBtn').disabled) return;
+  if(!capResend) capResend=makeCaptcha('capCanvas2','capInput2','capRefresh2');
+  if(capResend.isEmpty()){ toast('کد امنیتی داخل تصویر را وارد کنید','err'); return; }
+  if(!capResend.check()){ toast('کد امنیتی اشتباه بود؛ کد جدید ساخته شد','err'); return; }
+  if(!pendingPhoneFull || !firebaseReady() || otpSending) return;
+  otpSending=true;
+  try{
+    const appVerifier = getRecaptcha();
+    confirmationResult = await firebase.auth().signInWithPhoneNumber(pendingPhoneFull, appVerifier);
+    toast('کد جدید پیامک شد','ok'); startOtpTimer(120);
+  }catch(err){
+    console.warn('resendOtp error:', err);
+    toast('ارسال مجدد ناموفق بود: '+(err && err.message ? err.message : ''),'err');
+    resetRecaptcha();
+  }finally{ otpSending=false; }
+});
+$$('#otpInputs input').forEach((inp,idx,arr)=>{
+  inp.addEventListener('input',()=>{
+    inp.value = inp.value.replace(/[^0-9]/g,'').slice(0,1);
+    if(inp.value && arr[idx+1]) arr[idx+1].focus();
+  });
+  inp.addEventListener('keydown',e=>{ if(e.key==='Backspace' && !inp.value && arr[idx-1]) arr[idx-1].focus(); });
+});
+
+/* ============ تایمر ارسال مجدد کد (۲ دقیقه) و ویرایش شماره ============ */
+let otpTimerId=null;
+function startOtpTimer(sec){
+  clearInterval(otpTimerId);
+  let left=sec||120;
+  const btn=$('#resendOtpBtn'), cap=$('#resendCapRow');
+  btn.disabled=true; cap.style.display='none';
+  const paint=()=>{ const m=Math.floor(left/60), s2=left%60; btn.textContent='ارسال مجدد کد تا '+toFa(String(m).padStart(2,'0')+':'+String(s2).padStart(2,'0'))+' دیگر'; };
+  paint();
+  otpTimerId=setInterval(()=>{
+    left--;
+    if(left<=0){ clearInterval(otpTimerId); otpTimerId=null; btn.disabled=false; btn.textContent='ارسال مجدد کد'; cap.style.display='flex'; if(capResend) capResend.refresh(); }
+    else paint();
+  },1000);
+}
+$('#editPhoneBtn').addEventListener('click',()=>{
+  clearInterval(otpTimerId); otpTimerId=null;
+  confirmationResult=null; resetRecaptcha();
+  $$('#otpInputs input').forEach(i=>i.value='');
+  $('#loginStep2').style.display='none'; $('#loginStep1').style.display='block';
+  if(capSend) capSend.refresh();
+  $('#phoneInput').focus();
+});
+
+function finishLoginFlow(){
+  LiveChat.refresh();
+  if(pendingReviewPid){ const rid=pendingReviewPid; pendingReviewPid=null; openProductDetail(rid); return; }
+  if(pendingCheckout){
+    pendingCheckout=false;
+    const u=currentUser();
+    $('#checkoutAmount').value = fmt(cartTotal())+' تومان';
+    $('#payerName').value = u ? ((u.firstName+' '+u.lastName).trim()) : '';
+    $('#payerPhone').value = u ? (u.phone||'').replace(/^\+/,'') : '';
+    $('#trackingCode').value='';
+    refreshCheckoutBtn();
+    openModal('checkoutOverlay');
+  } else {
+    openAccountPage('summary');
+  }
+}
+async function afterFirebaseLogin(fbUser){
+  pendingFbUser = fbUser;
+  pendingPhoneFull = fbUser.phoneNumber || pendingPhoneFull;
+  let lookupFailed=false;
+  let existing = DB.users.find(u=>u.phone===pendingPhoneFull);
+  if(Cloud.ready && (!existing || existing.synced===true)){
+    try{
+      const remote = await Cloud.getUser(pendingPhoneFull);
+      if(remote){
+        remote.synced=true;
+        if(existing) Object.assign(existing, remote); else { DB.users.push(remote); existing=remote; }
+        save();
+      }
+    }catch(err){ lookupFailed=true; console.warn('User lookup failed:', err); }
+  }
+  if(existing){
+    existing.uid = fbUser.uid; existing.synced=false;
+    DB.auth.loggedIn=true; DB.auth.phone=pendingPhoneFull; DB.auth.userId=existing.id; DB.auth.uid=fbUser.uid; save(); pushPending();
+    toast('با موفقیت وارد شدید','ok');
+    closeModal('loginOverlay');
+    finishLoginFlow();
+  } else if(lookupFailed){
+    /* اتصال به سرور قطع بوده: حساب جدید نساز تا اطلاعات حساب قبلی بازنویسی نشود */
+    try{ if(firebaseReady()) firebase.auth().signOut(); }catch(e){}
+    toast('اتصال به سرور برقرار نشد؛ دوباره تلاش کنید تا به همان حساب قبلی‌تان وارد شوید','err');
+    $('#loginStep2').style.display='none'; $('#loginStep1').style.display='block';
+  } else {
+    if(authIntent==='login') toast('حسابی با این شماره پیدا نشد؛ نام خود را وارد کنید تا حساب ساخته شود');
+    $('#loginStep2').style.display='none'; $('#loginStepName').style.display='block';
+    $('#regFirstName').value=''; $('#regLastName').value=''; $('#regAddress').value='';
+    fillProvinceSelect($('#regProvince'),''); fillCitySelect($('#regCity'),'','');
+    updateRegBtn();
+    $('#regFirstName').focus();
+  }
+}
+$('#verifyOtpBtn').addEventListener('click',async ()=>{
+  const code = $$('#otpInputs input').map(i=>i.value).join('');
+  if(code.length<5){ toast('کد ۵ رقمی را کامل وارد کنید','err'); return; }
+  if(!confirmationResult){ toast('ابتدا کد تایید را دریافت کنید','err'); return; }
+  $('#verifyOtpBtn').disabled=true;
+  try{
+    const cred = await confirmationResult.confirm(code);
+    await afterFirebaseLogin(cred.user);
+  }catch(err){
+    console.warn('verify error:', err);
+    toast('کد وارد شده صحیح نیست','err');
+  }finally{ $('#verifyOtpBtn').disabled=false; }
+});
+function regErrors(){
+  const e=[];
+  if(!$('#regFirstName').value.trim()) e.push('نام');
+  if(!$('#regLastName').value.trim()) e.push('نام خانوادگی');
+  if(!$('#regProvince').value) e.push('استان');
+  if(!$('#regCity').value) e.push('شهر');
+  if($('#regAddress').value.trim().length<8) e.push('آدرس کامل');
+  return e;
+}
+function updateRegBtn(){
+  const e=regErrors();
+  $('#submitNameBtn').disabled = e.length>0;
+  $('#regHint').textContent = e.length ? 'برای ساخت حساب تکمیل کنید: '+e.join('، ') : '';
+}
+['regFirstName','regLastName','regAddress'].forEach(id=>$('#'+id).addEventListener('input',updateRegBtn));
+$('#regProvince').addEventListener('change',()=>{ fillCitySelect($('#regCity'),$('#regProvince').value,''); updateRegBtn(); });
+$('#regCity').addEventListener('change',updateRegBtn);
+fillProvinceSelect($('#regProvince'),''); fillCitySelect($('#regCity'),'','');
+$('#submitNameBtn').addEventListener('click',()=>{
+  const errs=regErrors();
+  if(errs.length){ toast('موارد اجباری را کامل کنید: '+errs.join('، '),'err'); return; }
+  const firstName=$('#regFirstName').value.trim(), lastName=$('#regLastName').value.trim();
+  const user={ id:uid(), phone:pendingPhoneFull, uid: pendingFbUser?pendingFbUser.uid:null, firstName, lastName, shopName:'', nationalCode:'', birthDate:'',
+    province:$('#regProvince').value, city:$('#regCity').value, address:$('#regAddress').value.trim() };
+  DB.users.push(user);
+  DB.auth.loggedIn=true; DB.auth.phone=pendingPhoneFull; DB.auth.userId=user.id; DB.auth.uid=user.uid; save(); pushPending();
+  toast('حساب کاربری با موفقیت ساخته شد','ok');
+  closeModal('loginOverlay');
+  finishLoginFlow();
+});
+$('#logoutBtn').addEventListener('click',()=>{
+  DB.auth.loggedIn=false; DB.auth.phone=null; DB.auth.userId=null; DB.auth.uid=null; save(); LiveChat.refresh();
+  try{ if(firebaseReady()) firebase.auth().signOut(); }catch(e){}
+  closeModal('loginOverlay'); toast('از حساب خارج شدید');
+});
+
+/* ============ account page ============ */
+let accountTab='summary';
+const ACCOUNT_FIELDS=[
+  {key:'fullname',label:'نام و نام خانوادگی',split:true},
+  {key:'shopName',label:'نام فروشگاه'},
+  {key:'nationalCode',label:'کد ملی'},
+  {key:'birthDate',label:'تاریخ تولد'},
+  {key:'province',label:'استان',select:'province'},
+  {key:'city',label:'شهر',select:'city'},
+  {key:'address',label:'آدرس',textarea:true}
+];
+function openAccountPage(tab){
+  const u=currentUser();
+  if(!u){ openAccount(); return; }
+  $('#accountPage').classList.add('open');
+  document.body.style.overflow='hidden';
+  setAccountTab(tab||'summary');
+}
+function closeAccountPage(){
+  $('#accountPage').classList.remove('open');
+  document.body.style.overflow='';
+}
+function setAccountTab(tab){
+  accountTab=tab;
+  const u=currentUser();
+  if(!u) return;
+  $('#acUserName').textContent = (u.firstName+' '+u.lastName).trim() || 'کاربر';
+  $('#acUserPhone').textContent = u.phone||'';
+  $$('#acMenu button[data-tab]').forEach(b=>b.classList.toggle('active', b.dataset.tab===tab));
+  renderAccountMain(tab, u);
+}
+function renderAccountMain(tab, u){
+  const main=$('#accountMain');
+  if(tab==='summary'){
+    const myOrders = DB.orders.filter(o=>o.payerPhone===u.phone);
+    main.innerHTML =
+      '<div class="account-card" style="margin-bottom:16px;">'+
+        '<div class="account-section-head"><h3>سفارش‌های من</h3></div>'+
+        '<div class="account-stats">'+
+          '<div class="account-stat"><span class="ic">↩️</span><b>'+fmt(myOrders.filter(o=>o.status==='مرجوع شده').length)+' سفارش</b><span style="color:var(--muted);font-size:12px;">مرجوع شده</span></div>'+
+          '<div class="account-stat"><span class="ic">✅</span><b>'+fmt(myOrders.filter(o=>o.status==='تحویل شده').length)+' سفارش</b><span style="color:var(--muted);font-size:12px;">تحویل شده</span></div>'+
+          '<div class="account-stat"><span class="ic">☁️</span><b>'+fmt(myOrders.filter(o=>o.status!=='تحویل شده' && o.status!=='مرجوع شده').length)+' سفارش</b><span style="color:var(--muted);font-size:12px;">جاری</span></div>'+
+        '</div>'+
+      '</div>'+
+      '<div class="account-card">'+
+        '<div class="account-section-head"><h3>پیشنهادات ما</h3></div>'+
+        '<div class="grid" id="acSuggestGrid" style="margin-top:14px;"></div>'+
+      '</div>';
+    renderSuggestGrid($('#acSuggestGrid'), null, 4);
+  } else if(tab==='orders'){
+    const myOrders = DB.orders.filter(o=>o.payerPhone===u.phone);
+    main.innerHTML = '<div class="account-card"><div class="account-section-head"><h3>سفارش‌های من</h3></div>'+
+      (myOrders.length ? myOrders.map(o=>'<div class="account-order-row"><span>'+o.id+' — '+o.date+'</span><span>'+fmt(o.total)+' تومان</span><span class="status-pill">'+o.status+'</span></div>').join('')
+        : '<div class="account-empty">هنوز سفارشی ثبت نکرده‌اید.</div>')+
+      '</div>';
+  } else if(tab==='wishlist'){
+    main.innerHTML='<div class="account-card"><div class="account-section-head"><h3>لیست‌های من</h3></div><div class="account-empty">هنوز محصولی به لیست علاقه‌مندی‌ها اضافه نکرده‌اید.</div></div>';
+  } else if(tab==='addresses'){
+    main.innerHTML='<div class="account-card"><div class="account-section-head"><h3>آدرس‌ها</h3></div>'+
+      (u.address ? '<div class="account-field-value" style="margin-top:10px;">'+escapeHtml(u.address)+'</div>' : '<div class="account-empty">هنوز آدرسی ثبت نکرده‌اید.</div>')+
+      '<button class="btn btn-dark" style="margin-top:14px;" id="acAddAddressBtn">➕ افزودن / ویرایش آدرس</button></div>';
+    const btn=$('#acAddAddressBtn'); if(btn) btn.addEventListener('click',()=>setAccountTab('edit'));
+  } else if(tab==='messages'){
+    main.innerHTML='<div class="account-card"><div class="account-section-head"><h3>پیغام‌ها</h3></div><div class="account-empty">پیام جدیدی ندارید.</div></div>';
+  } else if(tab==='transactions'){
+    main.innerHTML='<div class="account-card"><div class="account-section-head"><h3>تراکنش‌های اخیر</h3></div><div class="account-empty">تراکنشی ثبت نشده است.</div></div>';
+  } else if(tab==='edit'){
+    main.innerHTML = '<div class="account-card"><div class="account-section-head"><h3>اطلاعات حساب کاربری</h3></div><div id="acFieldsWrap"></div></div>';
+    renderAccountFields(u);
+  }
+}
+function renderAccountFields(u){
+  const wrap=$('#acFieldsWrap');
+  wrap.innerHTML = ACCOUNT_FIELDS.map(f=>{
+    const val = f.split ? ((u.firstName||'')+' '+(u.lastName||'')).trim() : (u[f.key]||'');
+    return '<div class="account-field-row" data-field="'+f.key+'">'+
+      '<div style="flex:1;">'+
+        '<div class="account-field-label">'+f.label+'</div>'+
+        '<div class="account-field-value">'+(val ? escapeHtml(val) : '<span style="color:var(--muted);font-weight:400;">ثبت نشده</span>')+'</div>'+
+      '</div>'+
+      '<button class="account-field-edit" data-edit="'+f.key+'">✎</button>'+
+    '</div>';
+  }).join('');
+  $$('[data-edit]',wrap).forEach(btn=>btn.addEventListener('click',()=>startEditField(btn.dataset.edit,u)));
+}
+function startEditField(key,u){
+  const row=$('.account-field-row[data-field="'+key+'"]', $('#acFieldsWrap'));
+  const f=ACCOUNT_FIELDS.find(x=>x.key===key);
+  row.classList.add('account-field-editing');
+  let inputHtml;
+  if(f.split){
+    inputHtml = '<input type="text" class="account-field-input" id="editFirstName" placeholder="نام" value="'+escapeHtml(u.firstName||'')+'" style="margin-bottom:6px;">'+
+                '<input type="text" class="account-field-input" id="editLastName" placeholder="نام خانوادگی" value="'+escapeHtml(u.lastName||'')+'">';
+  } else if(f.select){
+    inputHtml = '<select class="account-field-input" id="editFieldInput"></select>';
+  } else if(f.textarea){
+    inputHtml = '<textarea class="account-field-input" id="editFieldInput">'+escapeHtml(u[key]||'')+'</textarea>';
+  } else {
+    inputHtml = '<input type="text" class="account-field-input" id="editFieldInput" value="'+escapeHtml(u[key]||'')+'">';
+  }
+  row.innerHTML = '<div style="flex:1;">'+
+      '<div class="account-field-label">'+f.label+'</div>'+
+      inputHtml+
+      '<button class="account-field-save" id="editFieldSave">ذخیره</button>'+
+    '</div>';
+  if(f.select){
+    const se=$('#editFieldInput');
+    if(f.select==='province') fillProvinceSelect(se,u.province||'');
+    else fillCitySelect(se,u.province||'',u.city||'');
+  }
+  $('#editFieldSave').addEventListener('click',()=>{
+    if(f.select){
+      const v=$('#editFieldInput').value;
+      if(!v){ toast(f.select==='city'&&!u.province?'ابتدا استان را ثبت کنید':'یک مورد را انتخاب کنید','err'); return; }
+      if(f.select==='province' && v!==u.province) u.city='';
+      u[key]=v;
+    } else if(f.split){
+      u.firstName = $('#editFirstName').value.trim();
+      u.lastName = $('#editLastName').value.trim();
+    } else {
+      u[key] = $('#editFieldInput').value.trim();
+    }
+    u.synced=false; save(); pushPending();
+    toast('اطلاعات ذخیره شد','ok');
+    renderAccountFields(u);
+    $('#acUserName').textContent = (u.firstName+' '+u.lastName).trim() || 'کاربر';
+  });
+}
+$('#accountBackBtn').addEventListener('click',closeAccountPage);
+$$('#acMenu button[data-tab]').forEach(b=>b.addEventListener('click',()=>setAccountTab(b.dataset.tab)));
+$('#acEditPencil').addEventListener('click',()=>setAccountTab('edit'));
+$('#acLogoutBtn').addEventListener('click',()=>{
+  DB.auth.loggedIn=false; DB.auth.phone=null; DB.auth.userId=null; DB.auth.uid=null; save(); LiveChat.refresh();
+  try{ if(firebaseReady()) firebase.auth().signOut(); }catch(e){}
+  closeAccountPage(); toast('از حساب خارج شدید');
+});
+
+/* ============ checkout / card-to-card ============ */
+function checkoutErrors(){
+  const e=[];
+  if($('#payerName').value.trim().length<3) e.push('نام و نام خانوادگی');
+  const ph=$('#payerPhone').value.replace(/\D/g,'');
+  if(ph.length<8||ph.length>15) e.push('شماره تماس معتبر');
+  if($('#trackingCode').value.trim().length<4) e.push('کد پیگیری واریز');
+  return e;
+}
+function refreshCheckoutBtn(){
+  const e=checkoutErrors();
+  $('#submitOrderBtn').disabled=e.length>0;
+  $('#checkoutHint').textContent = e.length ? 'برای ثبت سفارش تکمیل کنید: '+e.join('، ') : '';
+}
+['payerName','payerPhone','trackingCode'].forEach(id=>$('#'+id).addEventListener('input',refreshCheckoutBtn));
+$('#checkoutBtn').addEventListener('click',()=>{
+  if(!DB.cart.length){ toast('سبد خرید خالی است','err'); return; }
+  if(!DB.cart.some(c=>{ const p=DB.products.find(x=>x.id===c.id); return p && p.inStock!==false; })){ toast('همه‌ی محصولات سبد ناموجود هستند','err'); return; }
+  if(!DB.auth.loggedIn){
+    pendingCheckout=true;
+    closeCart();
+    toast('برای تسویه‌حساب ابتدا باید وارد حساب کاربری خود شوید','err');
+    openAccount();
+    return;
+  }
+  const u=currentUser();
+  $('#checkoutAmount').value = fmt(cartTotal())+' تومان';
+  $('#payerName').value = u ? ((u.firstName+' '+u.lastName).trim()) : '';
+  $('#payerPhone').value = u ? (u.phone||'').replace(/^\+/,'') : '';
+  $('#trackingCode').value='';
+  refreshCheckoutBtn();
+  closeCart(); openModal('checkoutOverlay');
+});
+$('#submitOrderBtn').addEventListener('click',()=>{
+  const name=$('#payerName').value.trim(), phone=$('#payerPhone').value.trim(), track=$('#trackingCode').value.trim();
+  const ce=checkoutErrors();
+  if(ce.length){ toast('موارد اجباری را کامل کنید: '+ce.join('، '),'err'); refreshCheckoutBtn(); return; }
+  const order={
+    id:'ORD-'+Date.now().toString().slice(-6), cid:Cloud.newId(), ts:Date.now(),
+    date:new Date().toLocaleString('fa-IR'),
+    items:DB.cart.filter(c=>{ const p=DB.products.find(x=>x.id===c.id); return p && p.inStock!==false; }).map(c=>{ const p=DB.products.find(x=>x.id===c.id); return {name:p?p.name:'—',qty:c.qty,price:p?finalPrice(p):0,color:c.color||null}; }),
+    total:cartTotal(), payerName:name, payerPhone:phone, trackingCode:track, status:'در انتظار تایید'
+  };
+  DB.orders.unshift(order);
+  DB.cart=[]; save(); pushPending();
+  renderCartBadge(); renderCartDrawer();
+  closeModal('checkoutOverlay');
+  toast('سفارش شما با کد '+order.id+' ثبت شد','ok');
+});
+
+/* ============ admin panel ============ */
+let adminLoggedIn=false;
+let editingProductId=null; // null => creating a new product
+
+$('#adminEntryBtn').addEventListener('click',()=>{
+  if(adminLoggedIn){ openAdminPanel(); return; }
+  $('#adminPassInput').value='';
+  openModal('adminLoginOverlay');
+});
+$('#adminLoginBtn').addEventListener('click',()=>{
+  const pass=$('#adminPassInput').value;
+  if(pass!==DB.adminPassword){ toast('رمز عبور اشتباه است','err'); return; }
+  adminLoggedIn=true;
+  closeModal('adminLoginOverlay');
+  openAdminPanel();
+});
+$('#adminLogoutBtn').addEventListener('click',()=>{
+  adminLoggedIn=false;
+  closeModal('adminPanelOverlay');
+  toast('از پنل مدیریت خارج شدید');
+});
+
+function openAdminPanel(){
+  renderAdminProducts();
+  openModal('adminPanelOverlay');
+}
+
+function renderAdminProducts(){
+  const body=$('#adminProductsBody');
+  body.innerHTML = DB.products.map(p=>{
+    const cat=DB.categories.find(c=>c.id===p.catId);
+    return '<tr data-id="'+p.id+'">'+
+      '<td><img src="'+p.img+'" alt=""></td>'+
+      '<td>'+escapeHtml(p.name)+'</td>'+
+      '<td>'+(cat?escapeHtml(cat.name):'—')+'</td>'+
+      '<td>'+fmt(p.price)+' تومان</td>'+
+      '<td class="admin-actions">'+
+        '<button class="mini-btn edit" data-edit="'+p.id+'">ویرایش</button>'+
+        '<button class="mini-btn del" data-del="'+p.id+'">حذف</button>'+
+      '</td>'+
+    '</tr>';
+  }).join('') || '<tr><td colspan="5" style="text-align:center;color:var(--muted);padding:20px;">محصولی ثبت نشده است.</td></tr>';
+
+  $$('[data-edit]',body).forEach(b=>b.addEventListener('click',()=>openAdminEdit(b.dataset.edit)));
+  $$('[data-del]',body).forEach(b=>b.addEventListener('click',()=>{
+    if(!confirm('این محصول حذف شود؟')) return;
+    DB.products = DB.products.filter(x=>x.id!==b.dataset.del);
+    save(); saveCloud(); renderAdminProducts(); renderProducts();
+    toast('محصول حذف شد');
+  }));
+}
+
+function fillAdminCatSelect(selectedId){
+  $('#apCat').innerHTML = DB.categories.map(c=>
+    '<option value="'+c.id+'" '+(c.id===selectedId?'selected':'')+'>'+c.emoji+' '+escapeHtml(c.name)+'</option>'
+  ).join('');
+}
+function fillAdminSubSelect(catId, selectedSubId){
+  const subs = subsOf(catId);
+  $('#apSub').innerHTML = '<option value="">— بدون زیرمجموعه —</option>'+
+    subs.map(s=>'<option value="'+s.id+'" '+(s.id===selectedSubId?'selected':'')+'>'+escapeHtml(s.name)+'</option>').join('');
+  $('#apSub').disabled = subs.length===0;
+}
+function fillAdminChildSubSelect(catId, subId, selectedChildId){
+  const subs = subsOf(catId);
+  const sub = subs.find(s=>s.id===subId);
+  const children = sub && Array.isArray(sub.subs) ? sub.subs : [];
+  if(!subId || !children.length){
+    $('#apChildSubWrap').style.display='none';
+    $('#apChildSub').innerHTML=''; $('#apChildSub').disabled=true;
+    return;
+  }
+  $('#apChildSubWrap').style.display='';
+  $('#apChildSub').innerHTML = '<option value="">— بدون زیرمجموعهٔ دوم —</option>'+
+    children.map(ch=>'<option value="'+ch.id+'" '+(ch.id===selectedChildId?'selected':'')+'>'+escapeHtml(ch.name)+'</option>').join('');
+  $('#apChildSub').disabled=false;
+}
+document.getElementById('apCat').addEventListener('change',()=>{ fillAdminSubSelect($('#apCat').value,null); fillAdminChildSubSelect($('#apCat').value,null,null); });
+document.getElementById('apSub').addEventListener('change',()=>fillAdminChildSubSelect($('#apCat').value,$('#apSub').value||null,null));
+
+function renderSpecsEditor(specs){
+  const wrap=$('#apSpecsRows');
+  wrap.innerHTML = specs.map((s,i)=>
+    '<div class="specs-editor-row" data-idx="'+i+'">'+
+      '<input type="text" class="spec-k" placeholder="عنوان (مثلاً: توان مصرفی)" value="'+escapeHtml(s.k||'')+'">'+
+      '<input type="text" class="spec-v" placeholder="مقدار (مثلاً: ۱۵ وات)" value="'+escapeHtml(s.v||'')+'">'+
+      '<button class="rm-spec" data-rm-spec="'+i+'">✕</button>'+
+    '</div>'
+  ).join('');
+  $$('[data-rm-spec]',wrap).forEach(b=>b.addEventListener('click',()=>{
+    const idx=+b.dataset.rmSpec;
+    currentEditSpecs.splice(idx,1);
+    renderSpecsEditor(currentEditSpecs);
+  }));
+}
+
+let currentEditSpecs=[];
+function readSpecsFromEditor(){
+  $$('#apSpecsRows .specs-editor-row').forEach((row,i)=>{
+    currentEditSpecs[i] = { k: $('.spec-k',row).value, v: $('.spec-v',row).value };
+  });
+  return currentEditSpecs.filter(s=>(s.k||'').trim()!=='' || (s.v||'').trim()!=='');
+}
+
+$('#apAddSpecBtn').addEventListener('click',()=>{
+  readSpecsFromEditor();
+  currentEditSpecs.push({k:'',v:''});
+  renderSpecsEditor(currentEditSpecs);
+});
+
+function openAdminEdit(id){
+  editingProductId = id || null;
+  const p = id ? DB.products.find(x=>x.id===id) : null;
+  fillAdminCatSelect(p ? p.catId : (DB.categories[0]||{}).id);
+  fillAdminSubSelect(p ? p.catId : (DB.categories[0]||{}).id, p ? p.subId : null);
+  fillAdminChildSubSelect(p ? p.catId : (DB.categories[0]||{}).id, p ? p.subId : null, p ? p.childSubId : null);
+  $('#adminEditTitle').textContent = p ? 'ویرایش محصول' : 'افزودن محصول جدید';
+  $('#apName').value = p ? p.name : '';
+  $('#apPrice').value = p ? p.price : '';
+  $('#apSale').value = p && p.sale ? '1' : '0';
+  $('#apImg').value = p && p.img && !p.img.startsWith('data:') ? p.img : '';
+  $('#apDesc').value = p ? (p.desc||'') : '';
+  currentEditSpecs = p && Array.isArray(p.specs) ? p.specs.map(s=>({k:s.k||'',v:s.v||''})) : [];
+  if(!currentEditSpecs.length) currentEditSpecs=[{k:'',v:''}];
+  renderSpecsEditor(currentEditSpecs);
+  openModal('adminEditOverlay');
+}
+$('#adminAddProductBtn').addEventListener('click',()=>openAdminEdit(null));
+
+$('#apSaveBtn').addEventListener('click',()=>{
+  const name=$('#apName').value.trim();
+  const price=Number($('#apPrice').value);
+  const catId=$('#apCat').value;
+  const subId=$('#apSub').value || null;
+  const childSubId=$('#apChildSub').value || null;
+  if(!name){ toast('نام محصول را وارد کنید','err'); return; }
+  if(!price || price<0){ toast('قیمت معتبر وارد کنید','err'); return; }
+  const specs = readSpecsFromEditor();
+  const sale = $('#apSale').value==='1';
+  const desc = $('#apDesc').value;
+  const imgInput = $('#apImg').value.trim();
+
+  if(editingProductId){
+    const p=DB.products.find(x=>x.id===editingProductId);
+    p.name=name; p.price=price; p.catId=catId; p.subId=subId; p.childSubId=childSubId; p.sale=sale; p.desc=desc; p.specs=specs;
+    if(imgInput) p.img=imgInput;
+    else if(!p.img){ const cat=DB.categories.find(c=>c.id===catId); p.img=placeholderImg(cat?cat.emoji:'📦', 200); }
+  } else {
+    const cat=DB.categories.find(c=>c.id===catId);
+    const hueOf = idv => { let h=0; for(const c of idv) h=(h*31+c.charCodeAt(0))%360; return h; };
+    const newP={ id:uid(), name:name, price:price, catId:catId, subId:subId, childSubId:childSubId, brandId:null, sale:sale, desc:desc, specs:specs,
+      img: imgInput || placeholderImg(cat?cat.emoji:'📦', hueOf(catId||'x')) };
+    DB.products.push(newP);
+  }
+  save(); saveCloud();
+  closeModal('adminEditOverlay');
+  renderAdminProducts();
+  renderProducts();
+  toast('محصول ذخیره شد','ok');
+});
+
+/* ============ init ============ */
+function renderAll(){
+  renderBrand();
+  renderHero(); resetHeroTimer();
+  renderCategories();
+  renderProducts();
+  renderCartBadge(); renderCartDrawer();
+  fillCountrySelect();
+}
+bindNav();
+renderAll();
+initCloudSync();
+Reviews.loadCounts();
+
+/* اگر نشست Firebase فعال است ولی وضعیت محلی ورود ثبت نشده (مثلاً حافظه مرورگر پاک شده)، بی‌سروصدا هماهنگ کن */
+if(firebaseReady()){
+  firebase.auth().onAuthStateChanged(async function(fbUser){
+    if(fbUser && !DB.auth.loggedIn){
+      try{
+        let existing = DB.users.find(u=>u.phone===fbUser.phoneNumber);
+        if(Cloud.ready && !existing){
+          const remote = await Cloud.getUser(fbUser.phoneNumber);
+          if(remote){ remote.synced=true; DB.users.push(remote); existing=remote; save(); }
+        }
+        if(existing){
+          existing.uid=fbUser.uid;
+          DB.auth.loggedIn=true; DB.auth.phone=fbUser.phoneNumber; DB.auth.userId=existing.id; DB.auth.uid=fbUser.uid; save(); LiveChat.refresh();
+        }
+      }catch(e){ console.warn('Auth reconcile failed:', e); }
+    }
+  });
+}
+
+})();
+</script>
+</body>
+</html>
